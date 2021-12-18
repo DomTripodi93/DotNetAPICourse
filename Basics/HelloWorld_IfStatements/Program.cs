@@ -27,48 +27,48 @@ namespace HelloWorld
 
             Console.WriteLine(smallerInt);
 
-            string firstStringToCompare = "Given Value";
+            string myCapitalizedCow = "Cow";
 
-            string secondStringToCompare = "given value";
+            string myLowerCaseCow = "cow";
 
-            if (firstStringToCompare == secondStringToCompare)
+            if (myCapitalizedCow == myLowerCaseCow)
             {
                 Console.WriteLine("Same");
             }
 
-            if (firstStringToCompare != secondStringToCompare)
+            if (myCapitalizedCow != myLowerCaseCow)
             {
                 Console.WriteLine("Different");
             }
 
-            if (firstStringToCompare.ToLower() != secondStringToCompare.ToLower())
+            if (myCapitalizedCow.ToLower() != myLowerCaseCow.ToLower())
             {
                 Console.WriteLine("Same without case sensitivity");
             }
 
-            string partialStringToCompare = "Value";
+            string partialCowToCompare = "Co";
 
-            if (firstStringToCompare.Contains(partialStringToCompare))
+            if (myCapitalizedCow.Contains(partialCowToCompare))
             {
                 Console.WriteLine("Contained");
             }
 
-            if (secondStringToCompare.Contains(partialStringToCompare))
+            if (myLowerCaseCow.Contains(partialCowToCompare))
             {
                 Console.WriteLine("Contained");
             }
 
-            if (secondStringToCompare.Contains(partialStringToCompare.ToLower()))
+            if (myLowerCaseCow.Contains(partialCowToCompare.ToLower()))
             {
                 Console.WriteLine("Contained");
             }
 
-            if (firstStringToCompare.Contains(partialStringToCompare) && secondStringToCompare.Contains(partialStringToCompare))
+            if (myCapitalizedCow.Contains(partialCowToCompare) && myLowerCaseCow.Contains(partialCowToCompare))
             {
                 Console.WriteLine("Contained");
             }
 
-            if (firstStringToCompare.Contains(partialStringToCompare) || secondStringToCompare.Contains(partialStringToCompare))
+            if (myCapitalizedCow.Contains(partialCowToCompare) || myLowerCaseCow.Contains(partialCowToCompare))
             {
                 Console.WriteLine("Contained");
             }
