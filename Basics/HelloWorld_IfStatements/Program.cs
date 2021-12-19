@@ -111,7 +111,7 @@ namespace HelloWorld
                 case (>20, <20):
                     Console.WriteLine("First numeric case");
                     break;
-                case (<13, <20):
+                case (<14, <20):
                     Console.WriteLine("Second numeric case");
                     break;
                 default:
