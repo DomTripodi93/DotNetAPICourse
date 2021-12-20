@@ -80,7 +80,7 @@ namespace HelloWorld
                 // Console.WriteLine(intInWhile);
                 Console.WriteLine("While Ran");
                 Console.WriteLine(stringsToCheck[iteration]);
-                iteration++;
+                secondIteration++;
             };
             // Console.WriteLine(intInWhile);
 

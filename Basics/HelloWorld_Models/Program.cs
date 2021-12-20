@@ -16,6 +16,9 @@ namespace HelloWorld
             myComputer.HasLTE = false;
             myComputer.ReleaseDate = DateTime.Today;
             myComputer.Price = 859.95m;
+            myComputer.VideoCard = "rtx 2060";
+
+            Console.WriteLine(myComputer.Price);
         }
     }
 
@@ -27,5 +30,10 @@ namespace HelloWorld
         public bool HasLTE { get; set; }
         public DateTime ReleaseDate { get; set; }
         public decimal Price { get; set; }
+    }
+
+    public partial class Computer
+    {
+        public string? VideoCard {get; set;}
     }
 }

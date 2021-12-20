@@ -61,16 +61,20 @@ namespace HelloWorld
             do
             {
                 Console.WriteLine("Do While Ran");
-                // Console.WriteLine(stringsToCheck[iteration]);
+                if (stringsToCheck.Length - 1 > iteration)
+                {
+                    Console.WriteLine(stringsToCheck[iteration]);
+                }
                 iteration++;
             } while (iteration < stringsToCheck.Length);
 
+            int secondIteration = 0;
 
-            while (iteration < stringsToCheck.Length)
+            while (secondIteration < stringsToCheck.Length)
             {
                 Console.WriteLine("While Ran");
                 Console.WriteLine(stringsToCheck[iteration]);
-                iteration++;
+                secondIteration++;
             };
         }
     }
