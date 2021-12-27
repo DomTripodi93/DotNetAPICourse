@@ -1,0 +1,8 @@
+INSERT INTO TestAppSchema.Computer (Motherboard
+                                    , CPUCores
+                                    , HasWifi
+                                    , HasLTE
+                                    , ReleaseDate
+                                    , Price
+                                    , VideoCard)
+                            VALUES ('Z690', 4, 'True', 'False', '2021-12-26', 859.95, 'RTX 2060')
