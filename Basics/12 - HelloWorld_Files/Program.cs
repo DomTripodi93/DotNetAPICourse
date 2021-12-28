@@ -74,18 +74,21 @@ namespace HelloWorld
                 Console.WriteLine("");
             }
 
-            IEnumerable<Computer> computersFromDataBaseEF = dataContextEF.Computer.ToList<Computer>();
-            foreach (Computer singleComputerFromDataBaseEF in computersFromDataBaseEF)
+            IEnumerable<Computer>? computersFromDataBaseEF = dataContextEF.Computer?.ToList<Computer>();
+            if (computersFromDataBaseEF != null)
             {
-                Console.WriteLine("ComputerId: " + singleComputerFromDataBaseEF.ComputerId);
-                Console.WriteLine("Motherboard: " + singleComputerFromDataBaseEF.Motherboard);
-                Console.WriteLine("CPUCores: " + singleComputerFromDataBaseEF.CPUCores);
-                Console.WriteLine("HasWifi: " + singleComputerFromDataBaseEF.HasWifi);
-                Console.WriteLine("HasLTE: " + singleComputerFromDataBaseEF.HasLTE);
-                Console.WriteLine("ReleaseDate: " + singleComputerFromDataBaseEF.ReleaseDate.ToString("yyyy-MM-dd"));
-                Console.WriteLine("Price: " + singleComputerFromDataBaseEF.Price.ToString());
-                Console.WriteLine("VideoCard: " + singleComputerFromDataBaseEF.VideoCard);
-                Console.WriteLine("");
+                foreach (Computer singleComputerFromDataBaseEF in computersFromDataBaseEF)
+                {
+                    Console.WriteLine("ComputerId: " + singleComputerFromDataBaseEF.ComputerId);
+                    Console.WriteLine("Motherboard: " + singleComputerFromDataBaseEF.Motherboard);
+                    Console.WriteLine("CPUCores: " + singleComputerFromDataBaseEF.CPUCores);
+                    Console.WriteLine("HasWifi: " + singleComputerFromDataBaseEF.HasWifi);
+                    Console.WriteLine("HasLTE: " + singleComputerFromDataBaseEF.HasLTE);
+                    Console.WriteLine("ReleaseDate: " + singleComputerFromDataBaseEF.ReleaseDate.ToString("yyyy-MM-dd"));
+                    Console.WriteLine("Price: " + singleComputerFromDataBaseEF.Price.ToString());
+                    Console.WriteLine("VideoCard: " + singleComputerFromDataBaseEF.VideoCard);
+                    Console.WriteLine("");
+                }
             }
         }
     }

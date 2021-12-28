@@ -12,9 +12,9 @@ namespace HelloWorld
             int[] intsToCompress = {10, 15, 20, 25, 30, 35, 40, 45};
 
             DateTime startTime = DateTime.Now;
-            int totalValue = intsToCompress[0] + intsToCompress[1] 
-                + intsToCompress[2] + intsToCompress[3] 
-                + intsToCompress[4] + intsToCompress[5] 
+            int totalValue = intsToCompress[0] + intsToCompress[1]
+                + intsToCompress[2] + intsToCompress[3]
+                + intsToCompress[4] + intsToCompress[5]
                 + intsToCompress[6] + intsToCompress[7];
 
             Console.WriteLine(totalValue);
@@ -23,7 +23,7 @@ namespace HelloWorld
             
             startTime = DateTime.Now;
             int totalValueTwo = 0;
-            
+
             // for (int i = 0; i < 7; i++)
             for (int i = 0; i < intsToCompress.Length; i++)
             {
