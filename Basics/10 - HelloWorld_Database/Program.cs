@@ -55,17 +55,17 @@ namespace HelloWorld
                             + "', " + myComputer.Price.ToString() 
                             + ", '" + myComputer.VideoCard 
                             + "')";
-            // Console.WriteLine(sql);
+            Console.WriteLine(sql);
 
             DataContextDapper dataContextDapper = new DataContextDapper();
 
-            // dataContextDapper.ExecuteSQL("TRUNCATE TABLE TestAppSchema.Computer");
+            dataContextDapper.ExecuteSQL("TRUNCATE TABLE TestAppSchema.Computer");
 
             dataContextDapper.ExecuteSQL(sql);
 
             DataContextEF dataContextEF = new DataContextEF();
 
-            // dataContextDapper.ExecuteSQL("TRUNCATE TABLE TestAppSchema.ComputerForTestApp");
+            dataContextDapper.ExecuteSQL("TRUNCATE TABLE TestAppSchema.ComputerForTestApp");
 
             dataContextEF.Add(myComputer);
             dataContextEF.SaveChanges();

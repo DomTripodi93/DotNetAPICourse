@@ -17,15 +17,14 @@ namespace HelloWorld
                     .AddJsonFile("appSettings.json")
                     .Build();
 
-            Computer myComputer = new Computer(
-                "Z690",
-                4,
-                true,
-                false,
-                DateTime.Today,
-                859.95m,
-                "RTX 2060"
-            );
+            Computer myComputer = new Computer();
+            myComputer.Motherboard = "Z690";
+            myComputer.CPUCores = 4;
+            myComputer.HasWifi = true;
+            myComputer.HasLTE = false;
+            myComputer.ReleaseDate = DateTime.Today;
+            myComputer.Price = 859.95m;
+            myComputer.VideoCard = "rtx 2060";
             
             string sql = @"INSERT INTO TestAppSchema.Computer (Motherboard
                                     , CPUCores
