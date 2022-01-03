@@ -22,6 +22,14 @@ namespace HelloWorld
 
             IEnumerable<Computer>? computers = JsonConvert.DeserializeObject<IEnumerable<Computer>>(computersJson);
 
+            string serializedComputers = JsonConvert.SerializeObject(computers);
+
+            using StreamWriter openFile = new("ComputersCopy.json", append: true);
+
+            openFile.WriteLine(serializedComputers);
+
+            openFile.Close();
+
             DataContextDapper dataContextDapper = new DataContextDapper(Config);
 
             dataContextDapper.ExecuteSQL("TRUNCATE TABLE TestAppSchema.Computer");
