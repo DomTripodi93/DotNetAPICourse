@@ -1,7 +1,7 @@
-CREATE DATABASE TestDatabase
+CREATE DATABASE DotNetCourseDatabase
 GO
 
-USE TestDatabase
+USE DotNetCourseDatabase
 GO
 
 CREATE SCHEMA TestAppSchema

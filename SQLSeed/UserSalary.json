@@ -1,0 +1,4002 @@
+[
+  {
+    "UserId": 1,
+    "Salary": 83269.85
+  },
+  {
+    "UserId": 2,
+    "Salary": 195482.69
+  },
+  {
+    "UserId": 3,
+    "Salary": 158082.66
+  },
+  {
+    "UserId": 4,
+    "Salary": 188517.96
+  },
+  {
+    "UserId": 5,
+    "Salary": 140094.31
+  },
+  {
+    "UserId": 6,
+    "Salary": 162617.5
+  },
+  {
+    "UserId": 7,
+    "Salary": 163631.06
+  },
+  {
+    "UserId": 8,
+    "Salary": 111026.47
+  },
+  {
+    "UserId": 9,
+    "Salary": 85650.64
+  },
+  {
+    "UserId": 10,
+    "Salary": 83665.55
+  },
+  {
+    "UserId": 11,
+    "Salary": 152507.96
+  },
+  {
+    "UserId": 12,
+    "Salary": 183936.85
+  },
+  {
+    "UserId": 13,
+    "Salary": 168896.59
+  },
+  {
+    "UserId": 14,
+    "Salary": 148539.42
+  },
+  {
+    "UserId": 15,
+    "Salary": 177475.09
+  },
+  {
+    "UserId": 16,
+    "Salary": 91634.32
+  },
+  {
+    "UserId": 17,
+    "Salary": 178230
+  },
+  {
+    "UserId": 18,
+    "Salary": 125237.08
+  },
+  {
+    "UserId": 19,
+    "Salary": 130936.85
+  },
+  {
+    "UserId": 20,
+    "Salary": 95038.33
+  },
+  {
+    "UserId": 21,
+    "Salary": 116935.87
+  },
+  {
+    "UserId": 22,
+    "Salary": 146582.25
+  },
+  {
+    "UserId": 23,
+    "Salary": 168210.76
+  },
+  {
+    "UserId": 24,
+    "Salary": 129184.39
+  },
+  {
+    "UserId": 25,
+    "Salary": 197991.64
+  },
+  {
+    "UserId": 26,
+    "Salary": 103864.02
+  },
+  {
+    "UserId": 27,
+    "Salary": 110630.31
+  },
+  {
+    "UserId": 28,
+    "Salary": 195814.47
+  },
+  {
+    "UserId": 29,
+    "Salary": 181551.29
+  },
+  {
+    "UserId": 30,
+    "Salary": 132719.73
+  },
+  {
+    "UserId": 31,
+    "Salary": 136861.86
+  },
+  {
+    "UserId": 32,
+    "Salary": 147540.83
+  },
+  {
+    "UserId": 33,
+    "Salary": 179549.19
+  },
+  {
+    "UserId": 34,
+    "Salary": 139921.77
+  },
+  {
+    "UserId": 35,
+    "Salary": 121359.03
+  },
+  {
+    "UserId": 36,
+    "Salary": 106014.68
+  },
+  {
+    "UserId": 37,
+    "Salary": 96134.48
+  },
+  {
+    "UserId": 38,
+    "Salary": 191745.69
+  },
+  {
+    "UserId": 39,
+    "Salary": 109896.95
+  },
+  {
+    "UserId": 40,
+    "Salary": 197854.3
+  },
+  {
+    "UserId": 41,
+    "Salary": 175567.42
+  },
+  {
+    "UserId": 42,
+    "Salary": 127635.81
+  },
+  {
+    "UserId": 43,
+    "Salary": 196268.31
+  },
+  {
+    "UserId": 44,
+    "Salary": 103644.19
+  },
+  {
+    "UserId": 45,
+    "Salary": 132159.55
+  },
+  {
+    "UserId": 46,
+    "Salary": 86972.33
+  },
+  {
+    "UserId": 47,
+    "Salary": 139846.24
+  },
+  {
+    "UserId": 48,
+    "Salary": 125964.94
+  },
+  {
+    "UserId": 49,
+    "Salary": 159077.52
+  },
+  {
+    "UserId": 50,
+    "Salary": 192827.97
+  },
+  {
+    "UserId": 51,
+    "Salary": 141347.43
+  },
+  {
+    "UserId": 52,
+    "Salary": 159955.39
+  },
+  {
+    "UserId": 53,
+    "Salary": 181724.82
+  },
+  {
+    "UserId": 54,
+    "Salary": 98978.82
+  },
+  {
+    "UserId": 55,
+    "Salary": 82492.23
+  },
+  {
+    "UserId": 56,
+    "Salary": 89992.38
+  },
+  {
+    "UserId": 57,
+    "Salary": 166256.28
+  },
+  {
+    "UserId": 58,
+    "Salary": 192559.53
+  },
+  {
+    "UserId": 59,
+    "Salary": 156889.5
+  },
+  {
+    "UserId": 60,
+    "Salary": 169491.4
+  },
+  {
+    "UserId": 61,
+    "Salary": 99517.13
+  },
+  {
+    "UserId": 62,
+    "Salary": 167062.78
+  },
+  {
+    "UserId": 63,
+    "Salary": 120571.55
+  },
+  {
+    "UserId": 64,
+    "Salary": 148778.84
+  },
+  {
+    "UserId": 65,
+    "Salary": 87922.78
+  },
+  {
+    "UserId": 66,
+    "Salary": 192747.48
+  },
+  {
+    "UserId": 67,
+    "Salary": 88583.74
+  },
+  {
+    "UserId": 68,
+    "Salary": 147181.83
+  },
+  {
+    "UserId": 69,
+    "Salary": 164113.64
+  },
+  {
+    "UserId": 70,
+    "Salary": 84691.94
+  },
+  {
+    "UserId": 71,
+    "Salary": 164242
+  },
+  {
+    "UserId": 72,
+    "Salary": 159109.65
+  },
+  {
+    "UserId": 73,
+    "Salary": 127692.6
+  },
+  {
+    "UserId": 74,
+    "Salary": 133129.32
+  },
+  {
+    "UserId": 75,
+    "Salary": 181888.96
+  },
+  {
+    "UserId": 76,
+    "Salary": 93718.08
+  },
+  {
+    "UserId": 77,
+    "Salary": 96562.03
+  },
+  {
+    "UserId": 78,
+    "Salary": 158414.79
+  },
+  {
+    "UserId": 79,
+    "Salary": 183079.37
+  },
+  {
+    "UserId": 80,
+    "Salary": 105335.08
+  },
+  {
+    "UserId": 81,
+    "Salary": 122423.71
+  },
+  {
+    "UserId": 82,
+    "Salary": 161401.45
+  },
+  {
+    "UserId": 83,
+    "Salary": 90063.34
+  },
+  {
+    "UserId": 84,
+    "Salary": 132821.45
+  },
+  {
+    "UserId": 85,
+    "Salary": 79092.42
+  },
+  {
+    "UserId": 86,
+    "Salary": 81376.53
+  },
+  {
+    "UserId": 87,
+    "Salary": 198928.75
+  },
+  {
+    "UserId": 88,
+    "Salary": 139666.92
+  },
+  {
+    "UserId": 89,
+    "Salary": 77482.74
+  },
+  {
+    "UserId": 90,
+    "Salary": 198113.86
+  },
+  {
+    "UserId": 91,
+    "Salary": 91549.72
+  },
+  {
+    "UserId": 92,
+    "Salary": 88636.74
+  },
+  {
+    "UserId": 93,
+    "Salary": 85876.1
+  },
+  {
+    "UserId": 94,
+    "Salary": 191989.74
+  },
+  {
+    "UserId": 95,
+    "Salary": 180880.65
+  },
+  {
+    "UserId": 96,
+    "Salary": 76817.82
+  },
+  {
+    "UserId": 97,
+    "Salary": 161969.83
+  },
+  {
+    "UserId": 98,
+    "Salary": 176666.12
+  },
+  {
+    "UserId": 99,
+    "Salary": 76464.93
+  },
+  {
+    "UserId": 100,
+    "Salary": 184759.41
+  },
+  {
+    "UserId": 101,
+    "Salary": 107430.5
+  },
+  {
+    "UserId": 102,
+    "Salary": 169507.42
+  },
+  {
+    "UserId": 103,
+    "Salary": 158038.8
+  },
+  {
+    "UserId": 104,
+    "Salary": 140128.39
+  },
+  {
+    "UserId": 105,
+    "Salary": 92161.23
+  },
+  {
+    "UserId": 106,
+    "Salary": 148120.24
+  },
+  {
+    "UserId": 107,
+    "Salary": 170868.77
+  },
+  {
+    "UserId": 108,
+    "Salary": 81937.22
+  },
+  {
+    "UserId": 109,
+    "Salary": 168578.55
+  },
+  {
+    "UserId": 110,
+    "Salary": 107685.74
+  },
+  {
+    "UserId": 111,
+    "Salary": 169377.81
+  },
+  {
+    "UserId": 112,
+    "Salary": 100463.24
+  },
+  {
+    "UserId": 113,
+    "Salary": 83424.91
+  },
+  {
+    "UserId": 114,
+    "Salary": 172066.38
+  },
+  {
+    "UserId": 115,
+    "Salary": 181127.75
+  },
+  {
+    "UserId": 116,
+    "Salary": 197255.04
+  },
+  {
+    "UserId": 117,
+    "Salary": 134693.1
+  },
+  {
+    "UserId": 118,
+    "Salary": 160460.94
+  },
+  {
+    "UserId": 119,
+    "Salary": 166174.18
+  },
+  {
+    "UserId": 120,
+    "Salary": 158114.89
+  },
+  {
+    "UserId": 121,
+    "Salary": 126923.86
+  },
+  {
+    "UserId": 122,
+    "Salary": 193633.84
+  },
+  {
+    "UserId": 123,
+    "Salary": 76743.62
+  },
+  {
+    "UserId": 124,
+    "Salary": 154075.48
+  },
+  {
+    "UserId": 125,
+    "Salary": 130366.93
+  },
+  {
+    "UserId": 126,
+    "Salary": 168835.17
+  },
+  {
+    "UserId": 127,
+    "Salary": 76714.6
+  },
+  {
+    "UserId": 128,
+    "Salary": 188174.98
+  },
+  {
+    "UserId": 129,
+    "Salary": 159400.39
+  },
+  {
+    "UserId": 130,
+    "Salary": 144668
+  },
+  {
+    "UserId": 131,
+    "Salary": 190117.53
+  },
+  {
+    "UserId": 132,
+    "Salary": 83423.19
+  },
+  {
+    "UserId": 133,
+    "Salary": 155499.89
+  },
+  {
+    "UserId": 134,
+    "Salary": 107101.08
+  },
+  {
+    "UserId": 135,
+    "Salary": 160401.9
+  },
+  {
+    "UserId": 136,
+    "Salary": 129265.12
+  },
+  {
+    "UserId": 137,
+    "Salary": 199946.47
+  },
+  {
+    "UserId": 138,
+    "Salary": 111438.13
+  },
+  {
+    "UserId": 139,
+    "Salary": 174059.64
+  },
+  {
+    "UserId": 140,
+    "Salary": 166824.13
+  },
+  {
+    "UserId": 141,
+    "Salary": 99044.08
+  },
+  {
+    "UserId": 142,
+    "Salary": 168704.3
+  },
+  {
+    "UserId": 143,
+    "Salary": 190865.68
+  },
+  {
+    "UserId": 144,
+    "Salary": 133485.42
+  },
+  {
+    "UserId": 145,
+    "Salary": 145326.56
+  },
+  {
+    "UserId": 146,
+    "Salary": 90259.6
+  },
+  {
+    "UserId": 147,
+    "Salary": 100504.16
+  },
+  {
+    "UserId": 148,
+    "Salary": 197736.37
+  },
+  {
+    "UserId": 149,
+    "Salary": 197674.25
+  },
+  {
+    "UserId": 150,
+    "Salary": 149008.78
+  },
+  {
+    "UserId": 151,
+    "Salary": 151351.94
+  },
+  {
+    "UserId": 152,
+    "Salary": 82322.6
+  },
+  {
+    "UserId": 153,
+    "Salary": 197333.73
+  },
+  {
+    "UserId": 154,
+    "Salary": 139416.37
+  },
+  {
+    "UserId": 155,
+    "Salary": 104982.99
+  },
+  {
+    "UserId": 156,
+    "Salary": 159777.88
+  },
+  {
+    "UserId": 157,
+    "Salary": 165125.09
+  },
+  {
+    "UserId": 158,
+    "Salary": 108913.49
+  },
+  {
+    "UserId": 159,
+    "Salary": 188063.97
+  },
+  {
+    "UserId": 160,
+    "Salary": 189936.59
+  },
+  {
+    "UserId": 161,
+    "Salary": 136876.39
+  },
+  {
+    "UserId": 162,
+    "Salary": 82050.92
+  },
+  {
+    "UserId": 163,
+    "Salary": 82496.74
+  },
+  {
+    "UserId": 164,
+    "Salary": 96987.88
+  },
+  {
+    "UserId": 165,
+    "Salary": 79317.25
+  },
+  {
+    "UserId": 166,
+    "Salary": 101801.14
+  },
+  {
+    "UserId": 167,
+    "Salary": 113603.62
+  },
+  {
+    "UserId": 168,
+    "Salary": 78820.2
+  },
+  {
+    "UserId": 169,
+    "Salary": 79942.74
+  },
+  {
+    "UserId": 170,
+    "Salary": 133558.81
+  },
+  {
+    "UserId": 171,
+    "Salary": 175974.22
+  },
+  {
+    "UserId": 172,
+    "Salary": 83581.89
+  },
+  {
+    "UserId": 173,
+    "Salary": 96894.19
+  },
+  {
+    "UserId": 174,
+    "Salary": 192940.61
+  },
+  {
+    "UserId": 175,
+    "Salary": 85034.29
+  },
+  {
+    "UserId": 176,
+    "Salary": 91821.96
+  },
+  {
+    "UserId": 177,
+    "Salary": 87510.56
+  },
+  {
+    "UserId": 178,
+    "Salary": 151150.59
+  },
+  {
+    "UserId": 179,
+    "Salary": 104719.48
+  },
+  {
+    "UserId": 180,
+    "Salary": 180469.58
+  },
+  {
+    "UserId": 181,
+    "Salary": 85180.62
+  },
+  {
+    "UserId": 182,
+    "Salary": 149125.47
+  },
+  {
+    "UserId": 183,
+    "Salary": 162298.45
+  },
+  {
+    "UserId": 184,
+    "Salary": 186050.09
+  },
+  {
+    "UserId": 185,
+    "Salary": 174894.06
+  },
+  {
+    "UserId": 186,
+    "Salary": 83044.77
+  },
+  {
+    "UserId": 187,
+    "Salary": 157947.85
+  },
+  {
+    "UserId": 188,
+    "Salary": 184789.93
+  },
+  {
+    "UserId": 189,
+    "Salary": 175083.36
+  },
+  {
+    "UserId": 190,
+    "Salary": 126195.79
+  },
+  {
+    "UserId": 191,
+    "Salary": 96674.09
+  },
+  {
+    "UserId": 192,
+    "Salary": 98006.09
+  },
+  {
+    "UserId": 193,
+    "Salary": 104285.27
+  },
+  {
+    "UserId": 194,
+    "Salary": 79755.73
+  },
+  {
+    "UserId": 195,
+    "Salary": 154081
+  },
+  {
+    "UserId": 196,
+    "Salary": 159924.62
+  },
+  {
+    "UserId": 197,
+    "Salary": 77267.29
+  },
+  {
+    "UserId": 198,
+    "Salary": 117463.8
+  },
+  {
+    "UserId": 199,
+    "Salary": 144781.5
+  },
+  {
+    "UserId": 200,
+    "Salary": 154619.99
+  },
+  {
+    "UserId": 201,
+    "Salary": 171324.08
+  },
+  {
+    "UserId": 202,
+    "Salary": 108769.14
+  },
+  {
+    "UserId": 203,
+    "Salary": 165590.61
+  },
+  {
+    "UserId": 204,
+    "Salary": 82455.15
+  },
+  {
+    "UserId": 205,
+    "Salary": 194233.8
+  },
+  {
+    "UserId": 206,
+    "Salary": 76210.29
+  },
+  {
+    "UserId": 207,
+    "Salary": 124707.92
+  },
+  {
+    "UserId": 208,
+    "Salary": 99752.03
+  },
+  {
+    "UserId": 209,
+    "Salary": 146006.23
+  },
+  {
+    "UserId": 210,
+    "Salary": 149943.93
+  },
+  {
+    "UserId": 211,
+    "Salary": 129174.2
+  },
+  {
+    "UserId": 212,
+    "Salary": 90230.02
+  },
+  {
+    "UserId": 213,
+    "Salary": 149031.01
+  },
+  {
+    "UserId": 214,
+    "Salary": 182977.2
+  },
+  {
+    "UserId": 215,
+    "Salary": 165814.25
+  },
+  {
+    "UserId": 216,
+    "Salary": 172633.17
+  },
+  {
+    "UserId": 217,
+    "Salary": 179956.16
+  },
+  {
+    "UserId": 218,
+    "Salary": 76064.55
+  },
+  {
+    "UserId": 219,
+    "Salary": 108562.1
+  },
+  {
+    "UserId": 220,
+    "Salary": 191103.14
+  },
+  {
+    "UserId": 221,
+    "Salary": 159061.14
+  },
+  {
+    "UserId": 222,
+    "Salary": 142509.38
+  },
+  {
+    "UserId": 223,
+    "Salary": 111108.73
+  },
+  {
+    "UserId": 224,
+    "Salary": 190932.74
+  },
+  {
+    "UserId": 225,
+    "Salary": 121675.79
+  },
+  {
+    "UserId": 226,
+    "Salary": 163798.54
+  },
+  {
+    "UserId": 227,
+    "Salary": 144590.46
+  },
+  {
+    "UserId": 228,
+    "Salary": 183683.04
+  },
+  {
+    "UserId": 229,
+    "Salary": 189232.12
+  },
+  {
+    "UserId": 230,
+    "Salary": 152892.43
+  },
+  {
+    "UserId": 231,
+    "Salary": 132352.62
+  },
+  {
+    "UserId": 232,
+    "Salary": 120980.36
+  },
+  {
+    "UserId": 233,
+    "Salary": 167004.27
+  },
+  {
+    "UserId": 234,
+    "Salary": 90652.57
+  },
+  {
+    "UserId": 235,
+    "Salary": 86512.11
+  },
+  {
+    "UserId": 236,
+    "Salary": 80615.01
+  },
+  {
+    "UserId": 237,
+    "Salary": 168907.46
+  },
+  {
+    "UserId": 238,
+    "Salary": 128642.96
+  },
+  {
+    "UserId": 239,
+    "Salary": 121201.36
+  },
+  {
+    "UserId": 240,
+    "Salary": 135003.58
+  },
+  {
+    "UserId": 241,
+    "Salary": 168596.62
+  },
+  {
+    "UserId": 242,
+    "Salary": 117917.11
+  },
+  {
+    "UserId": 243,
+    "Salary": 96111.19
+  },
+  {
+    "UserId": 244,
+    "Salary": 175749.03
+  },
+  {
+    "UserId": 245,
+    "Salary": 111093.45
+  },
+  {
+    "UserId": 246,
+    "Salary": 127322.5
+  },
+  {
+    "UserId": 247,
+    "Salary": 123187.45
+  },
+  {
+    "UserId": 248,
+    "Salary": 197296.75
+  },
+  {
+    "UserId": 249,
+    "Salary": 121136
+  },
+  {
+    "UserId": 250,
+    "Salary": 190875.86
+  },
+  {
+    "UserId": 251,
+    "Salary": 170886
+  },
+  {
+    "UserId": 252,
+    "Salary": 98493.39
+  },
+  {
+    "UserId": 253,
+    "Salary": 91474.65
+  },
+  {
+    "UserId": 254,
+    "Salary": 98825.65
+  },
+  {
+    "UserId": 255,
+    "Salary": 174445.66
+  },
+  {
+    "UserId": 256,
+    "Salary": 180577.3
+  },
+  {
+    "UserId": 257,
+    "Salary": 155254.69
+  },
+  {
+    "UserId": 258,
+    "Salary": 150398.57
+  },
+  {
+    "UserId": 259,
+    "Salary": 189697.89
+  },
+  {
+    "UserId": 260,
+    "Salary": 190905.93
+  },
+  {
+    "UserId": 261,
+    "Salary": 172611.25
+  },
+  {
+    "UserId": 262,
+    "Salary": 98282.36
+  },
+  {
+    "UserId": 263,
+    "Salary": 143401.39
+  },
+  {
+    "UserId": 264,
+    "Salary": 103764.34
+  },
+  {
+    "UserId": 265,
+    "Salary": 163668.64
+  },
+  {
+    "UserId": 266,
+    "Salary": 112758.46
+  },
+  {
+    "UserId": 267,
+    "Salary": 134119.68
+  },
+  {
+    "UserId": 268,
+    "Salary": 171933.81
+  },
+  {
+    "UserId": 269,
+    "Salary": 166155.93
+  },
+  {
+    "UserId": 270,
+    "Salary": 133859.56
+  },
+  {
+    "UserId": 271,
+    "Salary": 114306.23
+  },
+  {
+    "UserId": 272,
+    "Salary": 130408.18
+  },
+  {
+    "UserId": 273,
+    "Salary": 159211.46
+  },
+  {
+    "UserId": 274,
+    "Salary": 199302.67
+  },
+  {
+    "UserId": 275,
+    "Salary": 113440.25
+  },
+  {
+    "UserId": 276,
+    "Salary": 164156.05
+  },
+  {
+    "UserId": 277,
+    "Salary": 101935.44
+  },
+  {
+    "UserId": 278,
+    "Salary": 179861.01
+  },
+  {
+    "UserId": 279,
+    "Salary": 96710.82
+  },
+  {
+    "UserId": 280,
+    "Salary": 172882.03
+  },
+  {
+    "UserId": 281,
+    "Salary": 156959.22
+  },
+  {
+    "UserId": 282,
+    "Salary": 169194.08
+  },
+  {
+    "UserId": 283,
+    "Salary": 151431.42
+  },
+  {
+    "UserId": 284,
+    "Salary": 106113.89
+  },
+  {
+    "UserId": 285,
+    "Salary": 159242.29
+  },
+  {
+    "UserId": 286,
+    "Salary": 139084.21
+  },
+  {
+    "UserId": 287,
+    "Salary": 82839.41
+  },
+  {
+    "UserId": 288,
+    "Salary": 117449.1
+  },
+  {
+    "UserId": 289,
+    "Salary": 135581.97
+  },
+  {
+    "UserId": 290,
+    "Salary": 155253.77
+  },
+  {
+    "UserId": 291,
+    "Salary": 163728.34
+  },
+  {
+    "UserId": 292,
+    "Salary": 179909.24
+  },
+  {
+    "UserId": 293,
+    "Salary": 126363.63
+  },
+  {
+    "UserId": 294,
+    "Salary": 119777.36
+  },
+  {
+    "UserId": 295,
+    "Salary": 149705.86
+  },
+  {
+    "UserId": 296,
+    "Salary": 137392.91
+  },
+  {
+    "UserId": 297,
+    "Salary": 125215.18
+  },
+  {
+    "UserId": 298,
+    "Salary": 150805.4
+  },
+  {
+    "UserId": 299,
+    "Salary": 185761.83
+  },
+  {
+    "UserId": 300,
+    "Salary": 143010.7
+  },
+  {
+    "UserId": 301,
+    "Salary": 117709.92
+  },
+  {
+    "UserId": 302,
+    "Salary": 199616.78
+  },
+  {
+    "UserId": 303,
+    "Salary": 93747.2
+  },
+  {
+    "UserId": 304,
+    "Salary": 169436.06
+  },
+  {
+    "UserId": 305,
+    "Salary": 117742.17
+  },
+  {
+    "UserId": 306,
+    "Salary": 147309.72
+  },
+  {
+    "UserId": 307,
+    "Salary": 128404.62
+  },
+  {
+    "UserId": 308,
+    "Salary": 104240.31
+  },
+  {
+    "UserId": 309,
+    "Salary": 104074.23
+  },
+  {
+    "UserId": 310,
+    "Salary": 93218.95
+  },
+  {
+    "UserId": 311,
+    "Salary": 166435.15
+  },
+  {
+    "UserId": 312,
+    "Salary": 159261.76
+  },
+  {
+    "UserId": 313,
+    "Salary": 105614.05
+  },
+  {
+    "UserId": 314,
+    "Salary": 112901.42
+  },
+  {
+    "UserId": 315,
+    "Salary": 85896.74
+  },
+  {
+    "UserId": 316,
+    "Salary": 121787.33
+  },
+  {
+    "UserId": 317,
+    "Salary": 173900.12
+  },
+  {
+    "UserId": 318,
+    "Salary": 139777.28
+  },
+  {
+    "UserId": 319,
+    "Salary": 103907.34
+  },
+  {
+    "UserId": 320,
+    "Salary": 108394.4
+  },
+  {
+    "UserId": 321,
+    "Salary": 146611.52
+  },
+  {
+    "UserId": 322,
+    "Salary": 179575.24
+  },
+  {
+    "UserId": 323,
+    "Salary": 152321.99
+  },
+  {
+    "UserId": 324,
+    "Salary": 138286.76
+  },
+  {
+    "UserId": 325,
+    "Salary": 157407
+  },
+  {
+    "UserId": 326,
+    "Salary": 165716.56
+  },
+  {
+    "UserId": 327,
+    "Salary": 133609.05
+  },
+  {
+    "UserId": 328,
+    "Salary": 100719.81
+  },
+  {
+    "UserId": 329,
+    "Salary": 140209.02
+  },
+  {
+    "UserId": 330,
+    "Salary": 111136.03
+  },
+  {
+    "UserId": 331,
+    "Salary": 110009.03
+  },
+  {
+    "UserId": 332,
+    "Salary": 79858.46
+  },
+  {
+    "UserId": 333,
+    "Salary": 109470.32
+  },
+  {
+    "UserId": 334,
+    "Salary": 136706.42
+  },
+  {
+    "UserId": 335,
+    "Salary": 163347.96
+  },
+  {
+    "UserId": 336,
+    "Salary": 93479.59
+  },
+  {
+    "UserId": 337,
+    "Salary": 80726.18
+  },
+  {
+    "UserId": 338,
+    "Salary": 86046.33
+  },
+  {
+    "UserId": 339,
+    "Salary": 88849.05
+  },
+  {
+    "UserId": 340,
+    "Salary": 117340.16
+  },
+  {
+    "UserId": 341,
+    "Salary": 137389.69
+  },
+  {
+    "UserId": 342,
+    "Salary": 83196.38
+  },
+  {
+    "UserId": 343,
+    "Salary": 138394.13
+  },
+  {
+    "UserId": 344,
+    "Salary": 123804.43
+  },
+  {
+    "UserId": 345,
+    "Salary": 159478.59
+  },
+  {
+    "UserId": 346,
+    "Salary": 156797.69
+  },
+  {
+    "UserId": 347,
+    "Salary": 193644.15
+  },
+  {
+    "UserId": 348,
+    "Salary": 117397.79
+  },
+  {
+    "UserId": 349,
+    "Salary": 111456.72
+  },
+  {
+    "UserId": 350,
+    "Salary": 118540.18
+  },
+  {
+    "UserId": 351,
+    "Salary": 182020.28
+  },
+  {
+    "UserId": 352,
+    "Salary": 114820.98
+  },
+  {
+    "UserId": 353,
+    "Salary": 195629.49
+  },
+  {
+    "UserId": 354,
+    "Salary": 97291.08
+  },
+  {
+    "UserId": 355,
+    "Salary": 127464.73
+  },
+  {
+    "UserId": 356,
+    "Salary": 148085.45
+  },
+  {
+    "UserId": 357,
+    "Salary": 196532.24
+  },
+  {
+    "UserId": 358,
+    "Salary": 170168.85
+  },
+  {
+    "UserId": 359,
+    "Salary": 173841.19
+  },
+  {
+    "UserId": 360,
+    "Salary": 155675.62
+  },
+  {
+    "UserId": 361,
+    "Salary": 87288.4
+  },
+  {
+    "UserId": 362,
+    "Salary": 147859.22
+  },
+  {
+    "UserId": 363,
+    "Salary": 180263.1
+  },
+  {
+    "UserId": 364,
+    "Salary": 166076.01
+  },
+  {
+    "UserId": 365,
+    "Salary": 148321.07
+  },
+  {
+    "UserId": 366,
+    "Salary": 166079.45
+  },
+  {
+    "UserId": 367,
+    "Salary": 156859.99
+  },
+  {
+    "UserId": 368,
+    "Salary": 185137
+  },
+  {
+    "UserId": 369,
+    "Salary": 156815.73
+  },
+  {
+    "UserId": 370,
+    "Salary": 198665.62
+  },
+  {
+    "UserId": 371,
+    "Salary": 191171.37
+  },
+  {
+    "UserId": 372,
+    "Salary": 170806.67
+  },
+  {
+    "UserId": 373,
+    "Salary": 106731.24
+  },
+  {
+    "UserId": 374,
+    "Salary": 112815
+  },
+  {
+    "UserId": 375,
+    "Salary": 106748.6
+  },
+  {
+    "UserId": 376,
+    "Salary": 139298.67
+  },
+  {
+    "UserId": 377,
+    "Salary": 120611.53
+  },
+  {
+    "UserId": 378,
+    "Salary": 80453.21
+  },
+  {
+    "UserId": 379,
+    "Salary": 122906.94
+  },
+  {
+    "UserId": 380,
+    "Salary": 97500.65
+  },
+  {
+    "UserId": 381,
+    "Salary": 89021.8
+  },
+  {
+    "UserId": 382,
+    "Salary": 84019.04
+  },
+  {
+    "UserId": 383,
+    "Salary": 79703.29
+  },
+  {
+    "UserId": 384,
+    "Salary": 169002.64
+  },
+  {
+    "UserId": 385,
+    "Salary": 136184.64
+  },
+  {
+    "UserId": 386,
+    "Salary": 137926
+  },
+  {
+    "UserId": 387,
+    "Salary": 154895.92
+  },
+  {
+    "UserId": 388,
+    "Salary": 90112.83
+  },
+  {
+    "UserId": 389,
+    "Salary": 154869.11
+  },
+  {
+    "UserId": 390,
+    "Salary": 181478.83
+  },
+  {
+    "UserId": 391,
+    "Salary": 128538.45
+  },
+  {
+    "UserId": 392,
+    "Salary": 150544.75
+  },
+  {
+    "UserId": 393,
+    "Salary": 153845.22
+  },
+  {
+    "UserId": 394,
+    "Salary": 181192.53
+  },
+  {
+    "UserId": 395,
+    "Salary": 84149.09
+  },
+  {
+    "UserId": 396,
+    "Salary": 191363.46
+  },
+  {
+    "UserId": 397,
+    "Salary": 134935.5
+  },
+  {
+    "UserId": 398,
+    "Salary": 175431.06
+  },
+  {
+    "UserId": 399,
+    "Salary": 111743.72
+  },
+  {
+    "UserId": 400,
+    "Salary": 185948.37
+  },
+  {
+    "UserId": 401,
+    "Salary": 149210.05
+  },
+  {
+    "UserId": 402,
+    "Salary": 177042.89
+  },
+  {
+    "UserId": 403,
+    "Salary": 112277.47
+  },
+  {
+    "UserId": 404,
+    "Salary": 113185.74
+  },
+  {
+    "UserId": 405,
+    "Salary": 117494
+  },
+  {
+    "UserId": 406,
+    "Salary": 170969.65
+  },
+  {
+    "UserId": 407,
+    "Salary": 196808.79
+  },
+  {
+    "UserId": 408,
+    "Salary": 155212.15
+  },
+  {
+    "UserId": 409,
+    "Salary": 140323.2
+  },
+  {
+    "UserId": 410,
+    "Salary": 170473
+  },
+  {
+    "UserId": 411,
+    "Salary": 128596.97
+  },
+  {
+    "UserId": 412,
+    "Salary": 96301.12
+  },
+  {
+    "UserId": 413,
+    "Salary": 132361.98
+  },
+  {
+    "UserId": 414,
+    "Salary": 162068.44
+  },
+  {
+    "UserId": 415,
+    "Salary": 198648.33
+  },
+  {
+    "UserId": 416,
+    "Salary": 194373.96
+  },
+  {
+    "UserId": 417,
+    "Salary": 86564.36
+  },
+  {
+    "UserId": 418,
+    "Salary": 88565.02
+  },
+  {
+    "UserId": 419,
+    "Salary": 111690.75
+  },
+  {
+    "UserId": 420,
+    "Salary": 86984.36
+  },
+  {
+    "UserId": 421,
+    "Salary": 91547.62
+  },
+  {
+    "UserId": 422,
+    "Salary": 132994.98
+  },
+  {
+    "UserId": 423,
+    "Salary": 95886.51
+  },
+  {
+    "UserId": 424,
+    "Salary": 119307.69
+  },
+  {
+    "UserId": 425,
+    "Salary": 131274.24
+  },
+  {
+    "UserId": 426,
+    "Salary": 187638.22
+  },
+  {
+    "UserId": 427,
+    "Salary": 121233.75
+  },
+  {
+    "UserId": 428,
+    "Salary": 98078.58
+  },
+  {
+    "UserId": 429,
+    "Salary": 143383.96
+  },
+  {
+    "UserId": 430,
+    "Salary": 159389.86
+  },
+  {
+    "UserId": 431,
+    "Salary": 100647.26
+  },
+  {
+    "UserId": 432,
+    "Salary": 154848.92
+  },
+  {
+    "UserId": 433,
+    "Salary": 159999.71
+  },
+  {
+    "UserId": 434,
+    "Salary": 128727.93
+  },
+  {
+    "UserId": 435,
+    "Salary": 154913.38
+  },
+  {
+    "UserId": 436,
+    "Salary": 137908.48
+  },
+  {
+    "UserId": 437,
+    "Salary": 191682.03
+  },
+  {
+    "UserId": 438,
+    "Salary": 159196.47
+  },
+  {
+    "UserId": 439,
+    "Salary": 154447.69
+  },
+  {
+    "UserId": 440,
+    "Salary": 193942.85
+  },
+  {
+    "UserId": 441,
+    "Salary": 190826.35
+  },
+  {
+    "UserId": 442,
+    "Salary": 96221.7
+  },
+  {
+    "UserId": 443,
+    "Salary": 108555.71
+  },
+  {
+    "UserId": 444,
+    "Salary": 116193.63
+  },
+  {
+    "UserId": 445,
+    "Salary": 85751.52
+  },
+  {
+    "UserId": 446,
+    "Salary": 195166
+  },
+  {
+    "UserId": 447,
+    "Salary": 172599.31
+  },
+  {
+    "UserId": 448,
+    "Salary": 115628.52
+  },
+  {
+    "UserId": 449,
+    "Salary": 123269.57
+  },
+  {
+    "UserId": 450,
+    "Salary": 158356.01
+  },
+  {
+    "UserId": 451,
+    "Salary": 156266.3
+  },
+  {
+    "UserId": 452,
+    "Salary": 85606.56
+  },
+  {
+    "UserId": 453,
+    "Salary": 130177.93
+  },
+  {
+    "UserId": 454,
+    "Salary": 81230.48
+  },
+  {
+    "UserId": 455,
+    "Salary": 152102.51
+  },
+  {
+    "UserId": 456,
+    "Salary": 83053.12
+  },
+  {
+    "UserId": 457,
+    "Salary": 127417.43
+  },
+  {
+    "UserId": 458,
+    "Salary": 199825.92
+  },
+  {
+    "UserId": 459,
+    "Salary": 172421.39
+  },
+  {
+    "UserId": 460,
+    "Salary": 183970.22
+  },
+  {
+    "UserId": 461,
+    "Salary": 194485.17
+  },
+  {
+    "UserId": 462,
+    "Salary": 160309.13
+  },
+  {
+    "UserId": 463,
+    "Salary": 154596.45
+  },
+  {
+    "UserId": 464,
+    "Salary": 116139.82
+  },
+  {
+    "UserId": 465,
+    "Salary": 163003.52
+  },
+  {
+    "UserId": 466,
+    "Salary": 97441.94
+  },
+  {
+    "UserId": 467,
+    "Salary": 90019.65
+  },
+  {
+    "UserId": 468,
+    "Salary": 139419.41
+  },
+  {
+    "UserId": 469,
+    "Salary": 75904.74
+  },
+  {
+    "UserId": 470,
+    "Salary": 159855.08
+  },
+  {
+    "UserId": 471,
+    "Salary": 199625
+  },
+  {
+    "UserId": 472,
+    "Salary": 127086.59
+  },
+  {
+    "UserId": 473,
+    "Salary": 183322.8
+  },
+  {
+    "UserId": 474,
+    "Salary": 188000.74
+  },
+  {
+    "UserId": 475,
+    "Salary": 140918.24
+  },
+  {
+    "UserId": 476,
+    "Salary": 145883.25
+  },
+  {
+    "UserId": 477,
+    "Salary": 76332.68
+  },
+  {
+    "UserId": 478,
+    "Salary": 105865.56
+  },
+  {
+    "UserId": 479,
+    "Salary": 150854.36
+  },
+  {
+    "UserId": 480,
+    "Salary": 84318.05
+  },
+  {
+    "UserId": 481,
+    "Salary": 91957.52
+  },
+  {
+    "UserId": 482,
+    "Salary": 199885.03
+  },
+  {
+    "UserId": 483,
+    "Salary": 179779.83
+  },
+  {
+    "UserId": 484,
+    "Salary": 181570.74
+  },
+  {
+    "UserId": 485,
+    "Salary": 86980.5
+  },
+  {
+    "UserId": 486,
+    "Salary": 122458.55
+  },
+  {
+    "UserId": 487,
+    "Salary": 199685.76
+  },
+  {
+    "UserId": 488,
+    "Salary": 90903.59
+  },
+  {
+    "UserId": 489,
+    "Salary": 116646.94
+  },
+  {
+    "UserId": 490,
+    "Salary": 189977.63
+  },
+  {
+    "UserId": 491,
+    "Salary": 157287.66
+  },
+  {
+    "UserId": 492,
+    "Salary": 105272
+  },
+  {
+    "UserId": 493,
+    "Salary": 150131.08
+  },
+  {
+    "UserId": 494,
+    "Salary": 174059.33
+  },
+  {
+    "UserId": 495,
+    "Salary": 196715.43
+  },
+  {
+    "UserId": 496,
+    "Salary": 153473.03
+  },
+  {
+    "UserId": 497,
+    "Salary": 93180.28
+  },
+  {
+    "UserId": 498,
+    "Salary": 99985.45
+  },
+  {
+    "UserId": 499,
+    "Salary": 137289.11
+  },
+  {
+    "UserId": 500,
+    "Salary": 103969.52
+  },
+  {
+    "UserId": 501,
+    "Salary": 112300.88
+  },
+  {
+    "UserId": 502,
+    "Salary": 183802.79
+  },
+  {
+    "UserId": 503,
+    "Salary": 175701.13
+  },
+  {
+    "UserId": 504,
+    "Salary": 96563.35
+  },
+  {
+    "UserId": 505,
+    "Salary": 93458.32
+  },
+  {
+    "UserId": 506,
+    "Salary": 199702.13
+  },
+  {
+    "UserId": 507,
+    "Salary": 125470.64
+  },
+  {
+    "UserId": 508,
+    "Salary": 81112.26
+  },
+  {
+    "UserId": 509,
+    "Salary": 186528.18
+  },
+  {
+    "UserId": 510,
+    "Salary": 125867.36
+  },
+  {
+    "UserId": 511,
+    "Salary": 135592.26
+  },
+  {
+    "UserId": 512,
+    "Salary": 143243.18
+  },
+  {
+    "UserId": 513,
+    "Salary": 116447.18
+  },
+  {
+    "UserId": 514,
+    "Salary": 141388.42
+  },
+  {
+    "UserId": 515,
+    "Salary": 194562.94
+  },
+  {
+    "UserId": 516,
+    "Salary": 155943.27
+  },
+  {
+    "UserId": 517,
+    "Salary": 89906.74
+  },
+  {
+    "UserId": 518,
+    "Salary": 122174.76
+  },
+  {
+    "UserId": 519,
+    "Salary": 191629.27
+  },
+  {
+    "UserId": 520,
+    "Salary": 91046.24
+  },
+  {
+    "UserId": 521,
+    "Salary": 144451.75
+  },
+  {
+    "UserId": 522,
+    "Salary": 117622.41
+  },
+  {
+    "UserId": 523,
+    "Salary": 135759.56
+  },
+  {
+    "UserId": 524,
+    "Salary": 101573.49
+  },
+  {
+    "UserId": 525,
+    "Salary": 77147.89
+  },
+  {
+    "UserId": 526,
+    "Salary": 140249.83
+  },
+  {
+    "UserId": 527,
+    "Salary": 119533.96
+  },
+  {
+    "UserId": 528,
+    "Salary": 183654.45
+  },
+  {
+    "UserId": 529,
+    "Salary": 83195.22
+  },
+  {
+    "UserId": 530,
+    "Salary": 172466
+  },
+  {
+    "UserId": 531,
+    "Salary": 87157.95
+  },
+  {
+    "UserId": 532,
+    "Salary": 148971.26
+  },
+  {
+    "UserId": 533,
+    "Salary": 143576.02
+  },
+  {
+    "UserId": 534,
+    "Salary": 150494.88
+  },
+  {
+    "UserId": 535,
+    "Salary": 129094.76
+  },
+  {
+    "UserId": 536,
+    "Salary": 94926.87
+  },
+  {
+    "UserId": 537,
+    "Salary": 78296.56
+  },
+  {
+    "UserId": 538,
+    "Salary": 131325.93
+  },
+  {
+    "UserId": 539,
+    "Salary": 150773.22
+  },
+  {
+    "UserId": 540,
+    "Salary": 116069.58
+  },
+  {
+    "UserId": 541,
+    "Salary": 146406.47
+  },
+  {
+    "UserId": 542,
+    "Salary": 194336.31
+  },
+  {
+    "UserId": 543,
+    "Salary": 94945.3
+  },
+  {
+    "UserId": 544,
+    "Salary": 118676.67
+  },
+  {
+    "UserId": 545,
+    "Salary": 180104.92
+  },
+  {
+    "UserId": 546,
+    "Salary": 102738.41
+  },
+  {
+    "UserId": 547,
+    "Salary": 169381.6
+  },
+  {
+    "UserId": 548,
+    "Salary": 159795.99
+  },
+  {
+    "UserId": 549,
+    "Salary": 138578.78
+  },
+  {
+    "UserId": 550,
+    "Salary": 182215.89
+  },
+  {
+    "UserId": 551,
+    "Salary": 113609.2
+  },
+  {
+    "UserId": 552,
+    "Salary": 166595.12
+  },
+  {
+    "UserId": 553,
+    "Salary": 129563.04
+  },
+  {
+    "UserId": 554,
+    "Salary": 151181.87
+  },
+  {
+    "UserId": 555,
+    "Salary": 185862.21
+  },
+  {
+    "UserId": 556,
+    "Salary": 199609.46
+  },
+  {
+    "UserId": 557,
+    "Salary": 171595.75
+  },
+  {
+    "UserId": 558,
+    "Salary": 87838.59
+  },
+  {
+    "UserId": 559,
+    "Salary": 113015.94
+  },
+  {
+    "UserId": 560,
+    "Salary": 173000.06
+  },
+  {
+    "UserId": 561,
+    "Salary": 181377.78
+  },
+  {
+    "UserId": 562,
+    "Salary": 100991.49
+  },
+  {
+    "UserId": 563,
+    "Salary": 84894.38
+  },
+  {
+    "UserId": 564,
+    "Salary": 173603.42
+  },
+  {
+    "UserId": 565,
+    "Salary": 188017.75
+  },
+  {
+    "UserId": 566,
+    "Salary": 93742.78
+  },
+  {
+    "UserId": 567,
+    "Salary": 178872.66
+  },
+  {
+    "UserId": 568,
+    "Salary": 140220.59
+  },
+  {
+    "UserId": 569,
+    "Salary": 99792.01
+  },
+  {
+    "UserId": 570,
+    "Salary": 100384.77
+  },
+  {
+    "UserId": 571,
+    "Salary": 169038.5
+  },
+  {
+    "UserId": 572,
+    "Salary": 179361.32
+  },
+  {
+    "UserId": 573,
+    "Salary": 126659.89
+  },
+  {
+    "UserId": 574,
+    "Salary": 132811.76
+  },
+  {
+    "UserId": 575,
+    "Salary": 137954.53
+  },
+  {
+    "UserId": 576,
+    "Salary": 76665.69
+  },
+  {
+    "UserId": 577,
+    "Salary": 76407.96
+  },
+  {
+    "UserId": 578,
+    "Salary": 78630.21
+  },
+  {
+    "UserId": 579,
+    "Salary": 187295.51
+  },
+  {
+    "UserId": 580,
+    "Salary": 164955.25
+  },
+  {
+    "UserId": 581,
+    "Salary": 109649.66
+  },
+  {
+    "UserId": 582,
+    "Salary": 117462.07
+  },
+  {
+    "UserId": 583,
+    "Salary": 87881.94
+  },
+  {
+    "UserId": 584,
+    "Salary": 172036
+  },
+  {
+    "UserId": 585,
+    "Salary": 163436.21
+  },
+  {
+    "UserId": 586,
+    "Salary": 172230.29
+  },
+  {
+    "UserId": 587,
+    "Salary": 159682.14
+  },
+  {
+    "UserId": 588,
+    "Salary": 102102.38
+  },
+  {
+    "UserId": 589,
+    "Salary": 153779.91
+  },
+  {
+    "UserId": 590,
+    "Salary": 162087.39
+  },
+  {
+    "UserId": 591,
+    "Salary": 186058.95
+  },
+  {
+    "UserId": 592,
+    "Salary": 123002.38
+  },
+  {
+    "UserId": 593,
+    "Salary": 135074.42
+  },
+  {
+    "UserId": 594,
+    "Salary": 112925.59
+  },
+  {
+    "UserId": 595,
+    "Salary": 186743.38
+  },
+  {
+    "UserId": 596,
+    "Salary": 90122.67
+  },
+  {
+    "UserId": 597,
+    "Salary": 99336.29
+  },
+  {
+    "UserId": 598,
+    "Salary": 127236.68
+  },
+  {
+    "UserId": 599,
+    "Salary": 167822.9
+  },
+  {
+    "UserId": 600,
+    "Salary": 193098
+  },
+  {
+    "UserId": 601,
+    "Salary": 143671.46
+  },
+  {
+    "UserId": 602,
+    "Salary": 151419.36
+  },
+  {
+    "UserId": 603,
+    "Salary": 189231.46
+  },
+  {
+    "UserId": 604,
+    "Salary": 140774.15
+  },
+  {
+    "UserId": 605,
+    "Salary": 109164.15
+  },
+  {
+    "UserId": 606,
+    "Salary": 80930.57
+  },
+  {
+    "UserId": 607,
+    "Salary": 99600.6
+  },
+  {
+    "UserId": 608,
+    "Salary": 118332.94
+  },
+  {
+    "UserId": 609,
+    "Salary": 140295.65
+  },
+  {
+    "UserId": 610,
+    "Salary": 182699.98
+  },
+  {
+    "UserId": 611,
+    "Salary": 129884.47
+  },
+  {
+    "UserId": 612,
+    "Salary": 130723.49
+  },
+  {
+    "UserId": 613,
+    "Salary": 131008.06
+  },
+  {
+    "UserId": 614,
+    "Salary": 141069.86
+  },
+  {
+    "UserId": 615,
+    "Salary": 96394.2
+  },
+  {
+    "UserId": 616,
+    "Salary": 113949.52
+  },
+  {
+    "UserId": 617,
+    "Salary": 76814.37
+  },
+  {
+    "UserId": 618,
+    "Salary": 76958.03
+  },
+  {
+    "UserId": 619,
+    "Salary": 194515.41
+  },
+  {
+    "UserId": 620,
+    "Salary": 138138.54
+  },
+  {
+    "UserId": 621,
+    "Salary": 164916.87
+  },
+  {
+    "UserId": 622,
+    "Salary": 116890.27
+  },
+  {
+    "UserId": 623,
+    "Salary": 187547.27
+  },
+  {
+    "UserId": 624,
+    "Salary": 87794.03
+  },
+  {
+    "UserId": 625,
+    "Salary": 167229.05
+  },
+  {
+    "UserId": 626,
+    "Salary": 123502.56
+  },
+  {
+    "UserId": 627,
+    "Salary": 171736.68
+  },
+  {
+    "UserId": 628,
+    "Salary": 169804.38
+  },
+  {
+    "UserId": 629,
+    "Salary": 161889.23
+  },
+  {
+    "UserId": 630,
+    "Salary": 179719.15
+  },
+  {
+    "UserId": 631,
+    "Salary": 160500.01
+  },
+  {
+    "UserId": 632,
+    "Salary": 138188.27
+  },
+  {
+    "UserId": 633,
+    "Salary": 97931.87
+  },
+  {
+    "UserId": 634,
+    "Salary": 132377.32
+  },
+  {
+    "UserId": 635,
+    "Salary": 98128.12
+  },
+  {
+    "UserId": 636,
+    "Salary": 75532.92
+  },
+  {
+    "UserId": 637,
+    "Salary": 120695.9
+  },
+  {
+    "UserId": 638,
+    "Salary": 78947.03
+  },
+  {
+    "UserId": 639,
+    "Salary": 142604.16
+  },
+  {
+    "UserId": 640,
+    "Salary": 100694.78
+  },
+  {
+    "UserId": 641,
+    "Salary": 170446.06
+  },
+  {
+    "UserId": 642,
+    "Salary": 152691.72
+  },
+  {
+    "UserId": 643,
+    "Salary": 128549.52
+  },
+  {
+    "UserId": 644,
+    "Salary": 117706.3
+  },
+  {
+    "UserId": 645,
+    "Salary": 114578.94
+  },
+  {
+    "UserId": 646,
+    "Salary": 192899.29
+  },
+  {
+    "UserId": 647,
+    "Salary": 98457.55
+  },
+  {
+    "UserId": 648,
+    "Salary": 183996.82
+  },
+  {
+    "UserId": 649,
+    "Salary": 102460.98
+  },
+  {
+    "UserId": 650,
+    "Salary": 185146.38
+  },
+  {
+    "UserId": 651,
+    "Salary": 176588.64
+  },
+  {
+    "UserId": 652,
+    "Salary": 141074.12
+  },
+  {
+    "UserId": 653,
+    "Salary": 162321.03
+  },
+  {
+    "UserId": 654,
+    "Salary": 153653.36
+  },
+  {
+    "UserId": 655,
+    "Salary": 114855.69
+  },
+  {
+    "UserId": 656,
+    "Salary": 166888.88
+  },
+  {
+    "UserId": 657,
+    "Salary": 135054.8
+  },
+  {
+    "UserId": 658,
+    "Salary": 199109.03
+  },
+  {
+    "UserId": 659,
+    "Salary": 181161.24
+  },
+  {
+    "UserId": 660,
+    "Salary": 122722.29
+  },
+  {
+    "UserId": 661,
+    "Salary": 159235.88
+  },
+  {
+    "UserId": 662,
+    "Salary": 104067.33
+  },
+  {
+    "UserId": 663,
+    "Salary": 109986.04
+  },
+  {
+    "UserId": 664,
+    "Salary": 174130.86
+  },
+  {
+    "UserId": 665,
+    "Salary": 151922.76
+  },
+  {
+    "UserId": 666,
+    "Salary": 183150.81
+  },
+  {
+    "UserId": 667,
+    "Salary": 117375.37
+  },
+  {
+    "UserId": 668,
+    "Salary": 94012.8
+  },
+  {
+    "UserId": 669,
+    "Salary": 132547.02
+  },
+  {
+    "UserId": 670,
+    "Salary": 145669.82
+  },
+  {
+    "UserId": 671,
+    "Salary": 100148.25
+  },
+  {
+    "UserId": 672,
+    "Salary": 147249.24
+  },
+  {
+    "UserId": 673,
+    "Salary": 158522.46
+  },
+  {
+    "UserId": 674,
+    "Salary": 178305.29
+  },
+  {
+    "UserId": 675,
+    "Salary": 159394.79
+  },
+  {
+    "UserId": 676,
+    "Salary": 172253.61
+  },
+  {
+    "UserId": 677,
+    "Salary": 83791.5
+  },
+  {
+    "UserId": 678,
+    "Salary": 79718.18
+  },
+  {
+    "UserId": 679,
+    "Salary": 191653.19
+  },
+  {
+    "UserId": 680,
+    "Salary": 104922.55
+  },
+  {
+    "UserId": 681,
+    "Salary": 79183.82
+  },
+  {
+    "UserId": 682,
+    "Salary": 109580.27
+  },
+  {
+    "UserId": 683,
+    "Salary": 156549.34
+  },
+  {
+    "UserId": 684,
+    "Salary": 126441.76
+  },
+  {
+    "UserId": 685,
+    "Salary": 193407.25
+  },
+  {
+    "UserId": 686,
+    "Salary": 194980.68
+  },
+  {
+    "UserId": 687,
+    "Salary": 155088.66
+  },
+  {
+    "UserId": 688,
+    "Salary": 121879.89
+  },
+  {
+    "UserId": 689,
+    "Salary": 173836.98
+  },
+  {
+    "UserId": 690,
+    "Salary": 169318.62
+  },
+  {
+    "UserId": 691,
+    "Salary": 155309.77
+  },
+  {
+    "UserId": 692,
+    "Salary": 173950.4
+  },
+  {
+    "UserId": 693,
+    "Salary": 145373.91
+  },
+  {
+    "UserId": 694,
+    "Salary": 93758.85
+  },
+  {
+    "UserId": 695,
+    "Salary": 156827.52
+  },
+  {
+    "UserId": 696,
+    "Salary": 154442.89
+  },
+  {
+    "UserId": 697,
+    "Salary": 179138.4
+  },
+  {
+    "UserId": 698,
+    "Salary": 170886.15
+  },
+  {
+    "UserId": 699,
+    "Salary": 117900.48
+  },
+  {
+    "UserId": 700,
+    "Salary": 138147.21
+  },
+  {
+    "UserId": 701,
+    "Salary": 97718.83
+  },
+  {
+    "UserId": 702,
+    "Salary": 103262.26
+  },
+  {
+    "UserId": 703,
+    "Salary": 175403.63
+  },
+  {
+    "UserId": 704,
+    "Salary": 115264.15
+  },
+  {
+    "UserId": 705,
+    "Salary": 91551.22
+  },
+  {
+    "UserId": 706,
+    "Salary": 86557.03
+  },
+  {
+    "UserId": 707,
+    "Salary": 189055.77
+  },
+  {
+    "UserId": 708,
+    "Salary": 192965.09
+  },
+  {
+    "UserId": 709,
+    "Salary": 79788.2
+  },
+  {
+    "UserId": 710,
+    "Salary": 178078.06
+  },
+  {
+    "UserId": 711,
+    "Salary": 160336.16
+  },
+  {
+    "UserId": 712,
+    "Salary": 135368.96
+  },
+  {
+    "UserId": 713,
+    "Salary": 98341.37
+  },
+  {
+    "UserId": 714,
+    "Salary": 127269.1
+  },
+  {
+    "UserId": 715,
+    "Salary": 119116.48
+  },
+  {
+    "UserId": 716,
+    "Salary": 180474.06
+  },
+  {
+    "UserId": 717,
+    "Salary": 146200.91
+  },
+  {
+    "UserId": 718,
+    "Salary": 157993.78
+  },
+  {
+    "UserId": 719,
+    "Salary": 148339
+  },
+  {
+    "UserId": 720,
+    "Salary": 172600.61
+  },
+  {
+    "UserId": 721,
+    "Salary": 182536.76
+  },
+  {
+    "UserId": 722,
+    "Salary": 191563.52
+  },
+  {
+    "UserId": 723,
+    "Salary": 102174.6
+  },
+  {
+    "UserId": 724,
+    "Salary": 182097.52
+  },
+  {
+    "UserId": 725,
+    "Salary": 98014.89
+  },
+  {
+    "UserId": 726,
+    "Salary": 159791.77
+  },
+  {
+    "UserId": 727,
+    "Salary": 186266.24
+  },
+  {
+    "UserId": 728,
+    "Salary": 81343.82
+  },
+  {
+    "UserId": 729,
+    "Salary": 83387.49
+  },
+  {
+    "UserId": 730,
+    "Salary": 87207.9
+  },
+  {
+    "UserId": 731,
+    "Salary": 156394.34
+  },
+  {
+    "UserId": 732,
+    "Salary": 164937.32
+  },
+  {
+    "UserId": 733,
+    "Salary": 97239.28
+  },
+  {
+    "UserId": 734,
+    "Salary": 183782.89
+  },
+  {
+    "UserId": 735,
+    "Salary": 80852.39
+  },
+  {
+    "UserId": 736,
+    "Salary": 152491.23
+  },
+  {
+    "UserId": 737,
+    "Salary": 199679.6
+  },
+  {
+    "UserId": 738,
+    "Salary": 130198.46
+  },
+  {
+    "UserId": 739,
+    "Salary": 171241.3
+  },
+  {
+    "UserId": 740,
+    "Salary": 127554.65
+  },
+  {
+    "UserId": 741,
+    "Salary": 81871.07
+  },
+  {
+    "UserId": 742,
+    "Salary": 96283.04
+  },
+  {
+    "UserId": 743,
+    "Salary": 114630.43
+  },
+  {
+    "UserId": 744,
+    "Salary": 189476.47
+  },
+  {
+    "UserId": 745,
+    "Salary": 144556.71
+  },
+  {
+    "UserId": 746,
+    "Salary": 124731.56
+  },
+  {
+    "UserId": 747,
+    "Salary": 82149.53
+  },
+  {
+    "UserId": 748,
+    "Salary": 125405.49
+  },
+  {
+    "UserId": 749,
+    "Salary": 76942.46
+  },
+  {
+    "UserId": 750,
+    "Salary": 160141.18
+  },
+  {
+    "UserId": 751,
+    "Salary": 187926.41
+  },
+  {
+    "UserId": 752,
+    "Salary": 117797.81
+  },
+  {
+    "UserId": 753,
+    "Salary": 155158.85
+  },
+  {
+    "UserId": 754,
+    "Salary": 100916.57
+  },
+  {
+    "UserId": 755,
+    "Salary": 97027.56
+  },
+  {
+    "UserId": 756,
+    "Salary": 126293.09
+  },
+  {
+    "UserId": 757,
+    "Salary": 136452.16
+  },
+  {
+    "UserId": 758,
+    "Salary": 110484.36
+  },
+  {
+    "UserId": 759,
+    "Salary": 95443.87
+  },
+  {
+    "UserId": 760,
+    "Salary": 192596.65
+  },
+  {
+    "UserId": 761,
+    "Salary": 128019.59
+  },
+  {
+    "UserId": 762,
+    "Salary": 76958.41
+  },
+  {
+    "UserId": 763,
+    "Salary": 182308.62
+  },
+  {
+    "UserId": 764,
+    "Salary": 156497.56
+  },
+  {
+    "UserId": 765,
+    "Salary": 185991.54
+  },
+  {
+    "UserId": 766,
+    "Salary": 139570.12
+  },
+  {
+    "UserId": 767,
+    "Salary": 134493.97
+  },
+  {
+    "UserId": 768,
+    "Salary": 104204.14
+  },
+  {
+    "UserId": 769,
+    "Salary": 188118.1
+  },
+  {
+    "UserId": 770,
+    "Salary": 156023.89
+  },
+  {
+    "UserId": 771,
+    "Salary": 85330.92
+  },
+  {
+    "UserId": 772,
+    "Salary": 175780.93
+  },
+  {
+    "UserId": 773,
+    "Salary": 163187.54
+  },
+  {
+    "UserId": 774,
+    "Salary": 166818.48
+  },
+  {
+    "UserId": 775,
+    "Salary": 127729.43
+  },
+  {
+    "UserId": 776,
+    "Salary": 104566.52
+  },
+  {
+    "UserId": 777,
+    "Salary": 164298.82
+  },
+  {
+    "UserId": 778,
+    "Salary": 159294.37
+  },
+  {
+    "UserId": 779,
+    "Salary": 105187.92
+  },
+  {
+    "UserId": 780,
+    "Salary": 145630.61
+  },
+  {
+    "UserId": 781,
+    "Salary": 152896.79
+  },
+  {
+    "UserId": 782,
+    "Salary": 99855.21
+  },
+  {
+    "UserId": 783,
+    "Salary": 116229.67
+  },
+  {
+    "UserId": 784,
+    "Salary": 143965.5
+  },
+  {
+    "UserId": 785,
+    "Salary": 152804.36
+  },
+  {
+    "UserId": 786,
+    "Salary": 156715
+  },
+  {
+    "UserId": 787,
+    "Salary": 168233.89
+  },
+  {
+    "UserId": 788,
+    "Salary": 113309.68
+  },
+  {
+    "UserId": 789,
+    "Salary": 197414.86
+  },
+  {
+    "UserId": 790,
+    "Salary": 128502.56
+  },
+  {
+    "UserId": 791,
+    "Salary": 119713.92
+  },
+  {
+    "UserId": 792,
+    "Salary": 149884.48
+  },
+  {
+    "UserId": 793,
+    "Salary": 162891.95
+  },
+  {
+    "UserId": 794,
+    "Salary": 193740.49
+  },
+  {
+    "UserId": 795,
+    "Salary": 169635.19
+  },
+  {
+    "UserId": 796,
+    "Salary": 115209.89
+  },
+  {
+    "UserId": 797,
+    "Salary": 102362.66
+  },
+  {
+    "UserId": 798,
+    "Salary": 139609.69
+  },
+  {
+    "UserId": 799,
+    "Salary": 172199.53
+  },
+  {
+    "UserId": 800,
+    "Salary": 117408.18
+  },
+  {
+    "UserId": 801,
+    "Salary": 101896.39
+  },
+  {
+    "UserId": 802,
+    "Salary": 171923.55
+  },
+  {
+    "UserId": 803,
+    "Salary": 197040.81
+  },
+  {
+    "UserId": 804,
+    "Salary": 119967.17
+  },
+  {
+    "UserId": 805,
+    "Salary": 85245.25
+  },
+  {
+    "UserId": 806,
+    "Salary": 177513.49
+  },
+  {
+    "UserId": 807,
+    "Salary": 116663.76
+  },
+  {
+    "UserId": 808,
+    "Salary": 198651.44
+  },
+  {
+    "UserId": 809,
+    "Salary": 142372.61
+  },
+  {
+    "UserId": 810,
+    "Salary": 172660.73
+  },
+  {
+    "UserId": 811,
+    "Salary": 102019.33
+  },
+  {
+    "UserId": 812,
+    "Salary": 140104.47
+  },
+  {
+    "UserId": 813,
+    "Salary": 180212.74
+  },
+  {
+    "UserId": 814,
+    "Salary": 135349.39
+  },
+  {
+    "UserId": 815,
+    "Salary": 80604.58
+  },
+  {
+    "UserId": 816,
+    "Salary": 198010.8
+  },
+  {
+    "UserId": 817,
+    "Salary": 154536.68
+  },
+  {
+    "UserId": 818,
+    "Salary": 120427.33
+  },
+  {
+    "UserId": 819,
+    "Salary": 85183.73
+  },
+  {
+    "UserId": 820,
+    "Salary": 100700.38
+  },
+  {
+    "UserId": 821,
+    "Salary": 133364.9
+  },
+  {
+    "UserId": 822,
+    "Salary": 121269.34
+  },
+  {
+    "UserId": 823,
+    "Salary": 83813.66
+  },
+  {
+    "UserId": 824,
+    "Salary": 198193.96
+  },
+  {
+    "UserId": 825,
+    "Salary": 124856.72
+  },
+  {
+    "UserId": 826,
+    "Salary": 119976.61
+  },
+  {
+    "UserId": 827,
+    "Salary": 104528.51
+  },
+  {
+    "UserId": 828,
+    "Salary": 112928.98
+  },
+  {
+    "UserId": 829,
+    "Salary": 137768.93
+  },
+  {
+    "UserId": 830,
+    "Salary": 93219.79
+  },
+  {
+    "UserId": 831,
+    "Salary": 75807.45
+  },
+  {
+    "UserId": 832,
+    "Salary": 87641.3
+  },
+  {
+    "UserId": 833,
+    "Salary": 135664.09
+  },
+  {
+    "UserId": 834,
+    "Salary": 145264.26
+  },
+  {
+    "UserId": 835,
+    "Salary": 146003.64
+  },
+  {
+    "UserId": 836,
+    "Salary": 125336.75
+  },
+  {
+    "UserId": 837,
+    "Salary": 86182.22
+  },
+  {
+    "UserId": 838,
+    "Salary": 133692.27
+  },
+  {
+    "UserId": 839,
+    "Salary": 138534.36
+  },
+  {
+    "UserId": 840,
+    "Salary": 149286.62
+  },
+  {
+    "UserId": 841,
+    "Salary": 102375.81
+  },
+  {
+    "UserId": 842,
+    "Salary": 123702.09
+  },
+  {
+    "UserId": 843,
+    "Salary": 80635.4
+  },
+  {
+    "UserId": 844,
+    "Salary": 84817.11
+  },
+  {
+    "UserId": 845,
+    "Salary": 93255.34
+  },
+  {
+    "UserId": 846,
+    "Salary": 158312.08
+  },
+  {
+    "UserId": 847,
+    "Salary": 77698.84
+  },
+  {
+    "UserId": 848,
+    "Salary": 79872.32
+  },
+  {
+    "UserId": 849,
+    "Salary": 181744.75
+  },
+  {
+    "UserId": 850,
+    "Salary": 133098.78
+  },
+  {
+    "UserId": 851,
+    "Salary": 189971.32
+  },
+  {
+    "UserId": 852,
+    "Salary": 146461.53
+  },
+  {
+    "UserId": 853,
+    "Salary": 171381.89
+  },
+  {
+    "UserId": 854,
+    "Salary": 145177.08
+  },
+  {
+    "UserId": 855,
+    "Salary": 157437.09
+  },
+  {
+    "UserId": 856,
+    "Salary": 111363.9
+  },
+  {
+    "UserId": 857,
+    "Salary": 136846.11
+  },
+  {
+    "UserId": 858,
+    "Salary": 91902.97
+  },
+  {
+    "UserId": 859,
+    "Salary": 165821.62
+  },
+  {
+    "UserId": 860,
+    "Salary": 87357.08
+  },
+  {
+    "UserId": 861,
+    "Salary": 102632.17
+  },
+  {
+    "UserId": 862,
+    "Salary": 149337.23
+  },
+  {
+    "UserId": 863,
+    "Salary": 160474.16
+  },
+  {
+    "UserId": 864,
+    "Salary": 114140.13
+  },
+  {
+    "UserId": 865,
+    "Salary": 105135.86
+  },
+  {
+    "UserId": 866,
+    "Salary": 164377.91
+  },
+  {
+    "UserId": 867,
+    "Salary": 108485.74
+  },
+  {
+    "UserId": 868,
+    "Salary": 88964
+  },
+  {
+    "UserId": 869,
+    "Salary": 163106.79
+  },
+  {
+    "UserId": 870,
+    "Salary": 192291.78
+  },
+  {
+    "UserId": 871,
+    "Salary": 127176.86
+  },
+  {
+    "UserId": 872,
+    "Salary": 136327.2
+  },
+  {
+    "UserId": 873,
+    "Salary": 157948.32
+  },
+  {
+    "UserId": 874,
+    "Salary": 129189.93
+  },
+  {
+    "UserId": 875,
+    "Salary": 110354.1
+  },
+  {
+    "UserId": 876,
+    "Salary": 117686.55
+  },
+  {
+    "UserId": 877,
+    "Salary": 148109.51
+  },
+  {
+    "UserId": 878,
+    "Salary": 156744.19
+  },
+  {
+    "UserId": 879,
+    "Salary": 136689.87
+  },
+  {
+    "UserId": 880,
+    "Salary": 102121.19
+  },
+  {
+    "UserId": 881,
+    "Salary": 143792.33
+  },
+  {
+    "UserId": 882,
+    "Salary": 122396.34
+  },
+  {
+    "UserId": 883,
+    "Salary": 162995.3
+  },
+  {
+    "UserId": 884,
+    "Salary": 160710.38
+  },
+  {
+    "UserId": 885,
+    "Salary": 106604.3
+  },
+  {
+    "UserId": 886,
+    "Salary": 143128.13
+  },
+  {
+    "UserId": 887,
+    "Salary": 128744.74
+  },
+  {
+    "UserId": 888,
+    "Salary": 78860.39
+  },
+  {
+    "UserId": 889,
+    "Salary": 128875
+  },
+  {
+    "UserId": 890,
+    "Salary": 100923.02
+  },
+  {
+    "UserId": 891,
+    "Salary": 162152.39
+  },
+  {
+    "UserId": 892,
+    "Salary": 112965.43
+  },
+  {
+    "UserId": 893,
+    "Salary": 141410.08
+  },
+  {
+    "UserId": 894,
+    "Salary": 86691.02
+  },
+  {
+    "UserId": 895,
+    "Salary": 82076.74
+  },
+  {
+    "UserId": 896,
+    "Salary": 163548.74
+  },
+  {
+    "UserId": 897,
+    "Salary": 104647.06
+  },
+  {
+    "UserId": 898,
+    "Salary": 142990.13
+  },
+  {
+    "UserId": 899,
+    "Salary": 100285.49
+  },
+  {
+    "UserId": 900,
+    "Salary": 82137.8
+  },
+  {
+    "UserId": 901,
+    "Salary": 192451.29
+  },
+  {
+    "UserId": 902,
+    "Salary": 136548.03
+  },
+  {
+    "UserId": 903,
+    "Salary": 136179.99
+  },
+  {
+    "UserId": 904,
+    "Salary": 176212.45
+  },
+  {
+    "UserId": 905,
+    "Salary": 118718.54
+  },
+  {
+    "UserId": 906,
+    "Salary": 127999.43
+  },
+  {
+    "UserId": 907,
+    "Salary": 84523.79
+  },
+  {
+    "UserId": 908,
+    "Salary": 168627.58
+  },
+  {
+    "UserId": 909,
+    "Salary": 197143.43
+  },
+  {
+    "UserId": 910,
+    "Salary": 180294.5
+  },
+  {
+    "UserId": 911,
+    "Salary": 120404.32
+  },
+  {
+    "UserId": 912,
+    "Salary": 89302.34
+  },
+  {
+    "UserId": 913,
+    "Salary": 139607.72
+  },
+  {
+    "UserId": 914,
+    "Salary": 111330.04
+  },
+  {
+    "UserId": 915,
+    "Salary": 160438.89
+  },
+  {
+    "UserId": 916,
+    "Salary": 161474.79
+  },
+  {
+    "UserId": 917,
+    "Salary": 167682.87
+  },
+  {
+    "UserId": 918,
+    "Salary": 107485.27
+  },
+  {
+    "UserId": 919,
+    "Salary": 101354.41
+  },
+  {
+    "UserId": 920,
+    "Salary": 175046.73
+  },
+  {
+    "UserId": 921,
+    "Salary": 136255.63
+  },
+  {
+    "UserId": 922,
+    "Salary": 118426.42
+  },
+  {
+    "UserId": 923,
+    "Salary": 126300.78
+  },
+  {
+    "UserId": 924,
+    "Salary": 85130.33
+  },
+  {
+    "UserId": 925,
+    "Salary": 89877.96
+  },
+  {
+    "UserId": 926,
+    "Salary": 112410.7
+  },
+  {
+    "UserId": 927,
+    "Salary": 102537.21
+  },
+  {
+    "UserId": 928,
+    "Salary": 199368.76
+  },
+  {
+    "UserId": 929,
+    "Salary": 184987.99
+  },
+  {
+    "UserId": 930,
+    "Salary": 97973.09
+  },
+  {
+    "UserId": 931,
+    "Salary": 107753.95
+  },
+  {
+    "UserId": 932,
+    "Salary": 173503.78
+  },
+  {
+    "UserId": 933,
+    "Salary": 153586.52
+  },
+  {
+    "UserId": 934,
+    "Salary": 104039.02
+  },
+  {
+    "UserId": 935,
+    "Salary": 124648.52
+  },
+  {
+    "UserId": 936,
+    "Salary": 142591.22
+  },
+  {
+    "UserId": 937,
+    "Salary": 123876.66
+  },
+  {
+    "UserId": 938,
+    "Salary": 174842.03
+  },
+  {
+    "UserId": 939,
+    "Salary": 142457.47
+  },
+  {
+    "UserId": 940,
+    "Salary": 139096
+  },
+  {
+    "UserId": 941,
+    "Salary": 118933.04
+  },
+  {
+    "UserId": 942,
+    "Salary": 199561.86
+  },
+  {
+    "UserId": 943,
+    "Salary": 185884.16
+  },
+  {
+    "UserId": 944,
+    "Salary": 164629.95
+  },
+  {
+    "UserId": 945,
+    "Salary": 164757.09
+  },
+  {
+    "UserId": 946,
+    "Salary": 99329.85
+  },
+  {
+    "UserId": 947,
+    "Salary": 193688.23
+  },
+  {
+    "UserId": 948,
+    "Salary": 80945.58
+  },
+  {
+    "UserId": 949,
+    "Salary": 134501.03
+  },
+  {
+    "UserId": 950,
+    "Salary": 79152.21
+  },
+  {
+    "UserId": 951,
+    "Salary": 124542.23
+  },
+  {
+    "UserId": 952,
+    "Salary": 138285.21
+  },
+  {
+    "UserId": 953,
+    "Salary": 161510.81
+  },
+  {
+    "UserId": 954,
+    "Salary": 179138.09
+  },
+  {
+    "UserId": 955,
+    "Salary": 153626.62
+  },
+  {
+    "UserId": 956,
+    "Salary": 140483.85
+  },
+  {
+    "UserId": 957,
+    "Salary": 119471.56
+  },
+  {
+    "UserId": 958,
+    "Salary": 182233.74
+  },
+  {
+    "UserId": 959,
+    "Salary": 188180.7
+  },
+  {
+    "UserId": 960,
+    "Salary": 192201.72
+  },
+  {
+    "UserId": 961,
+    "Salary": 112718.57
+  },
+  {
+    "UserId": 962,
+    "Salary": 85249.04
+  },
+  {
+    "UserId": 963,
+    "Salary": 147812.19
+  },
+  {
+    "UserId": 964,
+    "Salary": 126482.13
+  },
+  {
+    "UserId": 965,
+    "Salary": 128471
+  },
+  {
+    "UserId": 966,
+    "Salary": 199058.53
+  },
+  {
+    "UserId": 967,
+    "Salary": 125047.8
+  },
+  {
+    "UserId": 968,
+    "Salary": 156325.44
+  },
+  {
+    "UserId": 969,
+    "Salary": 147732.65
+  },
+  {
+    "UserId": 970,
+    "Salary": 168617.97
+  },
+  {
+    "UserId": 971,
+    "Salary": 195496.9
+  },
+  {
+    "UserId": 972,
+    "Salary": 82753.83
+  },
+  {
+    "UserId": 973,
+    "Salary": 165126.15
+  },
+  {
+    "UserId": 974,
+    "Salary": 107251.04
+  },
+  {
+    "UserId": 975,
+    "Salary": 180354.68
+  },
+  {
+    "UserId": 976,
+    "Salary": 121972.74
+  },
+  {
+    "UserId": 977,
+    "Salary": 181082.57
+  },
+  {
+    "UserId": 978,
+    "Salary": 169452.28
+  },
+  {
+    "UserId": 979,
+    "Salary": 147017.55
+  },
+  {
+    "UserId": 980,
+    "Salary": 109194.95
+  },
+  {
+    "UserId": 981,
+    "Salary": 104466.96
+  },
+  {
+    "UserId": 982,
+    "Salary": 187594.43
+  },
+  {
+    "UserId": 983,
+    "Salary": 139534.45
+  },
+  {
+    "UserId": 984,
+    "Salary": 111343.33
+  },
+  {
+    "UserId": 985,
+    "Salary": 126126.88
+  },
+  {
+    "UserId": 986,
+    "Salary": 85581.92
+  },
+  {
+    "UserId": 987,
+    "Salary": 192166.86
+  },
+  {
+    "UserId": 988,
+    "Salary": 98738.3
+  },
+  {
+    "UserId": 989,
+    "Salary": 76780.41
+  },
+  {
+    "UserId": 990,
+    "Salary": 94010.9
+  },
+  {
+    "UserId": 991,
+    "Salary": 138307.84
+  },
+  {
+    "UserId": 992,
+    "Salary": 162094.71
+  },
+  {
+    "UserId": 993,
+    "Salary": 187769.68
+  },
+  {
+    "UserId": 994,
+    "Salary": 183865.69
+  },
+  {
+    "UserId": 995,
+    "Salary": 122158.08
+  },
+  {
+    "UserId": 996,
+    "Salary": 196906.9
+  },
+  {
+    "UserId": 997,
+    "Salary": 153393.81
+  },
+  {
+    "UserId": 998,
+    "Salary": 81816.35
+  },
+  {
+    "UserId": 999,
+    "Salary": 165000.09
+  },
+  {
+    "UserId": 1000,
+    "Salary": 111265.54
+  }
+]

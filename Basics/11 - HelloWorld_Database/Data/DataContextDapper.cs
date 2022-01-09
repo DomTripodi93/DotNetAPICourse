@@ -10,7 +10,7 @@ namespace HelloWorld.Data
         public IEnumerable<T> LoadData<T>(string sql)
         {
             // using (IDbConnection dbConnection = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
-            using (IDbConnection dbConnection = new SqlConnection("Server=localhost;Database=TestDatabase;Trusted_Connection=true;TrustServerCertificate=true;"))
+            using (IDbConnection dbConnection = new SqlConnection("Server=localhost;Database=DotNetCourseDatabase;Trusted_Connection=true;TrustServerCertificate=true;"))
             {
                 dbConnection.Open();
                 using (IDbTransaction tran = dbConnection.BeginTransaction(IsolationLevel.ReadCommitted))
@@ -24,7 +24,7 @@ namespace HelloWorld.Data
 
         public int ExecuteSQL(string sql)
         {
-            using (IDbConnection dbConnection = new SqlConnection("Server=localhost;Database=TestDatabase;Trusted_Connection=true;TrustServerCertificate=true;"))
+            using (IDbConnection dbConnection = new SqlConnection("Server=localhost;Database=DotNetCourseDatabase;Trusted_Connection=true;TrustServerCertificate=true;"))
             {
                 return dbConnection.Execute(sql);
             }

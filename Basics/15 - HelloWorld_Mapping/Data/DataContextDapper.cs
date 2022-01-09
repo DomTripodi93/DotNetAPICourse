@@ -35,9 +35,9 @@ namespace HelloWorld.Data
             }
         }
 
-        public IEnumerable<T> ExecuteProcedureMulti<T>(string sql, IDbConnection dbConnection)
+        public void ExecuteProcedureMulti(string sql, IDbConnection dbConnection)
         {
-            return dbConnection.Query<T>(sql);
+            dbConnection.Execute(sql);
         }
 
     }

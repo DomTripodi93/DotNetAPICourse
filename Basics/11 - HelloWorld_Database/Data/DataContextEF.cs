@@ -13,7 +13,7 @@ namespace HelloWorld.Data
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder
-                    .UseSqlServer("Server=localhost;Database=TestDatabase;Trusted_Connection=true;TrustServerCertificate=true;",
+                    .UseSqlServer("Server=localhost;Database=DotNetCourseDatabase;Trusted_Connection=true;TrustServerCertificate=true;",
                         options => options.EnableRetryOnFailure());
             }
         }

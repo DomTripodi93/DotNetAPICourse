@@ -13,7 +13,7 @@ namespace HelloWorld
         public static void Main(string[] args)
         {
 
-            IConfiguration Config = new ConfigurationBuilder()
+            IConfiguration config = new ConfigurationBuilder()
                     .AddJsonFile("appSettings.json")
                     .Build();
 
@@ -47,13 +47,13 @@ namespace HelloWorld
 
             Console.WriteLine(fileRead);
 
-            DataContextDapper dataContextDapper = new DataContextDapper(Config);
+            DataContextDapper dataContextDapper = new DataContextDapper(config);
 
             dataContextDapper.ExecuteSQL("TRUNCATE TABLE TestAppSchema.Computer");
 
             dataContextDapper.ExecuteSQL(sql);
 
-            DataContextEF dataContextEF = new DataContextEF(Config);
+            DataContextEF dataContextEF = new DataContextEF(config);
 
             dataContextDapper.ExecuteSQL("TRUNCATE TABLE TestAppSchema.ComputerForTestApp");
 

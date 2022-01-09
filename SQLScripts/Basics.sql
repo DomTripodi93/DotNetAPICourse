@@ -1,7 +1,7 @@
-CREATE DATABASE TestDatabase;
+CREATE DATABASE DotNetCourseDatabase;
 GO
 
-USE TestDatabase;
+USE DotNetCourseDatabase;
 GO
 
 CREATE SCHEMA TestAppSchema;
@@ -60,3 +60,30 @@ SELECT  Motherboard
 DELETE FROM TestAppSchema.Computer WHERE ComputerId = 1
 
 TRUNCATE TABLE TestAppSchema.Computer
+
+USE DotNetCourseDatabase;
+
+INSERT INTO TestAppSchema.Computer (Motherboard
+                                    , CPUCores
+                                    , HasWifi
+                                    , HasLTE
+                                    , ReleaseDate
+                                    , Price
+                                    , VideoCard)
+
+SELECT  Computer.Motherboard
+      , Computer.CPUCores
+      , Computer.HasWifi
+      , Computer.HasLTE
+      , Computer.ReleaseDate
+      , Computer.Price
+      , Computer.VideoCard
+  FROM  TestAppSchema.Computer
+ ORDER BY
+    Computer.HasWifi
+    , Computer.HasLTE DESC
+    , Computer.ReleaseDate DESC;
+
+
+
+
