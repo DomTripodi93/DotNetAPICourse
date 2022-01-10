@@ -4,10 +4,10 @@ GO
 USE DotNetCourseDatabase
 GO
 
-CREATE SCHEMA TestAppSchema
+CREATE SCHEMA TutorialAppSchema
 GO
 
-CREATE TABLE TestAppSchema.Computer(
+CREATE TABLE TutorialAppSchema.Computer(
 	ComputerId INT IDENTITY(1,1) PRIMARY KEY,
 	Motherboard NVARCHAR(50),
 	CPUCores INT,
@@ -18,7 +18,7 @@ CREATE TABLE TestAppSchema.Computer(
 	VideoCard NVARCHAR(50)
 )
 
-CREATE TABLE TestAppSchema.ComputerForTestApp(
+CREATE TABLE TutorialAppSchema.ComputerForTestApp(
 	ComputerId INT IDENTITY(1,1) PRIMARY KEY,
 	Motherboard NVARCHAR(50),
 	CPUCores INT,

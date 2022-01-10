@@ -35,10 +35,5 @@ namespace HelloWorld.Data
             }
         }
 
-        public void ExecuteProcedureMulti(string sql, IDbConnection dbConnection)
-        {
-            dbConnection.Execute(sql);
-        }
-
     }
 }

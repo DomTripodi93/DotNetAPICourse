@@ -40,7 +40,7 @@ namespace HelloWorld
             myComputer.VideoCard = "rtx 2060";
 
             Console.WriteLine(myComputer.Price);
-            string sql = @"INSERT INTO TestAppSchema.Computer (Motherboard
+            string sql = @"INSERT INTO TutorialAppSchema.Computer (Motherboard
                                     , CPUCores
                                     , HasWifi
                                     , HasLTE
@@ -59,18 +59,18 @@ namespace HelloWorld
 
             DataContextDapper dataContextDapper = new DataContextDapper();
 
-            dataContextDapper.ExecuteSQL("TRUNCATE TABLE TestAppSchema.Computer");
+            dataContextDapper.ExecuteSQL("TRUNCATE TABLE TutorialAppSchema.Computer");
 
             dataContextDapper.ExecuteSQL(sql);
 
             DataContextEF dataContextEF = new DataContextEF();
 
-            dataContextDapper.ExecuteSQL("TRUNCATE TABLE TestAppSchema.ComputerForTestApp");
+            dataContextDapper.ExecuteSQL("TRUNCATE TABLE TutorialAppSchema.ComputerForTestApp");
 
             dataContextEF.Add(myComputer);
             dataContextEF.SaveChanges();
 
-            IEnumerable<Computer> computersFromDataBaseDapper = dataContextDapper.LoadData<Computer>("SELECT * FROM TestAppSchema.Computer");
+            IEnumerable<Computer> computersFromDataBaseDapper = dataContextDapper.LoadData<Computer>("SELECT * FROM TutorialAppSchema.Computer");
             foreach (Computer singleComputerFromDataBaseDapper in computersFromDataBaseDapper)
             {
                 Console.WriteLine("ComputerId: " + singleComputerFromDataBaseDapper.ComputerId);

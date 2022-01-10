@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace ProductivityManager.Controllers;
+namespace SocialSalary.Controllers;
 
 [ApiController]
 [Route("[controller]")]

@@ -4,10 +4,10 @@ GO
 USE DotNetCourseDatabase;
 GO
 
-CREATE SCHEMA TestAppSchema;
+CREATE SCHEMA TutorialAppSchema;
 GO
 
-CREATE TABLE TestAppSchema.Computer
+CREATE TABLE TutorialAppSchema.Computer
 (
     ComputerId INT IDENTITY(1, 1) PRIMARY KEY
     , Motherboard NVARCHAR(50)
@@ -19,7 +19,7 @@ CREATE TABLE TestAppSchema.Computer
     , VideoCard NVARCHAR(50)
 );
 
-CREATE TABLE TestAppSchema.ComputerForTestApp
+CREATE TABLE TutorialAppSchema.ComputerForTestApp
 (
     ComputerId INT IDENTITY(1, 1) PRIMARY KEY
     , Motherboard NVARCHAR(50)
@@ -31,7 +31,7 @@ CREATE TABLE TestAppSchema.ComputerForTestApp
     , VideoCard NVARCHAR(50)
 );
 
-INSERT INTO TestAppSchema.Computer (Motherboard
+INSERT INTO TutorialAppSchema.Computer (Motherboard
                                     , CPUCores
                                     , HasWifi
                                     , HasLTE
@@ -46,7 +46,7 @@ INSERT INTO TestAppSchema.Computer (Motherboard
 									, 859.95
 									, 'rtx 2060');
 
--- SELECT * FROM TestAppSchema.Computer
+-- SELECT * FROM TutorialAppSchema.Computer
 
 SELECT  Motherboard
         , CPUCores
@@ -55,15 +55,15 @@ SELECT  Motherboard
         , ReleaseDate
         , Price
         , VideoCard
-  FROM  TestAppSchema.Computer;
+  FROM  TutorialAppSchema.Computer;
 
-DELETE FROM TestAppSchema.Computer WHERE ComputerId = 1
+DELETE FROM TutorialAppSchema.Computer WHERE ComputerId = 1
 
-TRUNCATE TABLE TestAppSchema.Computer
+TRUNCATE TABLE TutorialAppSchema.Computer
 
 USE DotNetCourseDatabase;
 
-INSERT INTO TestAppSchema.Computer (Motherboard
+INSERT INTO TutorialAppSchema.Computer (Motherboard
                                     , CPUCores
                                     , HasWifi
                                     , HasLTE
@@ -78,7 +78,7 @@ SELECT  Computer.Motherboard
       , Computer.ReleaseDate
       , Computer.Price
       , Computer.VideoCard
-  FROM  TestAppSchema.Computer
+  FROM  TutorialAppSchema.Computer
  ORDER BY
     Computer.HasWifi
     , Computer.HasLTE DESC

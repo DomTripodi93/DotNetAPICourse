@@ -18,8 +18,15 @@ namespace HelloWorld
                     .Build();
 
             Computer myComputer = new Computer();
+            myComputer.Motherboard = "Z690";
+            myComputer.CPUCores = 4;
+            myComputer.HasWifi = true;
+            myComputer.HasLTE = false;
+            myComputer.ReleaseDate = DateTime.Today;
+            myComputer.Price = 859.95m;
+            myComputer.VideoCard = "rtx 2060";
             
-            string sql = @"INSERT INTO TestAppSchema.Computer (Motherboard
+            string sql = @"INSERT INTO TutorialAppSchema.Computer (Motherboard
                                     , CPUCores
                                     , HasWifi
                                     , HasLTE
@@ -49,18 +56,18 @@ namespace HelloWorld
 
             DataContextDapper dataContextDapper = new DataContextDapper(config);
 
-            dataContextDapper.ExecuteSQL("TRUNCATE TABLE TestAppSchema.Computer");
+            dataContextDapper.ExecuteSQL("TRUNCATE TABLE TutorialAppSchema.Computer");
 
             dataContextDapper.ExecuteSQL(sql);
 
             DataContextEF dataContextEF = new DataContextEF(config);
 
-            dataContextDapper.ExecuteSQL("TRUNCATE TABLE TestAppSchema.ComputerForTestApp");
+            dataContextDapper.ExecuteSQL("TRUNCATE TABLE TutorialAppSchema.ComputerForTestApp");
 
             dataContextEF.Add(myComputer);
             dataContextEF.SaveChanges();
 
-            IEnumerable<Computer> computersFromDataBaseDapper = dataContextDapper.LoadData<Computer>("SELECT * FROM TestAppSchema.Computer");
+            IEnumerable<Computer> computersFromDataBaseDapper = dataContextDapper.LoadData<Computer>("SELECT * FROM TutorialAppSchema.Computer");
             foreach (Computer singleComputerFromDataBaseDapper in computersFromDataBaseDapper)
             {
                 Console.WriteLine("ComputerId: " + singleComputerFromDataBaseDapper.ComputerId);

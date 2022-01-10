@@ -6,7 +6,9 @@ using AutoMapper;
 using HelloWorld.Data;
 using HelloWorld.Models;
 using Microsoft.Extensions.Configuration;
-using Newtonsoft.Json;
+using System.Text.Json;
+using Microsoft.Data.SqlClient;
+using System.Data;
 
 namespace HelloWorld
 {
@@ -21,7 +23,7 @@ namespace HelloWorld
 
             string computersJson = System.IO.File.ReadAllText("Computers.json");
 
-            IEnumerable<ComputerSnakeCase>? computersSnakeCase = JsonConvert.DeserializeObject<IEnumerable<ComputerSnakeCase>>(computersJson);
+            IEnumerable<ComputerSnakeCase>? computersSnakeCase = JsonSerializer.Deserialize<IEnumerable<ComputerSnakeCase>>(computersJson);
 
             
             Mapper mapper = new Mapper(new MapperConfiguration(cfg => { 
@@ -44,33 +46,36 @@ namespace HelloWorld
 
             DataContextDapper dataContextDapper = new DataContextDapper(config);
 
-            dataContextDapper.ExecuteSQL("TRUNCATE TABLE TestAppSchema.Computer");
-            
+            dataContextDapper.ExecuteSQL("TRUNCATE TABLE TutorialAppSchema.Computer");
+
             if (computers != null)
             {
-                foreach (Computer singleComputer in computers)
+                using (IDbConnection dbConnection = new SqlConnection(config.GetConnectionString("DefaultConnection")))
                 {
-                    string sql = @"INSERT INTO TestAppSchema.Computer (Motherboard
+                    foreach (Computer singleComputer in computers)
+                    {
+                        string sql = @"INSERT INTO TutorialAppSchema.Computer (Motherboard
                                             , CPUCores
                                             , HasWifi
                                             , HasLTE
                                             , ReleaseDate
                                             , Price
                                             , VideoCard)
-                                VALUES ('" + singleComputer.Motherboard?.Replace("'", "''") 
-                                + "', " + singleComputer.CPUCores 
-                                + ", '" + singleComputer.HasWifi 
-                                + "', '" + singleComputer.HasLTE 
-                                + "', '" + singleComputer.ReleaseDate?.ToString("yyyy-MM-dd")
-                                + "', " + singleComputer.Price.ToString() 
-                                + ", '" + singleComputer.VideoCard?.Replace("'", "''")
-                                + "')";
+                                VALUES ('" + singleComputer.Motherboard?.Replace("'", "''")
+                                    + "', " + singleComputer.CPUCores
+                                    + ", '" + singleComputer.HasWifi
+                                    + "', '" + singleComputer.HasLTE
+                                    + "', '" + singleComputer.ReleaseDate?.ToString("yyyy-MM-dd")
+                                    + "', " + singleComputer.Price.ToString()
+                                    + ", '" + singleComputer.VideoCard?.Replace("'", "''")
+                                    + "')";
 
-                    dataContextDapper.ExecuteSQL(sql);
+                        dataContextDapper.ExecuteSqlMulti(sql, dbConnection);
+                    }
                 }
             }
 
-            IEnumerable<Computer> computersFromDataBaseDapper = dataContextDapper.LoadData<Computer>("SELECT * FROM TestAppSchema.Computer");
+            IEnumerable<Computer> computersFromDataBaseDapper = dataContextDapper.LoadData<Computer>("SELECT * FROM TutorialAppSchema.Computer");
             foreach (Computer singleComputerFromDataBaseDapper in computersFromDataBaseDapper)
             {
                 Console.WriteLine("ComputerId: " + singleComputerFromDataBaseDapper.ComputerId);

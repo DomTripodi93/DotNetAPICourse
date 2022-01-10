@@ -20,10 +20,10 @@ namespace HelloWorld.Data
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasDefaultSchema("TestAppSchema");
+            modelBuilder.HasDefaultSchema("TutorialAppSchema");
 
             modelBuilder.Entity<Computer>()
-                .ToTable("ComputerForTestApp", "TestAppSchema")
+                .ToTable("ComputerForTestApp", "TutorialAppSchema")
                 .HasKey(e => e.ComputerId);
         }
     }

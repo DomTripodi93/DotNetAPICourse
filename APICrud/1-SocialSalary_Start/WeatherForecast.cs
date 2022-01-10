@@ -1,4 +1,4 @@
-namespace ProductivityManager;
+namespace SocialSalary;
 
 public class WeatherForecast
 {

@@ -1,4 +1,4 @@
-INSERT INTO TestAppSchema.Computer (Motherboard
+INSERT INTO TutorialAppSchema.Computer (Motherboard
                                     , CPUCores
                                     , HasWifi
                                     , HasLTE

@@ -27,17 +27,18 @@ namespace SQLSeed
             IEnumerable<Users>? users = JsonConvert.DeserializeObject<IEnumerable<Users>>(usersJson);
 
 
-            dataContextDapper.ExecuteSQL("TRUNCATE TABLE TestAppSchema.Users");
-            dataContextDapper.ExecuteSQL("SET IDENTITY_INSERT TestAppSchema.Users ON");
+            dataContextDapper.ExecuteSQL("TRUNCATE TABLE TutorialAppSchema.Users");
+            dataContextDapper.ExecuteSQL("SET IDENTITY_INSERT TutorialAppSchema.Users ON");
 
             if (users != null)
             {
                 using (IDbConnection dbConnection = new SqlConnection(config.GetConnectionString("DefaultConnection")))
                 {
-                    string sql = "SET IDENTITY_INSERT TestAppSchema.Users ON;"
-                                    + "INSERT INTO TestAppSchema.Users (UserId"
-                                    + ",FirstName "
+                    string sql = "SET IDENTITY_INSERT TutorialAppSchema.Users ON;"
+                                    + "INSERT INTO TutorialAppSchema.Users (UserId"
+                                    + ",FirstName"
                                     + ",LastName"
+                                    + ",Email"
                                     + ",Gender"
                                     + ",Active)"
                                     + "VALUES";
@@ -46,6 +47,7 @@ namespace SQLSeed
                         string sqlToAdd = "(" + singleUser.UserId
                                     + ", '" + singleUser.FirstName?.Replace("'", "''")
                                     + "', '" + singleUser.LastName?.Replace("'", "''")
+                                    + "', '" + singleUser.Email?.Replace("'", "''")
                                     + "', '" + singleUser.Gender
                                     + "', '" + singleUser.Active
                                     + "'),";
@@ -53,10 +55,11 @@ namespace SQLSeed
                         if ((sql + sqlToAdd).Length > 4000)
                         {
                             dataContextDapper.ExecuteProcedureMulti(sql.Trim(','), dbConnection);
-                            sql = "SET IDENTITY_INSERT TestAppSchema.Users ON;"
-                                    + "INSERT INTO TestAppSchema.Users (UserId"
+                            sql = "SET IDENTITY_INSERT TutorialAppSchema.Users ON;"
+                                    + "INSERT INTO TutorialAppSchema.Users (UserId"
                                     + ",FirstName "
                                     + ",LastName"
+                                    + ",Email"
                                     + ",Gender"
                                     + ",Active)"
                                     + "VALUES";
@@ -66,19 +69,19 @@ namespace SQLSeed
                     dataContextDapper.ExecuteProcedureMulti(sql.Trim(','), dbConnection);
                 }
             }
-            dataContextDapper.ExecuteSQL("SET IDENTITY_INSERT TestAppSchema.Users OFF");
+            dataContextDapper.ExecuteSQL("SET IDENTITY_INSERT TutorialAppSchema.Users OFF");
 
             string userSalaryJson = System.IO.File.ReadAllText("UserSalary.json");
 
             IEnumerable<UserSalary>? userSalary = JsonConvert.DeserializeObject<IEnumerable<UserSalary>>(userSalaryJson);
 
-            dataContextDapper.ExecuteSQL("TRUNCATE TABLE TestAppSchema.UserSalary");
+            dataContextDapper.ExecuteSQL("TRUNCATE TABLE TutorialAppSchema.UserSalary");
 
             if (userSalary != null)
             {
                 using (IDbConnection dbConnection = new SqlConnection(config.GetConnectionString("DefaultConnection")))
                 {
-                    string sql = "INSERT INTO TestAppSchema.UserSalary (UserId"
+                    string sql = "INSERT INTO TutorialAppSchema.UserSalary (UserId"
                                     + ",Salary)"
                                     + "VALUES";
                     foreach (UserSalary singleUserSalary in userSalary)
@@ -89,7 +92,7 @@ namespace SQLSeed
                         if ((sql + sqlToAdd).Length > 4000)
                         {
                             dataContextDapper.ExecuteProcedureMulti(sql.Trim(','), dbConnection);
-                            sql = "INSERT INTO TestAppSchema.UserSalary (UserId"
+                            sql = "INSERT INTO TutorialAppSchema.UserSalary (UserId"
                                     + ",Salary)"
                                     + "VALUES";
                         }
@@ -103,13 +106,13 @@ namespace SQLSeed
 
             IEnumerable<UserJobInfo>? userJobInfo = JsonConvert.DeserializeObject<IEnumerable<UserJobInfo>>(userJobInfoJson);
 
-            dataContextDapper.ExecuteSQL("TRUNCATE TABLE TestAppSchema.UserJobInfo");
+            dataContextDapper.ExecuteSQL("TRUNCATE TABLE TutorialAppSchema.UserJobInfo");
 
             if (userJobInfo != null)
             {
                 using (IDbConnection dbConnection = new SqlConnection(config.GetConnectionString("DefaultConnection")))
                 {
-                    string sql = "INSERT INTO TestAppSchema.UserJobInfo (UserId"
+                    string sql = "INSERT INTO TutorialAppSchema.UserJobInfo (UserId"
                                     + ",Department"
                                     + ",JobTitle)"
                                     + "VALUES";
@@ -122,7 +125,7 @@ namespace SQLSeed
                         if ((sql + sqlToAdd).Length > 4000)
                         {
                             dataContextDapper.ExecuteProcedureMulti(sql.Trim(','), dbConnection);
-                            sql = "INSERT INTO TestAppSchema.UserJobInfo (UserId"
+                            sql = "INSERT INTO TutorialAppSchema.UserJobInfo (UserId"
                                     + ",Department"
                                     + ",JobTitle)"
                                     + "VALUES";

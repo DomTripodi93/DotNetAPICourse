@@ -35,7 +35,7 @@ namespace HelloWorld.Data
             }
         }
 
-        public void ExecuteProcedureMulti(string sql, IDbConnection dbConnection)
+        public void ExecuteSqlMulti(string sql, IDbConnection dbConnection)
         {
             dbConnection.Execute(sql);
         }

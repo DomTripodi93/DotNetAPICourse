@@ -1,10 +1,10 @@
 USE DotNetCourseDatabase;
 GO
 
-CREATE OR ALTER PROCEDURE TestAppSchema.UserInfo_Get
+CREATE OR ALTER PROCEDURE TutorialAppSchema.UserInfo_Get
 AS
 BEGIN
-	/*EXEC TestAppSchema.UserInfo_Get*/
+	/*EXEC TutorialAppSchema.UserInfo_Get*/
     SELECT  Users.UserId
             , Users.FirstName
             , Users.LastName
@@ -14,19 +14,19 @@ BEGIN
             , UJI.JobTitle
             , ISNULL (UserSalary.Salary, AverageSalaryInDepartment.AverageSalaryInDepartment) AS Salary
             , CASE WHEN UserSalary.Salary IS NULL THEN 1 ELSE 0 END AS SalaryAssumed
-      FROM  TestAppSchema.Users
-          JOIN TestAppSchema.UserJobInfo AS UJI
+      FROM  TutorialAppSchema.Users
+          JOIN TutorialAppSchema.UserJobInfo AS UJI
               ON UJI.UserId = Users.UserId
-          LEFT JOIN TestAppSchema.UserSalary
+          LEFT JOIN TutorialAppSchema.UserSalary
               ON UserSalary.UserId = Users.UserId
                  AND Users.Active = 1
           OUTER APPLY (
                           SELECT    UJI2.Department
                                     , AVG (UserSalary.Salary) AS AverageSalaryInDepartment
-                            FROM    TestAppSchema.Users
-                                JOIN TestAppSchema.UserJobInfo UJI2
+                            FROM    TutorialAppSchema.Users
+                                JOIN TutorialAppSchema.UserJobInfo UJI2
                                     ON UJI2.UserId = Users.UserId
-                                JOIN TestAppSchema.UserSalary
+                                JOIN TutorialAppSchema.UserSalary
                                     ON UserSalary.UserId = Users.UserId
                            WHERE UJI2.Department = UJI.Department
                            GROUP BY UJI2.Department
@@ -34,11 +34,11 @@ BEGIN
 END;
 GO
 
-ALTER PROCEDURE TestAppSchema.UserInfo_Get
+ALTER PROCEDURE TutorialAppSchema.UserInfo_Get
     @Department NVARCHAR(50) = NULL /* 'Accounting' */
 AS
 BEGIN
-	/*EXEC TestAppSchema.UserInfo_Get @Department = 'Accounting'*/
+	/*EXEC TutorialAppSchema.UserInfo_Get @Department = 'Accounting'*/
     SELECT  Users.UserId
             , Users.FirstName
             , Users.LastName
@@ -48,19 +48,19 @@ BEGIN
             , UJI.JobTitle
             , ISNULL (UserSalary.Salary, AverageSalaryInDepartment.AverageSalaryInDepartment) AS Salary
             , CASE WHEN UserSalary.Salary IS NULL THEN 1 ELSE 0 END AS SalaryAssumed
-      FROM  TestAppSchema.Users
-          JOIN TestAppSchema.UserJobInfo AS UJI
+      FROM  TutorialAppSchema.Users
+          JOIN TutorialAppSchema.UserJobInfo AS UJI
               ON UJI.UserId = Users.UserId
-          LEFT JOIN TestAppSchema.UserSalary
+          LEFT JOIN TutorialAppSchema.UserSalary
               ON UserSalary.UserId = Users.UserId
                  AND Users.Active = 1
           OUTER APPLY (
                           SELECT    UJI2.Department
                                     , AVG (UserSalary.Salary) AS AverageSalaryInDepartment
-                            FROM    TestAppSchema.Users
-                                JOIN TestAppSchema.UserJobInfo UJI2
+                            FROM    TutorialAppSchema.Users
+                                JOIN TutorialAppSchema.UserJobInfo UJI2
                                     ON UJI2.UserId = Users.UserId
-                                JOIN TestAppSchema.UserSalary
+                                JOIN TutorialAppSchema.UserSalary
                                     ON UserSalary.UserId = Users.UserId
                            WHERE UJI2.Department = UJI.Department
                            GROUP BY UJI2.Department
@@ -69,12 +69,12 @@ BEGIN
 END;
 GO
 
-ALTER PROCEDURE TestAppSchema.UserInfo_Get
+ALTER PROCEDURE TutorialAppSchema.UserInfo_Get
     @Department NVARCHAR(50) = NULL
     , @JobTitle NVARCHAR(50) = NULL
 AS
 BEGIN
-	/*EXEC TestAppSchema.UserInfo_Get @Department = 'Accounting', @JobTitle='Sales Associate'*/
+	/*EXEC TutorialAppSchema.UserInfo_Get @Department = 'Accounting', @JobTitle='Sales Associate'*/
     DECLARE @ResultDate DATE;
 
     SET @ResultDate = CAST(GETDATE () AS DATE);
@@ -91,19 +91,19 @@ BEGIN
             , ISNULL (UserSalary.Salary, AverageSalaryInDepartment.AverageSalaryInDepartment) AS Salary
             , CASE WHEN UserSalary.Salary IS NULL THEN 1 ELSE 0 END AS SalaryAssumed
 			, @ResultDate AS DateOfQuery
-      FROM  TestAppSchema.Users
-          JOIN TestAppSchema.UserJobInfo AS UJI
+      FROM  TutorialAppSchema.Users
+          JOIN TutorialAppSchema.UserJobInfo AS UJI
               ON UJI.UserId = Users.UserId
-          LEFT JOIN TestAppSchema.UserSalary
+          LEFT JOIN TutorialAppSchema.UserSalary
               ON UserSalary.UserId = Users.UserId
                  AND Users.Active = 1
           OUTER APPLY (
                           SELECT    UJI2.Department
                                     , AVG (UserSalary.Salary) AS AverageSalaryInDepartment
-                            FROM    TestAppSchema.Users
-                                JOIN TestAppSchema.UserJobInfo UJI2
+                            FROM    TutorialAppSchema.Users
+                                JOIN TutorialAppSchema.UserJobInfo UJI2
                                     ON UJI2.UserId = Users.UserId
-                                JOIN TestAppSchema.UserSalary
+                                JOIN TutorialAppSchema.UserSalary
                                     ON UserSalary.UserId = Users.UserId
                            WHERE UJI2.Department = UJI.Department
                            GROUP BY UJI2.Department
@@ -113,12 +113,12 @@ BEGIN
 END;
 GO
 
-ALTER PROCEDURE TestAppSchema.UserInfo_Get
+ALTER PROCEDURE TutorialAppSchema.UserInfo_Get
     @Department NVARCHAR(50) = NULL
     , @JobTitle NVARCHAR(50) = NULL
 AS
 BEGIN
-	/*EXEC TestAppSchema.UserInfo_Get @Department = 'Accounting', @JobTitle='Account'*/
+	/*EXEC TutorialAppSchema.UserInfo_Get @Department = 'Accounting', @JobTitle='Account'*/
     DECLARE @ResultDate DATE;
 
     SET @ResultDate = CAST(GETDATE () AS DATE);
@@ -131,10 +131,10 @@ BEGIN
             , MIN (UserSalary.Salary) AS MinimumSalaryInDepartment
             , SUM (UserSalary.Salary) AS TotalSalaryInDepartment
       INTO  #DepartmentAverages
-      FROM  TestAppSchema.Users
-          JOIN TestAppSchema.UserJobInfo UJI
+      FROM  TutorialAppSchema.Users
+          JOIN TutorialAppSchema.UserJobInfo UJI
               ON UJI.UserId = Users.UserId
-          JOIN TestAppSchema.UserSalary
+          JOIN TutorialAppSchema.UserSalary
               ON UserSalary.UserId = Users.UserId
      GROUP BY UJI.Department;
 
@@ -148,10 +148,10 @@ BEGIN
             , ISNULL (UserSalary.Salary, AverageSalaryInDepartment.AverageSalaryInDepartment) AS Salary
             , CASE WHEN UserSalary.Salary IS NULL THEN 1 ELSE 0 END AS SalaryAssumed
 			, @ResultDate AS DateOfQuery
-      FROM  TestAppSchema.Users
-          JOIN TestAppSchema.UserJobInfo AS UJI
+      FROM  TutorialAppSchema.Users
+          JOIN TutorialAppSchema.UserJobInfo AS UJI
               ON UJI.UserId = Users.UserId
-          LEFT JOIN TestAppSchema.UserSalary
+          LEFT JOIN TutorialAppSchema.UserSalary
               ON UserSalary.UserId = Users.UserId
                  AND Users.Active = 1
           LEFT JOIN #DepartmentAverages AS AverageSalaryInDepartment
