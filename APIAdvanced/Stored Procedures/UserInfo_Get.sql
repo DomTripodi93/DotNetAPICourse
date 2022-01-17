@@ -34,7 +34,7 @@ BEGIN
 END;
 GO
 
-ALTER PROCEDURE TutorialAppSchema.UserInfo_Get
+CREATE OR ALTER PROCEDURE TutorialAppSchema.UserInfo_Get
     @Department NVARCHAR(50) = NULL /* 'Accounting' */
 AS
 BEGIN
@@ -69,7 +69,7 @@ BEGIN
 END;
 GO
 
-ALTER PROCEDURE TutorialAppSchema.UserInfo_Get
+CREATE OR ALTER PROCEDURE TutorialAppSchema.UserInfo_Get
     @Department NVARCHAR(50) = NULL
     , @JobTitle NVARCHAR(50) = NULL
 AS
@@ -113,7 +113,7 @@ BEGIN
 END;
 GO
 
-ALTER PROCEDURE TutorialAppSchema.UserInfo_Get
+CREATE OR ALTER PROCEDURE TutorialAppSchema.UserInfo_Get
     @Department NVARCHAR(50) = NULL
     , @JobTitle NVARCHAR(50) = NULL
 AS
@@ -133,7 +133,7 @@ BEGIN
       INTO  #DepartmentAverages
       FROM  TutorialAppSchema.Users
           JOIN TutorialAppSchema.UserJobInfo UJI
-              ON UJI.UserId = Users.UserId
+              ON UJI.UserId = Users.UserIdA
           JOIN TutorialAppSchema.UserSalary
               ON UserSalary.UserId = Users.UserId
      GROUP BY UJI.Department;

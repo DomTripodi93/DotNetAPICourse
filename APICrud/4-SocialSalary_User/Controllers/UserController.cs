@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using SocialSalary.Data;
+using SocialSalary.Dtos;
 using SocialSalary.Models;
 
 namespace SocialSalary.Controllers;
@@ -37,12 +38,12 @@ public class UserController : ControllerBase
     }
 
     [HttpGet("SingleUser/{userId}")]
-    public IEnumerable<Users> GetUsers(int userId)
+    public IEnumerable<Users> GetUser(int userId)
     {
         return _dapper.LoadData<Users>(@"SELECT  Users.UserId
                     , Users.FirstName
                     , Users.LastName
-                , Users.Email
+                    , Users.Email
                     , Users.Gender
                     , Users.Active
             FROM  TutorialAppSchema.Users
@@ -50,7 +51,7 @@ public class UserController : ControllerBase
     }
 
     [HttpPost("Users")]
-    public IActionResult PostUser(Users userForInsert)
+    public IActionResult PostUser(UsersDto userForInsert)
     {
         string sql = "INSERT INTO TutorialAppSchema.Users ("
             + "FirstName"
