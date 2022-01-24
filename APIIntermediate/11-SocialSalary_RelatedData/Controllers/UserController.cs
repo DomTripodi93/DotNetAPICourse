@@ -1,7 +1,5 @@
 using Microsoft.AspNetCore.Authorization;
-using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using SocialSalary.Data;
 using SocialSalary.Dtos;
 using SocialSalary.Models;
@@ -57,7 +55,7 @@ public class UserController : ControllerBase
     }
 
     [HttpPost("Users")]
-    public IActionResult PostUser(Users userForInsert)
+    public IActionResult PostUser(UsersDto userForInsert)
     {
         string sql = "INSERT INTO TutorialAppSchema.Users ("
             + "FirstName"

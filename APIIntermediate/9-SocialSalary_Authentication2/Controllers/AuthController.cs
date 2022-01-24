@@ -137,28 +137,22 @@ namespace SocialSalary.Controllers
                         iterationCount: 100000,
                         numBytesRequested: 256 / 8);
 
-                    bool hashMatch = true;
                     for (int i = 0; i < passwordHash.Length; i++)
                     {
                         if (passwordHash[i] != loginConfirm.PasswordHash[i])
                         {
-                            hashMatch = false;
+                            return StatusCode(401, "Authentication Failed");
                         }
                     }
 
-                    if (hashMatch)
-                    {
-                        return Ok(new { token = CreateToken(userId) });
-                    }
-
-                    throw new Exception("Authentication Failed");
+                    return Ok(new { token = CreateToken(userId) });
 
                 }
 
                 throw new Exception("No salt for user password Login");
             }
 
-            throw new Exception("Please provide valid login data");
+            return StatusCode(401, "Please provide valid login data");
         }
 
 
@@ -184,8 +178,6 @@ namespace SocialSalary.Controllers
                 // new Claim(ClaimTypes.NameIdentifier, userId.ToString())
                 new Claim("userId", userId.ToString())
             };
-
-            Console.WriteLine(_config.GetSection("AppSettings:Token").Value);
 
             SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config.GetSection("AppSettings:Token").Value));
 

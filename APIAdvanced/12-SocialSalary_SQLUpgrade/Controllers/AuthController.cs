@@ -148,28 +148,22 @@ namespace SocialSalary.Controllers
                         iterationCount: 100000,
                         numBytesRequested: 256 / 8);
 
-                    bool hashMatch = true;
                     for (int i = 0; i < passwordHash.Length; i++)
                     {
                         if (passwordHash[i] != loginConfirm.PasswordHash[i])
                         {
-                            hashMatch = false;
+                            return StatusCode(401, "Authentication Failed");
                         }
                     }
 
-                    if (hashMatch)
-                    {
-                        return Ok(new { token = _tokenHelper.CreateToken(userId) });
-                    }
-
-                    throw new Exception("Authentication Failed");
+                    return Ok(new { token = _tokenHelper.CreateToken(userId) });
 
                 }
 
                 throw new Exception("No salt for user password Login");
             }
 
-            throw new Exception("Please provide valid login data");
+            return StatusCode(401, "Please provide valid login data");
         }
 
 

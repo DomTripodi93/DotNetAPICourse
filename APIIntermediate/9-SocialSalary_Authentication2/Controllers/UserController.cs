@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SocialSalary.Data;
+using SocialSalary.Dtos;
 using SocialSalary.Models;
 
 namespace SocialSalary.Controllers;
