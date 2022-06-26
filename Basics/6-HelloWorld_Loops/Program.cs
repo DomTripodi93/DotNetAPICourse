@@ -1,81 +1,111 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
+using System.Text.RegularExpressions;
 
 namespace HelloWorld
 {
-    public class Program
+    internal class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            int[] intsToCompress = {10, 15, 20, 25, 30, 35, 40, 45};
+            int[] intsToCompress = new int[] {10, 15, 20, 25, 30, 12, 34};
+
+            // int totalValue = 0;
+
+            // foreach(int intForCompression in intsToCompress)
+            // {
+            //     if (intForCompression > 20)
+            //     {
+            //         totalValue += intForCompression;
+            //     }
+            // }
+
+            // Console.WriteLine(totalValue);
 
             DateTime startTime = DateTime.Now;
+
             int totalValue = intsToCompress[0] + intsToCompress[1]
                 + intsToCompress[2] + intsToCompress[3]
                 + intsToCompress[4] + intsToCompress[5]
-                + intsToCompress[6] + intsToCompress[7];
+                + intsToCompress[6];
+
+            Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
 
             Console.WriteLine(totalValue);
-            Console.WriteLine((DateTime.Now - startTime).TotalMilliseconds * .001);
-            
-            
-            startTime = DateTime.Now;
-            int totalValueTwo = 0;
 
-            // for (int i = 0; i < 7; i++)
+            //146
+
+            totalValue = 0;
+
+            startTime = DateTime.Now;
+
             for (int i = 0; i < intsToCompress.Length; i++)
             {
-                totalValueTwo += intsToCompress[i];
+                totalValue += intsToCompress[i];
             }
 
-            Console.WriteLine(totalValueTwo);
-            Console.WriteLine((DateTime.Now - startTime).TotalMilliseconds * .001);
+            Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
 
+            Console.WriteLine(totalValue);
+
+
+            totalValue = 0;
 
             startTime = DateTime.Now;
-            int totalValueThree = 0;
 
-            foreach(int intToAdd in intsToCompress)
+            foreach(int intForCompression in intsToCompress)
             {
-                totalValueThree += intToAdd;
+                totalValue += intForCompression;
             }
 
-            Console.WriteLine(totalValueThree);
-            Console.WriteLine((DateTime.Now - startTime).TotalMilliseconds * .001);
+            Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
 
+            Console.WriteLine(totalValue);
+
+
+            totalValue = 0;
 
             startTime = DateTime.Now;
-            int totalValueFour = intsToCompress.Sum();
 
-            Console.WriteLine(totalValueFour);
-            Console.WriteLine((DateTime.Now - startTime).TotalMilliseconds * .001);
+            int index = 0;
+
+            while(index < intsToCompress.Length)
+            {
+                totalValue += intsToCompress[index];
+                index++;
+            }
 
 
-            string[] stringsToCheck = {};
-            // string[] stringsToCheck = {"iterated value"};
+            Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
 
-            int iteration = 0;
+            Console.WriteLine(totalValue);
+            totalValue = 0;
+
+            startTime = DateTime.Now;
+
+            index = 0;
 
             do
             {
-                Console.WriteLine("Do While Ran");
-                if (stringsToCheck.Length - 1 > iteration)
-                {
-                    Console.WriteLine(stringsToCheck[iteration]);
-                }
-                iteration++;
-            } while (iteration < stringsToCheck.Length);
+                totalValue += intsToCompress[index];
+                index++;
+            } 
+            while(index < intsToCompress.Length);
 
-            int secondIteration = 0;
+            Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
 
-            while (secondIteration < stringsToCheck.Length)
-            {
-                Console.WriteLine("While Ran");
-                Console.WriteLine(stringsToCheck[iteration]);
-                secondIteration++;
-            };
+            Console.WriteLine(totalValue);
+
+
+            startTime = DateTime.Now;
+
+            totalValue = 0;
+
+            totalValue = intsToCompress.Sum();
+
+            Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
+
+            Console.WriteLine(totalValue);
+
         }
     }
 }

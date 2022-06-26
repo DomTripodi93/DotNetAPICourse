@@ -1,110 +1,153 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
+using System.Text.RegularExpressions;
 
 namespace HelloWorld
 {
-    public class Program
+    internal class Program
     {
-        // static int accessibleInt = 25;
-        public static void Main(string[] args)
+        static int AccessibleInt = 7;
+        static void Main(string[] args)
         {
-            // Console.WriteLine(accessibleInt);
-            // int accessibleInt = 15;
-            // Console.WriteLine(accessibleInt);
+            int accessibleInt = 5;
+            Console.WriteLine(accessibleInt);
+            Console.WriteLine(AccessibleInt);
 
+            int[] intsToCompress = new int[] {10, 15, 20, 25, 30, 12, 34};
 
-            int[] intsToCompress = {10, 15, 20, 25, 30, 35, 40, 45};
+            // int totalValue = 0;
+
+            // foreach(int intForCompression in intsToCompress)
+            // {
+            //     if (intForCompression > 20)
+            //     {
+            //         totalValue += intForCompression;
+            //     }
+            // }
+
+            // Console.WriteLine(totalValue);
 
             DateTime startTime = DateTime.Now;
-            int totalValue = intsToCompress[0] + intsToCompress[1] 
-                + intsToCompress[2] + intsToCompress[3] 
-                + intsToCompress[4] + intsToCompress[5] 
-                + intsToCompress[6] + intsToCompress[7];
+
+            int totalValue = intsToCompress[0] + intsToCompress[1]
+                + intsToCompress[2] + intsToCompress[3]
+                + intsToCompress[4] + intsToCompress[5]
+                + intsToCompress[6];
+
+            Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
 
             Console.WriteLine(totalValue);
-            Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
-            
-            
+
+            //146
+
+            totalValue = 0;
+
             startTime = DateTime.Now;
-            int totalValueTwo = 0;
-            
-            // for (int i = 0; i < 7; i++)
+
             for (int i = 0; i < intsToCompress.Length; i++)
             {
-                totalValueTwo += intsToCompress[i];
+                totalValue += intsToCompress[i];
             }
 
-            Console.WriteLine(totalValueTwo);
             Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
 
+            Console.WriteLine(totalValue);
+
+
+            totalValue = 0;
 
             startTime = DateTime.Now;
-            int totalValueThree = 0;
 
-            foreach(int intToAdd in intsToCompress)
+            foreach(int intForCompression in intsToCompress)
             {
-                totalValueThree += intToAdd;
+                totalValue += intForCompression;
             }
 
-            Console.WriteLine(totalValueThree);
             Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
 
+            Console.WriteLine(totalValue);
+
+
+            totalValue = 0;
 
             startTime = DateTime.Now;
-            int totalValueFour = intsToCompress.Sum();
 
-            Console.WriteLine(totalValueFour);
+            int index = 0;
+
+            while(index < intsToCompress.Length)
+            {
+                totalValue += intsToCompress[index];
+                index++;
+            }
+
+            // int i = 0;
+
+            // while(i < intsToCompress.Length)
+            // {
+            //     totalValue += intsToCompress[i];
+            //     i++;
+            // }
+
+
             Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
 
+            Console.WriteLine(totalValue);
+            totalValue = 0;
 
-            string[] stringsToCheck = {};
-            // string[] stringsToCheck = {"iterated value"};
+            startTime = DateTime.Now;
 
-            int iteration = 0;
+            index = 0;
 
             do
             {
-                Console.WriteLine("Do While Ran");
-                // Console.WriteLine(stringsToCheck[iteration]);
-                iteration++;
-            } while (iteration < stringsToCheck.Length);
+                totalValue += intsToCompress[index];
+                index++;
+            } 
+            while(index < intsToCompress.Length);
 
-            int secondIteration = 0;
+            Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
 
-            while (secondIteration < stringsToCheck.Length)
-            {
-                // int iteration = 7;
-                // int intInWhile = 7;
-                // Console.WriteLine(intInWhile);
-                Console.WriteLine("While Ran");
-                Console.WriteLine(stringsToCheck[iteration]);
-                secondIteration++;
-            };
-            // Console.WriteLine(intInWhile);
+            Console.WriteLine(totalValue);
 
-            
-            int[] secondSetOfIntsToCompress = {10, 15, 20, 25, 30};
 
             startTime = DateTime.Now;
-            int totalValueFive = getSum();
-            // int totalValueFive = getSum(intsToCompress);
-            // int totalValueFive = getSum(secondSetOfIntsToCompress);
 
-            Console.WriteLine(totalValueFive);
+            totalValue = 0;
+
+            totalValue = intsToCompress.Sum();
+
             Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
+
+            Console.WriteLine(totalValue);
+
+
+            startTime = DateTime.Now;
+
+            totalValue = 0;
+
+            totalValue = GetSum(intsToCompress);
+
+            Console.WriteLine((DateTime.Now - startTime).TotalSeconds);
+
+            Console.WriteLine(totalValue);
+
+            int[] intsToCompress2 = new int[] {23, 23, 53, 56, 83, 92};
+
+            totalValue = GetSum(intsToCompress2);
+
+            Console.WriteLine(totalValue);
+
         }
 
-        public static int getSum()//int[] intsToCompress)
+        static private int GetSum(int[] compressableIntArray)
         {
-            int[] intsToCompress = {10, 15, 20, 25, 30, 35, 40, 45};
-            int compressedValue = 0;
-            for (int i = 0; i < intsToCompress.Length; i++)
+
+            // int[] intsToCompress = new int[] {10, 15, 20, 25, 30, 12, 34};
+            int totalValue = 0;
+            foreach(int intForCompression in compressableIntArray)
             {
-                compressedValue += intsToCompress[i];
+                totalValue += intForCompression;
             }
-            return compressedValue;
+            return totalValue;
         }
     }
 }

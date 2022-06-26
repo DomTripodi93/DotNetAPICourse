@@ -1,52 +1,50 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
+using System.Text.RegularExpressions;
 
 namespace HelloWorld
 {
-    public class Program
+    public class Computer
     {
-        public static void Main(string[] args)
-        {
-            // Computer myComputer = new Computer();
-            Computer myComputer = new Computer(
-                "Z690",
-                4,
-                true,
-                false,
-                DateTime.Today,
-                859.95m,
-                "RTX 2060"
-            );
-
-            Console.WriteLine(myComputer.Price);
-        }
-    }
-
-    public partial class Computer
-    {
-        public string? Motherboard { get; set; }
+        // private string _motherboard;
+        public string Motherboard { get; set; }
         public int CPUCores { get; set; }
         public bool HasWifi { get; set; }
         public bool HasLTE { get; set; }
         public DateTime ReleaseDate { get; set; }
         public decimal Price { get; set; }
-        public string? VideoCard { get; set; }
-        public Computer(string motherboard, int cpuCores, bool hasWifi, bool hasLTE, DateTime releaseDate, decimal price, string videoCard)
+        public string VideoCard { get; set; }
+
+        public Computer()
         {
-            Motherboard = motherboard;
-            CPUCores = cpuCores;
-            HasWifi = hasWifi;
-            HasLTE = hasLTE;
-            ReleaseDate = releaseDate;
-            Price = price;
-            VideoCard = videoCard;
+            if (VideoCard == null)
+            {
+                VideoCard = "";
+            }
+            if (Motherboard == null)
+            {
+                Motherboard = "";
+            }
         }
     }
-
-    public partial class Computer
+    internal class Program
     {
-        // public string? VideoCard { get; set; }
+        static void Main(string[] args)
+        {
+            Computer myComputer = new Computer() 
+            {
+                Motherboard = "Z690",
+                HasWifi = true,
+                HasLTE = false,
+                ReleaseDate = DateTime.Now,
+                Price = 943.87m,
+                VideoCard = "RTX 2060"
+            };
+            myComputer.HasWifi = false;
+            Console.WriteLine(myComputer.Motherboard);
+            Console.WriteLine(myComputer.HasWifi);
+            Console.WriteLine(myComputer.ReleaseDate);
+            Console.WriteLine(myComputer.VideoCard);
+        }
+
     }
 }

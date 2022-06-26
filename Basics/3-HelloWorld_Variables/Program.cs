@@ -1,104 +1,91 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
 
 namespace HelloWorld
 {
-    public class Program
+    internal class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            string myString = "new String";
-            string stringWithSymbols = "!@#$%^&*()_'{}()`/\" giveitsomespace \\";
-            // Console.WriteLine(stringWithSymbols.Length);
-
-            char singleCharacter = '\"';
-
-            bool myBool = false;
+            Console.WriteLine("Hello World!");
 
             sbyte mySbyte = 127;
+            sbyte mySecondSbyte = -128;
             byte myByte = 255;
+            byte mySecondByte = 0;
+
             short myShort = -32768;
             ushort myUshort = 65535;
-            int myInt = -2147483648;
+
+            int myInt = 2147483647;
+            int mySecondInt = -2147483648;
+
             long myLong = -9223372036854775808;
 
 
             float myFloat = 0.751f;
             float mySecondFloat = 0.75f;
 
-            double myDouble = 0.751d;
-            double mySecondDouble = 0.75;
+            double myDouble = 0.751;
+            double mySecondDouble = 0.75d;
 
             decimal myDecimal = 0.751m;
             decimal mySecondDecimal = 0.75m;
 
-            Console.WriteLine(myFloat - mySecondFloat);
-            Console.WriteLine(myDouble - mySecondDouble);
-            Console.WriteLine(myDecimal - mySecondDecimal);
+            // Console.WriteLine(myFloat - mySecondFloat);
+            // Console.WriteLine(myDouble - mySecondDouble);
+            // Console.WriteLine(myDecimal - mySecondDecimal);
+
+            string myString = "Hello World";
+            // Console.WriteLine(myString);
+            string myStringWithSymbols = "!@#$@^$%%^&(&%^*__)+%^@##$!@%123589071340698ughedfaoig1378904cbt90fty89701c2byt34";
+            // Console.WriteLine(myStringWithSymbols);
+
+            bool myBool = true;
 
             string[] myGroceryArray = new string[2];
-            myGroceryArray[0] = "Guacamole";
-            myGroceryArray[1] = "Ice Cream";
 
-            Console.WriteLine(myGroceryArray[0]);
+            myGroceryArray[0] = "Guacamole";
+            // myGroceryArray[2] = "Ice Cream";
+
+            // Console.WriteLine(myGroceryArray[0]);
+            // Console.WriteLine(myGroceryArray[1]);
+            // Console.WriteLine(myGroceryArray[2]);
 
             string[] mySecondGroceryArray = { "Apples", "Eggs" };
 
-            mySecondGroceryArray[0] = "Oranges";
+            // mySecondGroceryArray[2] = ""; //Error
 
-            Console.WriteLine(mySecondGroceryArray[0]);
+            // Console.WriteLine(mySecondGroceryArray[0]);
+            // Console.WriteLine(mySecondGroceryArray[1]);
+            // Console.WriteLine(mySecondGroceryArray[2]); //Error
 
             List<string> myGroceryList = new List<string>() { "Milk", "Cheese" };
 
-            myGroceryList.Add("Ham");
+            // Console.WriteLine(myGroceryList[0]);
+            // Console.WriteLine(myGroceryList[1]);
 
-            // Console.WriteLine(myStringList[2]);
+            // Console.WriteLine(myGroceryList[2]); //Error
 
-            IEnumerable<string> myGroceryIEnumerable = myGroceryList;
-            IEnumerable<string> mySecondGroceryIEnumerable = myGroceryList;
+            myGroceryList.Add("Oranges");
 
-            Console.WriteLine(myGroceryIEnumerable.First());
+            // Console.WriteLine(myGroceryList[2]);
 
-            string[,] myTwoDArray = {
-                {"Guacamole", "Ice Cream", "Apples"},
-                {"Milk", "Cheese", "Eggs"}
+            IEnumerable<string> myGroceryIEnumerable =  myGroceryList;
+
+            // Console.WriteLine(myGroceryIEnumerable.First());
+
+            string[,] myTwoDimensionalArray = new string[,] {
+                { "Apples", "Eggs" },
+                { "Milk", "Cheese" }
             };
 
-            Console.WriteLine(myTwoDArray[0, 1]);
+            // Console.WriteLine(myTwoDimensionalArray[1,1]);
 
-            string[,,] myThreeDArray = {
-                {
-                    {"Guacamole", "Ice Cream", "Apples"},
-                    {"Milk", "Cheese", "Eggs"}
-                },
-                {
-                    {"Guacamole", "Ice Cream", "Apples"},
-                    {"Milk", "Cheese", "Eggs"}
-                }
+            Dictionary<string, string[]> myGroceryDictionary = new Dictionary<string, string[]>(){
+                {"Dairy", new string[]{"Cheese", "Milk", "Eggs"}}
             };
 
-            Console.WriteLine(myThreeDArray[0, 1, 1]);
-
-
-            Dictionary<string, string> car = new Dictionary<string, string>(){
-                {"transmission", "automatic"}
-            };
-
-            Console.WriteLine(car["transmission"]);
-
-            car["make"] = "Honda";
-
-            Console.WriteLine(car["make"]);
-
-
-            Dictionary<string, string[]> myGroceriesByDepartment = new Dictionary<string, string[]>{
-                {"Dairy", new string[]{"Milk", "Cheese", "Eggs"}},
-                {"Meat", new string[]{"Chicken", "Beef", "Pork"}},
-                {"Produce", new string[]{"Apples", "Oranges", "Spinach", "Broccoli"}}
-            };
-
+            Console.WriteLine(myGroceryDictionary["Dairy"][2]);
         }
     }
 }

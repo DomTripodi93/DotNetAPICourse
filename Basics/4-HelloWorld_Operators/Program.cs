@@ -1,74 +1,83 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
 
 namespace HelloWorld
 {
-    public class Program
+    internal class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            sbyte mySbyte = 127;
-            byte myByte = 255;
-            short myShort = -32768;
-            ushort myUshort = 65535;
-            int myInt = -2147483648;
-            long myLong = -9223372036854775808;
+            int myInt = 5;
+            int mySecondInt = 10;
+
+            Console.WriteLine(myInt.Equals(mySecondInt));
+            Console.WriteLine(myInt.Equals(mySecondInt / 2));
+
+            Console.WriteLine(myInt != mySecondInt);
+            Console.WriteLine(myInt == mySecondInt / 2);
+            Console.WriteLine(myInt != mySecondInt / 3);
+
+            Console.WriteLine(myInt >= mySecondInt);
+            Console.WriteLine(myInt >= mySecondInt / 2);
+            Console.WriteLine(myInt > mySecondInt);
+            Console.WriteLine(myInt > mySecondInt - 6);
+            Console.WriteLine(myInt <= mySecondInt);
+            Console.WriteLine(myInt < mySecondInt);
+
+            Console.WriteLine(5 > 10 && 5 < 10);
 
 
-            float myFloat = 0.751f;
-            float mySecondFloat = 0.75f;
+            //Mathematical Operators
 
-            double myDouble = 0.751d;
-            double mySecondDouble = 0.75;
 
-            decimal myDecimal = 0.751m;
-            decimal mySecondDecimal = 0.75m;
+            Console.WriteLine(myInt);
 
-            Console.WriteLine(mySbyte + myDecimal);
+            myInt++;
 
-            int mySecondInt = 5;
-            int myThirdInt = 10;
+            Console.WriteLine(myInt);
 
-            Console.WriteLine(mySecondInt * myThirdInt);
-            Console.WriteLine(myThirdInt / mySecondInt);
+            myInt += 7;
+
+            Console.WriteLine(myInt);
+
+            myInt -= 8;
+
+            Console.WriteLine(myInt);
+
+            Console.WriteLine(myInt * mySecondInt);
+
+            Console.WriteLine(mySecondInt / myInt);
+
+            Console.WriteLine(mySecondInt + myInt);
+
+            Console.WriteLine(myInt - mySecondInt);
 
             Console.WriteLine(5 + 5 * 10);
+
             Console.WriteLine((5 + 5) * 10);
 
-            Console.WriteLine(mySecondInt);
+            Console.WriteLine(Math.Pow(5, 4));
 
-            mySecondInt++;
+            Console.WriteLine(Math.Sqrt(25));
 
-            Console.WriteLine(mySecondInt);
+            string myString = "test";
 
-            mySecondInt += 3;
+            Console.WriteLine(myString);
 
-            Console.WriteLine(mySecondInt);
+            myString += ". second part.";
 
-            Console.WriteLine(Math.Pow(3, 2));
-            Console.WriteLine(Math.Sqrt(9));
+            Console.WriteLine(myString);
 
-            Console.WriteLine(mySecondInt.Equals(myThirdInt));
-            Console.WriteLine(mySecondInt == myThirdInt);
+            myString = myString + " \"third\\ part.";
 
-            mySecondInt++;
+            Console.WriteLine(myString);
 
-            Console.WriteLine(mySecondInt.Equals(myThirdInt));
-            Console.WriteLine(mySecondInt == myThirdInt);
-            Console.WriteLine(mySecondInt != myThirdInt);
-            Console.WriteLine(mySecondInt > myThirdInt);
-            Console.WriteLine(mySecondInt >= myThirdInt);
-            Console.WriteLine(mySecondInt < myThirdInt);
-            Console.WriteLine(mySecondInt <= myThirdInt);
+            string[] myStringArr = myString.Split(". ");
+            Console.WriteLine(myStringArr[0]);
+            Console.WriteLine(myStringArr[1]);
 
-            Console.WriteLine(mySecondInt == myThirdInt & mySecondInt <= myThirdInt);
-            Console.WriteLine(mySecondInt < myThirdInt && mySecondInt <= myThirdInt); //short-cycling
 
-            Console.WriteLine(mySecondInt != myThirdInt | mySecondInt < myThirdInt);
-            Console.WriteLine(mySecondInt == myThirdInt || mySecondInt < myThirdInt); //short-cycling
-            
+
+
         }
     }
 }
