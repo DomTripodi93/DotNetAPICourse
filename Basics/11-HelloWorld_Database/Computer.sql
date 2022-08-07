@@ -16,4 +16,4 @@ CREATE TABLE TutorialAppSchema.Computer(
 	ReleaseDate DATE,
 	Price DECIMAL(18,4),
 	VideoCard NVARCHAR(50)
-)
+);

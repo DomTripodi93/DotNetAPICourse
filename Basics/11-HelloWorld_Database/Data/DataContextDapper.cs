@@ -7,28 +7,32 @@ namespace HelloWorld.Data
 {
     public class DataContextDapper
     {
+        private string _connectionString = "Server=localhost;Database=DotNetCourseDatabase;Trusted_Connection=true;TrustServerCertificate=true;";
+            
         public IEnumerable<T> LoadData<T>(string sql)
         {
-            // using (IDbConnection dbConnection = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
-            using (IDbConnection dbConnection = new SqlConnection("Server=localhost;Database=DotNetCourseDatabase;Trusted_Connection=true;TrustServerCertificate=true;"))
-            {
-                dbConnection.Open();
-                using (IDbTransaction tran = dbConnection.BeginTransaction(IsolationLevel.ReadCommitted))
-                {
-                    var holdVal = dbConnection.Query<T>(sql, null, transaction: tran, commandTimeout: 999999999);
-                    dbConnection.Close();
-                    return holdVal;
-                }
-            }
+            IDbConnection dbConnection = new SqlConnection(_connectionString);
+            return dbConnection.Query<T>(sql);
         }
 
-        public int ExecuteSQL(string sql)
+        public T LoadDataSingle<T>(string sql)
         {
-            using (IDbConnection dbConnection = new SqlConnection("Server=localhost;Database=DotNetCourseDatabase;Trusted_Connection=true;TrustServerCertificate=true;"))
-            {
-                return dbConnection.Execute(sql);
-            }
+            IDbConnection dbConnection = new SqlConnection(_connectionString);
+            return dbConnection.QuerySingle<T>(sql);
         }
 
+        public bool ExecuteSql(string sql)
+        {
+            IDbConnection dbConnection = new SqlConnection(_connectionString);
+            return (dbConnection.Execute(sql) > 0);
+        }
+
+        public int ExecuteSqlWithRowCount(string sql)
+        {
+            IDbConnection dbConnection = new SqlConnection(_connectionString);
+            return dbConnection.Execute(sql);
+        }
+
+        
     }
 }
