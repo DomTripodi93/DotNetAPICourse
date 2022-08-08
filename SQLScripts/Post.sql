@@ -9,4 +9,4 @@ CREATE TABLE TutorialAppSchema.Post(
 	PostContent NVARCHAR(MAX)
 )
 
-CREATE CLUSTERED INDEX cix_Post_UserId ON TutorialAppSchema.Post(UserId)
+CREATE CLUSTERED INDEX cix_Post_UserId_PostId ON TutorialAppSchema.Post(UserId, PostId)

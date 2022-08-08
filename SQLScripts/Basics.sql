@@ -9,70 +9,78 @@ GO
 
 CREATE TABLE TutorialAppSchema.Computer
 (
+    -- TableId INT  IDENTITY(Starting, Increment By) 
     ComputerId INT IDENTITY(1, 1) PRIMARY KEY
-    , Motherboard NVARCHAR(50)
-    , CPUCores INT
+    -- , Motherboard CHAR(10) 'x' 'x         '
+    -- , Motherboard VARCHAR(10) 'x' 'x'
+    -- , Motherboard NVARCHAR(255) --'x'
+    , Motherboard NVARCHAR(50)  --'x'
+    , CPUCores INT              --NOT NULL
     , HasWifi BIT
     , HasLTE BIT
-    , ReleaseDate DATE
     , Price DECIMAL(18, 4)
     , VideoCard NVARCHAR(50)
 );
+GO
 
-
-INSERT INTO TutorialAppSchema.Computer (Motherboard
-                                    , CPUCores
-                                    , HasWifi
-                                    , HasLTE
-                                    , ReleaseDate
-                                    , Price
-                                    , VideoCard)
-							VALUES ('Z690'
-									, 4
-									, 'True'
-									, 'False'
-									, '2021-12-27'
-									, 859.95
-									, 'rtx 2060');
-
--- SELECT * FROM TutorialAppSchema.Computer
-
-SELECT  Motherboard
-        , CPUCores
-        , HasWifi
-        , HasLTE
-        , ReleaseDate
-        , Price
-        , VideoCard
+SELECT  [ComputerId]
+        , [Motherboard]
+        , [CPUCores]
+        , [HasWifi]
+        , [HasLTE]
+        , [ReleaseDate]
+        , [Price]
+        , [VideoCard]
   FROM  TutorialAppSchema.Computer;
 
-DELETE FROM TutorialAppSchema.Computer WHERE ComputerId = 1
+INSERT INTO TutorialAppSchema.Computer ([Motherboard]
+                                        , [CPUCores]
+                                        , [HasWifi]
+                                        , [HasLTE]
+                                        , [ReleaseDate]
+                                        , [Price]
+                                        , [VideoCard])
+VALUES ('Sample-Motherboard'
+        , 4
+        , 1  -- true
+        , 0                         -- false
+        , GETDATE ()
+        , 1000.28
+        , 'Sample-VideoCard');
 
-TRUNCATE TABLE TutorialAppSchema.Computer
+-- DELETE FROM TutorialAppSchema.Computer WHERE ReleaseDate > '2018-10-31'
+DELETE  FROM TutorialAppSchema.Computer
+ WHERE  ComputerId = 1003;
 
-USE DotNetCourseDatabase;
+UPDATE  TutorialAppSchema.Computer
+   SET  Motherboard = 'Obsolete'
+ WHERE  HasWifi = 0;
 
-INSERT INTO TutorialAppSchema.Computer (Motherboard
-                                    , CPUCores
-                                    , HasWifi
-                                    , HasLTE
-                                    , ReleaseDate
-                                    , Price
-                                    , VideoCard)
+SELECT  [ComputerId]
+        , [Motherboard]
+        , ISNULL ([CPUCores], 4) AS CPUCores
+        , [HasWifi]
+        , [HasLTE]
+        , [ReleaseDate]
+        , [Price]
+        , [VideoCard]
+  FROM  TutorialAppSchema.Computer;
 
-SELECT  Computer.Motherboard
-      , Computer.CPUCores
-      , Computer.HasWifi
-      , Computer.HasLTE
-      , Computer.ReleaseDate
-      , Computer.Price
-      , Computer.VideoCard
+UPDATE  TutorialAppSchema.Computer
+   SET  CPUCores = 4
+ WHERE  CPUCores IS NULL;
+
+SELECT  [ComputerId]
+        , [Motherboard]
+        , ISNULL ([CPUCores], 4) AS CPUCores
+        , [HasWifi]
+        , [HasLTE]
+        , [ReleaseDate]
+        , [Price]
+        , [VideoCard]
   FROM  TutorialAppSchema.Computer
  ORDER BY
-    Computer.HasWifi
-    , Computer.HasLTE DESC
-    , Computer.ReleaseDate DESC;
+    HasLTE DESC
+    , ReleaseDate DESC;
 
-
-
-
+TRUNCATE TABLE TutorialAppSchema.Computer;
