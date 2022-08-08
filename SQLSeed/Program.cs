@@ -22,13 +22,12 @@ namespace SQLSeed
 
             DataContextDapper dataContextDapper = new DataContextDapper(config);
 
+            string tableCreateSql = System.IO.File.ReadAllText("Users.sql");
+            dataContextDapper.ExecuteSQL(tableCreateSql);
+
             string usersJson = System.IO.File.ReadAllText("Users.json");
 
             IEnumerable<Users>? users = JsonConvert.DeserializeObject<IEnumerable<Users>>(usersJson);
-
-
-            dataContextDapper.ExecuteSQL("TRUNCATE TABLE TutorialAppSchema.Users");
-            dataContextDapper.ExecuteSQL("SET IDENTITY_INSERT TutorialAppSchema.Users ON");
 
             if (users != null)
             {

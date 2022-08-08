@@ -1,5 +1,4 @@
-USE DotNetCourseDatabase;
-GO
+DROP TABLE IF EXISTS TutorialAppSchema.Users;
 
 CREATE TABLE TutorialAppSchema.Users
 (
@@ -11,11 +10,15 @@ CREATE TABLE TutorialAppSchema.Users
     , Active BIT
 );
 
+DROP TABLE IF EXISTS TutorialAppSchema.UserSalary;
+
 CREATE TABLE TutorialAppSchema.UserSalary
 (
     UserId INT
     , Salary DECIMAL(18, 4)
 );
+
+DROP TABLE IF EXISTS TutorialAppSchema.UserJobInfo;
 
 CREATE TABLE TutorialAppSchema.UserJobInfo
 (
@@ -24,20 +27,22 @@ CREATE TABLE TutorialAppSchema.UserJobInfo
     , Department NVARCHAR(50),
 );
 
+-- USE DotNetCourseDatabase;
+-- GO
 
-SELECT  [UserId]
-        , [FirstName]
-        , [LastName]
-        , [Email]
-        , [Gender]
-        , [Active]
-  FROM  TutorialAppSchema.Users;
+-- SELECT  [UserId]
+--         , [FirstName]
+--         , [LastName]
+--         , [Email]
+--         , [Gender]
+--         , [Active]
+--   FROM  TutorialAppSchema.Users;
 
-SELECT  [UserId]
-        , [Salary]
-  FROM  TutorialAppSchema.UserSalary;
+-- SELECT  [UserId]
+--         , [Salary]
+--   FROM  TutorialAppSchema.UserSalary;
 
-SELECT  [UserId]
-        , [JobTitle]
-        , [Department]
-  FROM  TutorialAppSchema.UserJobInfo;
+-- SELECT  [UserId]
+--         , [JobTitle]
+--         , [Department]
+--   FROM  TutorialAppSchema.UserJobInfo;
