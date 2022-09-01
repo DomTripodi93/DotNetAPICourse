@@ -19,6 +19,8 @@ public class UserEFController : ControllerBase
 
         _mapper = new Mapper(new MapperConfiguration(cfg =>{
             cfg.CreateMap<UserToAddDto, User>();
+            cfg.CreateMap<UserSalary, UserSalary>();
+            cfg.CreateMap<UserJobInfo, UserJobInfo>();
         }));
 
     }
