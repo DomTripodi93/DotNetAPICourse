@@ -1,41 +1,89 @@
-using AutoMapper;
 using DotnetAPI.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace DotnetAPI.Data
 {
     public class UserRepository : IUserRepository
     {
-        private readonly DataContextEF _entityFramework;
-        
-        public UserRepository(DataContextEF context)
+        DataContextEF _entityFramework;    
+
+        public UserRepository(IConfiguration config)
         {
-            _entityFramework = context;
-        }
-        public void Add<T>(T entity) where T : class
-        {
-            _entityFramework.Add(entity);
+            _entityFramework = new DataContextEF(config);
         }
 
-        public void Delete<T>(T entity) where T : class
+        public bool SaveChanges()
         {
-            _entityFramework.Remove(entity);
+            return _entityFramework.SaveChanges() > 0;
         }
 
-        public async Task<bool> SaveAll()
+        // public bool AddEntity<T>(T entityToAdd)
+        public void AddEntity<T>(T entityToAdd)
         {
-            return await _entityFramework.SaveChangesAsync() > 0;
+            if (entityToAdd != null)
+            {
+                _entityFramework.Add(entityToAdd);
+                // return true;
+            }
+            // return false;
         }
 
-        public async Task<IEnumerable<Users>> GetUsers()
+        // public bool AddEntity<T>(T entityToAdd)
+        public void RemoveEntity<T>(T entityToAdd)
         {
-            return await _entityFramework.Users.ToListAsync();
-        }
-        public async Task<Users> GetUser(int id)
-        {
-            var user = await _entityFramework.Users.FirstOrDefaultAsync(u => u.UserId == id);
-            return user;
+            if (entityToAdd != null)
+            {
+                _entityFramework.Remove(entityToAdd);
+                // return true;
+            }
+            // return false;
         }
 
+        public IEnumerable<User> GetUsers()
+        {
+            IEnumerable<User> users = _entityFramework.Users.ToList<User>();
+            return users;
+        }
+
+        public User GetSingleUser(int userId)
+        {
+            User? user = _entityFramework.Users
+                .Where(u => u.UserId == userId)
+                .FirstOrDefault<User>();
+
+            if (user != null)
+            {
+                return user;
+            }
+            
+            throw new Exception("Failed to Get User");
+        }
+
+        public UserSalary GetSingleUserSalary(int userId)
+        {
+            UserSalary? userSalary = _entityFramework.UserSalary
+                .Where(u => u.UserId == userId)
+                .FirstOrDefault<UserSalary>();
+
+            if (userSalary != null)
+            {
+                return userSalary;
+            }
+            
+            throw new Exception("Failed to Get User");
+        }
+
+        public UserJobInfo GetSingleUserJobInfo(int userId)
+        {
+            UserJobInfo? userJobInfo = _entityFramework.UserJobInfo
+                .Where(u => u.UserId == userId)
+                .FirstOrDefault<UserJobInfo>();
+
+            if (userJobInfo != null)
+            {
+                return userJobInfo;
+            }
+            
+            throw new Exception("Failed to Get User");
+        }
     }
 }

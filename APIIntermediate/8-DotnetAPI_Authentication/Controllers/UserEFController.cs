@@ -1,117 +1,113 @@
 using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using DotnetAPI.Data;
 using DotnetAPI.Dtos;
 using DotnetAPI.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DotnetAPI.Controllers;
 
 [ApiController]
 [Route("[controller]")]
 public class UserEFController : ControllerBase
-{
-    private readonly IConfiguration _config;
-    private readonly DataContextEF _entityFramework;
-    private readonly IMapper _mapper;
-    private readonly IUserRepository _userRepo;
+{   
+    IUserRepository _userRepository;
+    IMapper _mapper;
 
-    public UserEFController(IConfiguration config, DataContextEF entityFramework, IUserRepository userRepo)
+    public UserEFController(IConfiguration config, IUserRepository userRepository)
     {
-        _config = config;
-        _entityFramework = entityFramework;
-        _userRepo = userRepo;
-        _mapper = new Mapper(new MapperConfiguration(cfg => { 
-            cfg.CreateMap<UsersForCreateDto, Users>().ReverseMap();
-            cfg.CreateMap<Users, Users>();
+        _userRepository = userRepository;
+
+        _mapper = new Mapper(new MapperConfiguration(cfg =>{
+            cfg.CreateMap<UserToAddDto, User>();
             cfg.CreateMap<UserSalary, UserSalary>();
             cfg.CreateMap<UserJobInfo, UserJobInfo>();
         }));
+
     }
 
-    [HttpGet("UsersEF")]
-    public async Task<IEnumerable<Users>> GetUsersEf()
+    [HttpGet("GetUsers")]
+    // public IEnumerable<User> GetUsers()
+    public IEnumerable<User> GetUsers()
     {
-        return await _userRepo.GetUsers();
-        // return await _entityFramework.Users.ToListAsync();
+        IEnumerable<User> users = _userRepository.GetUsers();
+        return users;
+    }
+
+    [HttpGet("GetSingleUser/{userId}")]
+    // public IEnumerable<User> GetUsers()
+    public User GetSingleUser(int userId)
+    {
+        return _userRepository.GetSingleUser(userId);
     }
     
-    [HttpGet("SingleUserEF/{userId}")]
-    public async Task<Users> GetUsersEF(int userId)
+    [HttpPut("EditUser")]
+    public IActionResult EditUser(User user)
     {
-        return await _userRepo.GetUser(userId);
-        //  _entityFramework.Users
-        //     .Where(u => u.UserId == userId)
-        //     .ToListAsync();
+        User? userDb = _userRepository.GetSingleUser(user.UserId);
+            
+        if (userDb != null)
+        {
+            userDb.Active = user.Active;
+            userDb.FirstName = user.FirstName;
+            userDb.LastName = user.LastName;
+            userDb.Email = user.Email;
+            userDb.Gender = user.Gender;
+            if (_userRepository.SaveChanges())
+            {
+                return Ok();
+            } 
+
+            throw new Exception("Failed to Update User");
+        }
+        
+        throw new Exception("Failed to Get User");
     }
 
-    [HttpPost("UsersEF")]
-    public async Task<IActionResult> PostUsersEf(UsersForCreateDto userForInsert)
+
+    [HttpPost("AddUser")]
+    public IActionResult AddUser(UserToAddDto user)
     {
-        Users mappedUserForInsert = _mapper.Map<Users>(userForInsert);
-        // _entityFramework.Users.Add(mappedUserForInsert);
-        _userRepo.Add(mappedUserForInsert);
-        if (await _userRepo.SaveAll())
-        // if (await _entityFramework.SaveChangesAsync() > 0)
+        User userDb = _mapper.Map<User>(user);
+        
+        _userRepository.AddEntity<User>(userDb);
+        if (_userRepository.SaveChanges())
         {
             return Ok();
-        }
-        throw new Exception("Adding User failed on save");
+        } 
+
+        throw new Exception("Failed to Add User");
     }
 
-
-    [HttpPut("UsersEF")]
-    public async Task<IActionResult> PutUsersEf(Users userForUpdate)
+    [HttpDelete("DeleteUser/{userId}")]
+    public IActionResult DeleteUser(int userId)
     {
-        Users userToUpdate = await _userRepo.GetUser(userForUpdate.UserId);
-        // Users userToUpdate = await _entityFramework.Users.Where(u => u.UserId == userForUpdate.UserId).FirstOrDefaultAsync();
-
-        if (userToUpdate != null)
+        User? userDb = _userRepository.GetSingleUser(userId);
+            
+        if (userDb != null)
         {
-            _mapper.Map(userToUpdate, userForUpdate);
-            if (await _userRepo.SaveAll())
-            // if (await _entityFramework.SaveChangesAsync() > 0)
+            _userRepository.RemoveEntity<User>(userDb);
+            if (_userRepository.SaveChanges())
             {
                 return Ok();
-            }
-            throw new Exception("Updating User failed on save");
+            } 
+
+            throw new Exception("Failed to Delete User");
         }
-        throw new Exception("Failed to find User to Update");
+        
+        throw new Exception("Failed to Get User");
     }
 
-
-    [HttpDelete("UsersEF/{userId}")]
-    public async Task<IActionResult> DeleteUsersEf(int userId)
+    [HttpGet("UserSalary/{userId}")]
+    public UserSalary GetUserSalaryEF(int userId)
     {
-        Users userToDelete = await _entityFramework.Users.Where(u => u.UserId == userId).FirstOrDefaultAsync();
-
-        if (userToDelete != null)
-        {
-            _userRepo.Delete(userToDelete);
-            // _entityFramework.Users.Remove(userToDelete);
-            if (await _userRepo.SaveAll())
-            // if (await _entityFramework.SaveChangesAsync() > 0)
-            {
-                return Ok();
-            }
-            throw new Exception("Deleting User failed on save");
-        }
-        throw new Exception("Failed to find User to delete");
+        return _userRepository.GetSingleUserSalary(userId);
     }
 
-    [HttpGet("UserSalaryEF/{userId}")]
-    public async Task<IEnumerable<UserSalary>> GetUserSalaryEF(int userId)
+    [HttpPost("UserSalary")]
+    public IActionResult PostUserSalaryEf(UserSalary userForInsert)
     {
-        return await _entityFramework.UserSalary
-            .Where(u => u.UserId == userId)
-            .ToListAsync();
-    }
-
-    [HttpPost("UserSalaryEF")]
-    public async Task<IActionResult> PostUserSalaryEf(UserSalary userForInsert)
-    {
-        _entityFramework.UserSalary.Add(userForInsert);
-        if (await _entityFramework.SaveChangesAsync() > 0)
+        _userRepository.AddEntity<UserSalary>(userForInsert);
+        if (_userRepository.SaveChanges())
         {
             return Ok();
         }
@@ -119,15 +115,15 @@ public class UserEFController : ControllerBase
     }
 
 
-    [HttpPut("UserSalaryEF")]
-    public async Task<IActionResult> PutUserSalaryEf(UserSalary userForUpdate)
+    [HttpPut("UserSalary")]
+    public IActionResult PutUserSalaryEf(UserSalary userForUpdate)
     {
-        UserSalary userToUpdate = await _entityFramework.UserSalary.Where(u => u.UserId == userForUpdate.UserId).FirstOrDefaultAsync();
+        UserSalary? userToUpdate = _userRepository.GetSingleUserSalary(userForUpdate.UserId);
 
         if (userToUpdate != null)
         {
             _mapper.Map(userToUpdate, userForUpdate);
-            if (await _entityFramework.SaveChangesAsync() > 0)
+            if (_userRepository.SaveChanges())
             {
                 return Ok();
             }
@@ -137,15 +133,15 @@ public class UserEFController : ControllerBase
     }
 
 
-    [HttpDelete("UserSalaryEF/{userId}")]
-    public async Task<IActionResult> DeleteUserSalaryEf(int userId)
+    [HttpDelete("UserSalary/{userId}")]
+    public IActionResult DeleteUserSalaryEf(int userId)
     {
-        UserSalary userToDelete = await _entityFramework.UserSalary.Where(u => u.UserId == userId).FirstOrDefaultAsync();
+        UserSalary? userToDelete = _userRepository.GetSingleUserSalary(userId);
 
         if (userToDelete != null)
         {
-            _entityFramework.UserSalary.Remove(userToDelete);
-            if (await _entityFramework.SaveChangesAsync() > 0)
+            _userRepository.RemoveEntity<UserSalary>(userToDelete);
+            if (_userRepository.SaveChanges())
             {
                 return Ok();
             }
@@ -155,19 +151,17 @@ public class UserEFController : ControllerBase
     }
 
 
-    [HttpGet("UserJobInfoEF/{userId}")]
-    public async Task<IEnumerable<UserJobInfo>> GetUserJobInfoEF(int userId)
+    [HttpGet("UserJobInfo/{userId}")]
+    public UserJobInfo GetUserJobInfoEF(int userId)
     {
-        return await _entityFramework.UserJobInfo
-            .Where(u => u.UserId == userId)
-            .ToListAsync();
+        return _userRepository.GetSingleUserJobInfo(userId);
     }
 
-    [HttpPost("UserJobInfoEf")]
-    public async Task<IActionResult> PostUserJobInfoEf(UserJobInfo userForInsert)
+    [HttpPost("UserJobInfo")]
+    public IActionResult PostUserJobInfoEf(UserJobInfo userForInsert)
     {
-        _entityFramework.UserJobInfo.Add(userForInsert);
-        if (await _entityFramework.SaveChangesAsync() > 0)
+        _userRepository.AddEntity<UserJobInfo>(userForInsert);
+        if (_userRepository.SaveChanges())
         {
             return Ok();
         }
@@ -175,15 +169,15 @@ public class UserEFController : ControllerBase
     }
 
 
-    [HttpPut("UserJobInfoEF")]
-    public async Task<IActionResult> PutUserJobInfoEf(UserJobInfo userForUpdate)
+    [HttpPut("UserJobInfo")]
+    public IActionResult PutUserJobInfoEf(UserJobInfo userForUpdate)
     {
-        UserJobInfo userToUpdate = await _entityFramework.UserJobInfo.Where(u => u.UserId == userForUpdate.UserId).FirstOrDefaultAsync();
+        UserJobInfo? userToUpdate = _userRepository.GetSingleUserJobInfo(userForUpdate.UserId);
 
         if (userToUpdate != null)
         {
             _mapper.Map(userToUpdate, userForUpdate);
-            if (await _entityFramework.SaveChangesAsync() > 0)
+            if (_userRepository.SaveChanges())
             {
                 return Ok();
             }
@@ -193,15 +187,15 @@ public class UserEFController : ControllerBase
     }
 
 
-    [HttpDelete("UserJobInfoEF/{userId}")]
-    public async Task<IActionResult> DeleteUserJobInfoEf(int userId)
+    [HttpDelete("UserJobInfo/{userId}")]
+    public IActionResult DeleteUserJobInfoEf(int userId)
     {
-        UserJobInfo userToDelete = await _entityFramework.UserJobInfo.Where(u => u.UserId == userId).FirstOrDefaultAsync();
+        UserJobInfo? userToDelete = _userRepository.GetSingleUserJobInfo(userId);
 
         if (userToDelete != null)
         {
-            _entityFramework.UserJobInfo.Remove(userToDelete);
-            if (await _entityFramework.SaveChangesAsync() > 0)
+            _userRepository.RemoveEntity<UserJobInfo>(userToDelete);
+            if (_userRepository.SaveChanges())
             {
                 return Ok();
             }
@@ -210,4 +204,3 @@ public class UserEFController : ControllerBase
         throw new Exception("Failed to find UserJobInfo to delete");
     }
 }
-
