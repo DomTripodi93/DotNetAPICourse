@@ -1,11 +1,10 @@
 using System.Data;
 using Dapper;
 using Microsoft.Data.SqlClient;
-using Microsoft.Extensions.Configuration;
 
 namespace DotnetAPI.Data
 {
-    public class DataContextDapper
+    class DataContextDapper
     {
         private readonly IConfiguration _config;
         public DataContextDapper(IConfiguration config)
@@ -15,65 +14,47 @@ namespace DotnetAPI.Data
 
         public IEnumerable<T> LoadData<T>(string sql)
         {
-            using (IDbConnection dbConnection = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
-            {
-                dbConnection.Open();
-                using (IDbTransaction tran = dbConnection.BeginTransaction(IsolationLevel.ReadCommitted))
-                {
-                    var holdVal = dbConnection.Query<T>(sql, null, transaction: tran, commandTimeout: 999999999);
-                    dbConnection.Close();
-                    return holdVal;
-                }
-            }
+            IDbConnection dbConnection = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
+            return dbConnection.Query<T>(sql);
         }
 
         public T LoadDataSingle<T>(string sql)
         {
-            using (IDbConnection dbConnection = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
-            {
-                dbConnection.Open();
-                using (IDbTransaction tran = dbConnection.BeginTransaction(IsolationLevel.ReadCommitted))
-                {
-                    var holdVal = dbConnection.QuerySingle<T>(sql, null, transaction: tran, commandTimeout: 999999999);
-                    dbConnection.Close();
-                    return holdVal;
-                }
-            }
+            IDbConnection dbConnection = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
+            return dbConnection.QuerySingle<T>(sql);
         }
 
-        public int ExecuteSQL(string sql)
+        public bool ExecuteSql(string sql)
         {
-            using (IDbConnection dbConnection = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
-            {
-                return dbConnection.Execute(sql);
-            }
+            IDbConnection dbConnection = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
+            return dbConnection.Execute(sql) > 0;
         }
 
-        public int ExecuteSQLWithParams(string sql, IEnumerable<SqlParameter> sqlParams)
+        public int ExecuteSqlWithRowCount(string sql)
+        {
+            IDbConnection dbConnection = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
+            return dbConnection.Execute(sql);
+        }
+
+        public bool ExecuteSqlWithParameters(string sql, List<SqlParameter> parameters)
         {
             SqlCommand commandWithParams = new SqlCommand(sql);
 
-            foreach (SqlParameter param in sqlParams)
+            foreach(SqlParameter parameter in parameters)
             {
-                commandWithParams.Parameters.Add(param);
+                commandWithParams.Parameters.Add(parameter);
             }
 
-            SqlConnection commandConnection = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
-            commandConnection.Open();
+            SqlConnection dbConnection = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
+            dbConnection.Open();
 
-            commandWithParams.Connection = commandConnection;
+            commandWithParams.Connection = dbConnection;
 
             int rowsAffected = commandWithParams.ExecuteNonQuery();
 
-            commandConnection.Close();
+            dbConnection.Close();
 
-            return rowsAffected;
+            return rowsAffected > 0;
         }
-
-        public void ExecuteSQLMulti(string sql, IDbConnection dbConnection)
-        {
-            dbConnection.Execute(sql);
-        }
-
     }
 }

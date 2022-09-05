@@ -1,12 +1,19 @@
-using System.ComponentModel.DataAnnotations;
-
 namespace DotnetAPI.Dtos
 {
-    public class UserForLoginDto
+    public partial class UserForLoginDto
     {
-        [EmailAddress]
-        public string? Email { get; set; }
-        [Required]
-        public string? Password { get; set; }
+        public string Email {get; set;}
+        public string Password {get; set;}
+        public UserForLoginDto()
+        {
+            if (Email == null)
+            {
+                Email = "";
+            }
+            if (Password == null)
+            {
+                Password = "";
+            }
+        }
     }
 }

@@ -4,11 +4,12 @@ namespace DotnetAPI.Data
 {
     public interface IUserRepository
     {
-        void Add<T>(T entity) where T: class;
-        void Delete<T>(T entity) where T: class;
-        Task<bool> SaveAll();
-        Task<IEnumerable<Users>> GetUsers();
-        Task<Users> GetUser(int id);
-        
+        public bool SaveChanges();
+        public void AddEntity<T>(T entityToAdd);
+        public void RemoveEntity<T>(T entityToAdd);
+        public IEnumerable<User> GetUsers();
+        public User GetSingleUser(int userId);
+        public UserSalary GetSingleUserSalary(int userId);
+        public UserJobInfo GetSingleUserJobInfo(int userId);
     }
 }
