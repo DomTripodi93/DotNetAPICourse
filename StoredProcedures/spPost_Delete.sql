@@ -1,17 +1,22 @@
-CREATE OR ALTER PROCEDURE TutorialAppSchema.spPost_Delete
-    @PostId INT = NULL
-    , @UserId INT
+USE DotNetCourseDatabase
+GO
+
+CREATE PROCEDURE TutorialAppSchema.spPost_Delete
+    @PostId INT
 AS
 BEGIN
-    IF EXISTS (
-                  SELECT    *
-                    FROM    TutorialAppSchema.Post
-                   WHERE Post.PostId = @PostId
-                         AND Post.UserId = @UserId
-              )
-    BEGIN
-        DELETE  FROM TutorialAppSchema.Post
-         WHERE  Post.PostId = @PostId
-                AND Post.UserId = @UserId;
-    END;
-END;
+    DELETE FROM TutorialAppSchema.Posts 
+        WHERE PostId = @PostId
+END
+GO
+
+
+CREATE OR ALTER PROCEDURE TutorialAppSchema.spPost_Delete
+    @PostId INT
+    , @UserId INT 
+AS
+BEGIN
+    DELETE FROM TutorialAppSchema.Posts 
+        WHERE PostId = @PostId
+            AND UserId = @UserId
+END

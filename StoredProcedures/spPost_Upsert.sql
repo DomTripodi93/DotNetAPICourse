@@ -1,30 +1,36 @@
-CREATE OR ALTER PROCEDURE TutorialAppSchema.spPost_Upsert
-    @PostId INT = NULL
-	, @UserId INT
-	, @PostTitle NVARCHAR(255)
-	, @PostContent NVARCHAR(MAX)
+USE DotNetCourseDatabase
+GO
+
+CREATE OR ALTER PROCEDURE TutorialAppSchema.spPosts_Upsert
+    @UserId INT
+    , @PostTitle NVARCHAR(255)
+    , @PostContent NVARCHAR(MAX)
+    , @PostId INT = NULL
 AS
 BEGIN
-	IF EXISTS (SELECT * FROM TutorialAppSchema.Post WHERE Post.PostId = @PostId AND Post.UserId = @UserId)
-	BEGIN
-		UPDATE TutorialAppSchema.Post 
-			SET Post.PostTitle = @PostTitle
-				, Post.PostContent = @PostContent
-				, Post.ChangeDate = GETDATE()
-			WHERE Post.PostId = @PostId AND Post.UserId = @UserId
-	END
-	ELSE
-	BEGIN
-		INSERT INTO TutorialAppSchema.Post (UserId
-		                                    , PostDate
-		                                    , ChangeDate
-		                                    , PostTitle
-		                                    , PostContent)
-		VALUES (@UserId
-		        , GETDATE()
-		        , GETDATE()
-		        , @PostTitle
-		        , @PostContent
-		    )
-	END
-END;
+    IF NOT EXISTS (SELECT * FROM TutorialAppSchema.Posts WHERE PostId = @PostId)
+        BEGIN
+            INSERT INTO TutorialAppSchema.Posts(
+                [UserId],
+                [PostTitle],
+                [PostContent],
+                [PostCreated],
+                [PostUpdated]
+            ) VALUES (
+                @UserId,
+                @PostTitle,
+                @PostContent,
+                GETDATE(),
+                GETDATE()
+            )
+        END
+    ELSE
+        BEGIN
+            UPDATE TutorialAppSchema.Posts 
+                SET PostTitle = @PostTitle,
+                    PostContent = @PostContent,
+                    PostUpdated = GETDATE()
+                WHERE PostId = @PostId
+        END
+END
+

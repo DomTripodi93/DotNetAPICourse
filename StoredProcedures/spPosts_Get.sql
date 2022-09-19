@@ -1,31 +1,24 @@
-CREATE OR ALTER PROCEDURE TutorialAppSchema.spPosts_Get
-    @UserId INT = NULL
-AS
-BEGIN
-    SELECT  Post.PostId
-            , Post.UserId
-            , Post.PostDate
-            , Post.ChangeDate
-            , Post.PostTitle
-            , Post.PostContent
-      FROM  TutorialAppSchema.Post
-     WHERE  Post.UserId = ISNULL (@UserId, Post.UserId);
-END;
+USE DotNetCourseDatabase
 GO
 
 CREATE OR ALTER PROCEDURE TutorialAppSchema.spPosts_Get
+/*EXEC TutorialAppSchema.spPosts_Get @UserId = 1003, @SearchValue='Second'*/
+/*EXEC TutorialAppSchema.spPosts_Get @PostId = 2*/
     @UserId INT = NULL
-	, @SearchFor NVARCHAR(MAX) =''
+    , @SearchValue NVARCHAR(MAX) = NULL
+    , @PostId INT = NULL
 AS
 BEGIN
-    SELECT  Post.PostId
-            , Post.UserId
-            , Post.PostDate
-            , Post.ChangeDate
-            , Post.PostTitle
-            , Post.PostContent
-      FROM  TutorialAppSchema.Post
-     WHERE  Post.UserId = ISNULL (@UserId, Post.UserId)
-		AND (Post.PostTitle LIKE '%' + @SearchFor + '%'
-			OR Post.PostContent LIKE '%' + @SearchFor + '%');
-END;
+    SELECT [Posts].[PostId],
+        [Posts].[UserId],
+        [Posts].[PostTitle],
+        [Posts].[PostContent],
+        [Posts].[PostCreated],
+        [Posts].[PostUpdated] 
+    FROM TutorialAppSchema.Posts AS Posts
+        WHERE Posts.UserId = ISNULL(@UserId, Posts.UserId)
+            AND Posts.PostId = ISNULL(@PostId, Posts.PostId)
+            AND (@SearchValue IS NULL
+                OR Posts.PostContent LIKE '%' + @SearchValue + '%'
+                OR Posts.PostTitle LIKE '%' + @SearchValue + '%')
+END
