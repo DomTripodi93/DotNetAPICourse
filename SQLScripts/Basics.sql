@@ -18,6 +18,7 @@ CREATE TABLE TutorialAppSchema.Computer
     , CPUCores INT              --NOT NULL
     , HasWifi BIT
     , HasLTE BIT
+    , ReleaseDate DATETIME
     , Price DECIMAL(18, 4)
     , VideoCard NVARCHAR(50)
 );

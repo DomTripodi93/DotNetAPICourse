@@ -78,8 +78,8 @@ namespace HelloWorld
                             + "','" + computer.Price
                             + "','" + EscapeSingleQuote(computer.VideoCard)
                     + "')";
-
-                    dapper.ExecuteSql(sql);
+                    
+                    dapper.ExecuteSQL(sql);
                 }
             }
 
