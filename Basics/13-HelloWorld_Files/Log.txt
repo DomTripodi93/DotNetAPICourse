@@ -6,7 +6,7 @@ INSERT INTO TutorialAppSchema.Computer (
                 ReleaseDate,
                 Price,
                 VideoCard
-            ) VALUES ('Z690','True','False','8/7/2022 1:03:37 PM','943.87','RTX 2060')
+            ) VALUES ('Z690','True','False','11/18/2022 8:11:37 PM','943.87','RTX 2060')
 
 INSERT INTO TutorialAppSchema.Computer (
                 Motherboard,
@@ -15,5 +15,5 @@ INSERT INTO TutorialAppSchema.Computer (
                 ReleaseDate,
                 Price,
                 VideoCard
-            ) VALUES ('Z690','True','False','8/7/2022 1:03:37 PM','943.87','RTX 2060')
+            ) VALUES ('Z690','True','False','11/18/2022 8:11:37 PM','943.87','RTX 2060')
 

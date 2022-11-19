@@ -10,15 +10,15 @@ namespace HelloWorld
     {
         public static void Main(string[] args)
         {
-            Computer myComputer = new Computer(
-                "Z690",
-                4,
-                true,
-                false,
-                DateTime.Today,
-                859.95m,
-                "RTX 2060"
-            );
+            Computer myComputer = new Computer() 
+            {
+                Motherboard = "Z690",
+                HasWifi = true,
+                HasLTE = false,
+                ReleaseDate = DateTime.Now,
+                Price = 943.87m,
+                VideoCard = "RTX 2060"
+            };
 
             Console.WriteLine(myComputer.Price);
         }

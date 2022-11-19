@@ -66,7 +66,7 @@ namespace DotnetAPI.Controllers
 
                     if (_dapper.ExecuteSqlWithParameters(sqlAddAuth, sqlParameters))
                     {
-                        
+
                         string sqlAddUser = @"
                             INSERT INTO TutorialAppSchema.Users(
                                 [FirstName],
@@ -75,10 +75,10 @@ namespace DotnetAPI.Controllers
                                 [Gender],
                                 [Active]
                             ) VALUES (" +
-                                "'" + userForRegistration.FirstName + 
+                                "'" + userForRegistration.FirstName +
                                 "', '" + userForRegistration.LastName +
-                                "', '" + userForRegistration.Email + 
-                                "', '" + userForRegistration.Gender + 
+                                "', '" + userForRegistration.Email +
+                                "', '" + userForRegistration.Gender +
                                 "', 1)";
                         if (_dapper.ExecuteSql(sqlAddUser))
                         {
@@ -111,7 +111,8 @@ namespace DotnetAPI.Controllers
 
             for (int index = 0; index < passwordHash.Length; index++)
             {
-                if (passwordHash[index] != userForConfirmation.PasswordHash[index]){
+                if (passwordHash[index] != userForConfirmation.PasswordHash[index])
+                {
                     return StatusCode(401, "Incorrect password!");
                 }
             }
@@ -133,7 +134,7 @@ namespace DotnetAPI.Controllers
             string userIdSql = @"
                 SELECT UserId FROM TutorialAppSchema.Users WHERE UserId = '" +
                 User.FindFirst("userId")?.Value + "'";
-            
+
             int userId = _dapper.LoadDataSingle<int>(userIdSql);
 
             return CreateToken(userId);
@@ -160,23 +161,25 @@ namespace DotnetAPI.Controllers
                 new Claim("userId", userId.ToString())
             };
 
+            string? tokenKeyString = _config.GetSection("AppSettings:Token").Value;
+
             SymmetricSecurityKey tokenKey = new SymmetricSecurityKey(
                     Encoding.UTF8.GetBytes(
-                        _config.GetSection("Appsettings:TokenKey").Value
+                        tokenKeyString != null ? tokenKeyString : ""
                     )
                 );
 
             SigningCredentials credentials = new SigningCredentials(
-                    tokenKey, 
+                    tokenKey,
                     SecurityAlgorithms.HmacSha512Signature
                 );
 
             SecurityTokenDescriptor descriptor = new SecurityTokenDescriptor()
-                {
-                    Subject = new ClaimsIdentity(claims),
-                    SigningCredentials = credentials,
-                    Expires = DateTime.Now.AddDays(1)
-                };
+            {
+                Subject = new ClaimsIdentity(claims),
+                SigningCredentials = credentials,
+                Expires = DateTime.Now.AddDays(1)
+            };
 
             JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
 
