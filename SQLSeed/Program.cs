@@ -86,7 +86,7 @@ namespace SQLSeed
                     foreach (UserSalary singleUserSalary in userSalary)
                     {
                         string sqlToAdd = "(" + singleUserSalary.UserId
-                                    + ", '" + singleUserSalary.Salary
+                                    + ", '" + singleUserSalary.Salary.ToString("0.00")
                                     + "'),";
                         if ((sql + sqlToAdd).Length > 4000)
                         {

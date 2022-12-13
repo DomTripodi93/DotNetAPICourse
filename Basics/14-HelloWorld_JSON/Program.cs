@@ -74,8 +74,8 @@ namespace HelloWorld
                     ) VALUES ('" + EscapeSingleQuote(computer.Motherboard)
                             + "','" + computer.HasWifi
                             + "','" + computer.HasLTE
-                            + "','" + computer.ReleaseDate
-                            + "','" + computer.Price
+                            + "','" + computer.ReleaseDate.ToString("yyyy-MM-dd")
+                            + "','" + computer.Price.ToString("0.00")
                             + "','" + EscapeSingleQuote(computer.VideoCard)
                     + "')";
                     

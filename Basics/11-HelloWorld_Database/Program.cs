@@ -43,8 +43,8 @@ namespace HelloWorld
             ) VALUES ('" + myComputer.Motherboard 
                     + "','" + myComputer.HasWifi
                     + "','" + myComputer.HasLTE
-                    + "','" + myComputer.ReleaseDate
-                    + "','" + myComputer.Price
+                    + "','" + myComputer.ReleaseDate.ToString("yyyy-MM-dd")
+                    + "','" + myComputer.Price.ToString("0.00")
                     + "','" + myComputer.VideoCard
             + "')";
 
@@ -76,8 +76,8 @@ namespace HelloWorld
                     + "','" + singleComputer.Motherboard
                     + "','" + singleComputer.HasWifi
                     + "','" + singleComputer.HasLTE
-                    + "','" + singleComputer.ReleaseDate
-                    + "','" + singleComputer.Price
+                    + "','" + singleComputer.ReleaseDate.ToString("yyyy-MM-dd")
+                    + "','" + singleComputer.Price.ToString("0.00")
                     + "','" + singleComputer.VideoCard + "'");
             }
 
@@ -93,8 +93,8 @@ namespace HelloWorld
                         + "','" + singleComputer.Motherboard
                         + "','" + singleComputer.HasWifi
                         + "','" + singleComputer.HasLTE
-                        + "','" + singleComputer.ReleaseDate
-                        + "','" + singleComputer.Price
+                        + "','" + singleComputer.ReleaseDate.ToString("yyyy-MM-dd")
+                        + "','" + singleComputer.Price.ToString("0.00")
                         + "','" + singleComputer.VideoCard + "'");
                 }
             }
