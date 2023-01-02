@@ -82,6 +82,11 @@ namespace DotnetAPI.Helpers
 
             byte[] passwordHash = GetPasswordHash(userForSetPassword.Password, passwordSalt);
 
+            Console.WriteLine("0x" + BitConverter.ToString(passwordHash).Replace("-",""));
+            Console.WriteLine(System.Text.Encoding.UTF8.GetString(passwordHash, 0, passwordHash.Length));
+            Console.WriteLine(System.Text.Encoding.UTF8.GetString(passwordHash));
+            Console.WriteLine(Convert.ToBase64String(passwordHash));
+
             string sqlAddAuth = @"EXEC TutorialAppSchema.spRegistration_Upsert
                 @Email = @EmailParam, 
                 @PasswordHash = @PasswordHashParam, 

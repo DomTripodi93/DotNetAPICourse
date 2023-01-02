@@ -12,6 +12,7 @@ namespace HelloWorld.Data
         {
             if (!options.IsConfigured)
             {
+                // options.UseSqlServer("Server=localhost;Database=DotNetCourseDatabase;Trusted_connection=false;TrustServerCertificate=True;User Id=sa;Password=SQLConnect1;",
                 options.UseSqlServer("Server=localhost;Database=DotNetCourseDatabase;Trusted_Connection=true;TrustServerCertificate=true;",
                     options => options.EnableRetryOnFailure());
             }

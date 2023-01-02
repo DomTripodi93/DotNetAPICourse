@@ -30,7 +30,8 @@ builder.Services.AddCors((options) =>
             });
     });
 
-string? tokenKeyString = builder.Configuration.GetSection("AppSettings:Token").Value;
+string? tokenKeyString = builder.Configuration.GetSection("AppSettings:TokenKey").Value;
+Console.WriteLine(tokenKeyString);
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options => {

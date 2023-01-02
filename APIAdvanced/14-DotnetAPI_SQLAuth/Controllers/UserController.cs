@@ -128,7 +128,7 @@ public class UserController : ControllerBase
         return _dapper.LoadData<UserSalary>(@"
             SELECT UserSalary.UserId
                     , UserSalary.Salary
-                    , UserSalary.AverageSalary
+                    , UserSalary.AvgSalary
             FROM  TutorialAppSchema.UserSalary
                 WHERE UserId = " + userId.ToString());
     }
