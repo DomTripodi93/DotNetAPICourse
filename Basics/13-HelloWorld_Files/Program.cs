@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data;
-using System.Globalization;
 using System.Text.RegularExpressions;
 using Dapper;
 using HelloWorld.Data;
@@ -38,7 +37,7 @@ namespace HelloWorld
                     + "','" + myComputer.HasWifi
                     + "','" + myComputer.HasLTE
                     + "','" + myComputer.ReleaseDate.ToString("yyyy-MM-dd")
-                    + "','" + myComputer.Price.ToString("0.00", CultureInfo.InvariantCulture)
+                    + "','" + myComputer.Price.ToString("0.00")
                     + "','" + myComputer.VideoCard
             + "')";
 

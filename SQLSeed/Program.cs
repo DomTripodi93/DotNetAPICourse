@@ -8,7 +8,6 @@ using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Microsoft.Data.SqlClient;
 using System.Data;
-using System.Globalization;
 
 namespace SQLSeed
 {
@@ -87,8 +86,8 @@ namespace SQLSeed
                     foreach (UserSalary singleUserSalary in userSalary)
                     {
                         string sqlToAdd = "(" + singleUserSalary.UserId
-                                    + ", " + singleUserSalary.Salary.ToString("0.00", CultureInfo.InvariantCulture)
-                                    + "),";
+                                    + ", '" + singleUserSalary.Salary.ToString("0.00")
+                                    + "'),";
                         if ((sql + sqlToAdd).Length > 4000)
                         {
                             dataContextDapper.ExecuteProcedureMulti(sql.Trim(','), dbConnection);

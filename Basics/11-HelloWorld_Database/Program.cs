@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data;
-using System.Globalization;
 using System.Text.RegularExpressions;
 using Dapper;
 using HelloWorld.Data;
@@ -20,8 +19,8 @@ namespace HelloWorld
             DateTime rightNow = dapper.LoadDataSingle<DateTime>("SELECT GETDATE()");
 
             // Console.WriteLine(rightNow.ToString());
-
-            Computer myComputer = new Computer()
+            
+            Computer myComputer = new Computer() 
             {
                 Motherboard = "Z690",
                 HasWifi = true,
@@ -41,11 +40,11 @@ namespace HelloWorld
                 ReleaseDate,
                 Price,
                 VideoCard
-            ) VALUES ('" + myComputer.Motherboard
+            ) VALUES ('" + myComputer.Motherboard 
                     + "','" + myComputer.HasWifi
                     + "','" + myComputer.HasLTE
                     + "','" + myComputer.ReleaseDate.ToString("yyyy-MM-dd")
-                    + "','" + myComputer.Price.ToString("0.00", CultureInfo.InvariantCulture)
+                    + "','" + myComputer.Price.ToString("0.00")
                     + "','" + myComputer.VideoCard
             + "')";
 
@@ -69,16 +68,16 @@ namespace HelloWorld
 
             IEnumerable<Computer> computers = dapper.LoadData<Computer>(sqlSelect);
 
-            Console.WriteLine("'ComputerId','Motherboard','HasWifi','HasLTE','ReleaseDate'"
+            Console.WriteLine("'ComputerId','Motherboard','HasWifi','HasLTE','ReleaseDate'" 
                 + ",'Price','VideoCard'");
-            foreach (Computer singleComputer in computers)
+            foreach(Computer singleComputer in computers)
             {
-                Console.WriteLine("'" + singleComputer.ComputerId
+                Console.WriteLine("'" + singleComputer.ComputerId 
                     + "','" + singleComputer.Motherboard
                     + "','" + singleComputer.HasWifi
                     + "','" + singleComputer.HasLTE
                     + "','" + singleComputer.ReleaseDate.ToString("yyyy-MM-dd")
-                    + "','" + singleComputer.Price.ToString("0.00", CultureInfo.InvariantCulture)
+                    + "','" + singleComputer.Price.ToString("0.00")
                     + "','" + singleComputer.VideoCard + "'");
             }
 
@@ -86,16 +85,16 @@ namespace HelloWorld
 
             if (computersEf != null)
             {
-                Console.WriteLine("'ComputerId','Motherboard','HasWifi','HasLTE','ReleaseDate'"
+                Console.WriteLine("'ComputerId','Motherboard','HasWifi','HasLTE','ReleaseDate'" 
                     + ",'Price','VideoCard'");
-                foreach (Computer singleComputer in computersEf)
+                foreach(Computer singleComputer in computersEf)
                 {
-                    Console.WriteLine("'" + singleComputer.ComputerId
+                    Console.WriteLine("'" + singleComputer.ComputerId 
                         + "','" + singleComputer.Motherboard
                         + "','" + singleComputer.HasWifi
                         + "','" + singleComputer.HasLTE
                         + "','" + singleComputer.ReleaseDate.ToString("yyyy-MM-dd")
-                        + "','" + singleComputer.Price.ToString("0.00", CultureInfo.InvariantCulture)
+                        + "','" + singleComputer.Price.ToString("0.00")
                         + "','" + singleComputer.VideoCard + "'");
                 }
             }

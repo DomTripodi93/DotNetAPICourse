@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data;
-using System.Globalization;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using Dapper;
@@ -76,10 +75,10 @@ namespace HelloWorld
                             + "','" + computer.HasWifi
                             + "','" + computer.HasLTE
                             + "','" + computer.ReleaseDate?.ToString("yyyy-MM-dd")
-                            + "','" + computer.Price.ToString("0.00", CultureInfo.InvariantCulture)
+                            + "','" + computer.Price.ToString("0.00")
                             + "','" + EscapeSingleQuote(computer.VideoCard)
                     + "')";
-
+                    
                     dapper.ExecuteSQL(sql);
                 }
             }
