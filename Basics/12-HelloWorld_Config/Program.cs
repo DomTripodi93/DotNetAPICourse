@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Globalization;
 using System.Text.RegularExpressions;
 using Dapper;
 using HelloWorld.Data;
@@ -48,7 +49,7 @@ namespace HelloWorld
                     + "','" + myComputer.HasWifi
                     + "','" + myComputer.HasLTE
                     + "','" + myComputer.ReleaseDate.ToString("yyyy-MM-dd")
-                    + "','" + myComputer.Price.ToString("0.00")
+                    + "','" + myComputer.Price.ToString("0.00", CultureInfo.InvariantCulture)
                     + "','" + myComputer.VideoCard
             + "')";
 
@@ -81,7 +82,7 @@ namespace HelloWorld
                     + "','" + singleComputer.HasWifi
                     + "','" + singleComputer.HasLTE
                     + "','" + singleComputer.ReleaseDate.ToString("yyyy-MM-dd")
-                    + "','" + singleComputer.Price.ToString("0.00")
+                    + "','" + singleComputer.Price.ToString("0.00", CultureInfo.InvariantCulture)
                     + "','" + singleComputer.VideoCard + "'");
             }
 
@@ -98,7 +99,7 @@ namespace HelloWorld
                         + "','" + singleComputer.HasWifi
                         + "','" + singleComputer.HasLTE
                         + "','" + singleComputer.ReleaseDate.ToString("yyyy-MM-dd")
-                        + "','" + singleComputer.Price.ToString("0.00")
+                        + "','" + singleComputer.Price.ToString("0.00", CultureInfo.InvariantCulture)
                         + "','" + singleComputer.VideoCard + "'");
                 }
             }
