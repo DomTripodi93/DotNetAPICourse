@@ -43,7 +43,7 @@ namespace DotnetAPI.Helpers
                 new Claim("userId", userId.ToString())
             };
             
-string? tokenKeyString = _config.GetSection("AppSettings:Token").Value;
+string? tokenKeyString = _config.GetSection("AppSettings:TokenKey").Value;
 
 SymmetricSecurityKey tokenKey = new SymmetricSecurityKey(
         Encoding.UTF8.GetBytes(
