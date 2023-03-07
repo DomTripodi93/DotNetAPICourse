@@ -123,6 +123,8 @@ ALTER PROCEDURE TutorialAppSchema.spUsers_Get
 AS
 BEGIN
     DROP TABLE IF EXISTS #AverageDeptSalary
+    -- IF OBJECT_ID('tempdb..#AverageDeptSalary') IS NOT NULL
+    --     DROP TABLE #AverageDeptSalary;
 
     SELECT UserJobInfo.Department
         , AVG(UserSalary.Salary) AvgSalary

@@ -455,3 +455,6 @@ $RECYCLE.BIN/
 !.vscode/extensions.json
 
 
+Basics/16-HelloWorld_AsyncAwait/HelloWorld.csproj
+Basics/16-HelloWorld_AsyncAwait/Program.cs
+Basics/16-HelloWorld_AsyncAwait/Test/TestAsync.cs

@@ -84,6 +84,19 @@ SELECT  ISNULL (UserJobInfo.Department, 'No Department Listed') AS Deparment
         , AVG (UserSalary.Salary) AS AvgSalary
         , COUNT (*) AS PeopleInDepartment
         , STRING_AGG (Users.UserId, ', ') AS UserIds
+        -- , STUFF ((
+        --                 SELECT   DISTINCT
+        --                             ', ' + InnerUsers.UserId
+        --                     FROM   TutorialAppSchema.Users AS InnerUsers
+        --                         LEFT JOIN TutorialAppSchema.UserJobInfo AS UserJobInfoInner
+        --                             ON UserJobInfoInner.UserId = InnerUsers.UserId
+        --                     WHERE   UserJobInfoInner.Department = UserJobInfo.Department
+        --                 FOR XML PATH ('')
+        --             )
+        --             , 1
+        --             , 1
+        --             , ''
+        --             ) AS UserIds
   FROM  TutorialAppSchema.Users AS Users
       --INNER JOIN
       JOIN TutorialAppSchema.UserSalary AS UserSalary

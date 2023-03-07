@@ -1,5 +1,8 @@
 DROP TABLE IF EXISTS TutorialAppSchema.Users;
 
+-- IF OBJECT_ID('TutorialAppSchema.Users') IS NOT NULL
+--     DROP TABLE TutorialAppSchema.Users;
+
 CREATE TABLE TutorialAppSchema.Users
 (
     UserId INT IDENTITY(1, 1) PRIMARY KEY
@@ -12,6 +15,9 @@ CREATE TABLE TutorialAppSchema.Users
 
 DROP TABLE IF EXISTS TutorialAppSchema.UserSalary;
 
+-- IF OBJECT_ID('TutorialAppSchema.UserSalary') IS NOT NULL
+--     DROP TABLE TutorialAppSchema.UserSalary;
+
 CREATE TABLE TutorialAppSchema.UserSalary
 (
     UserId INT
@@ -19,6 +25,9 @@ CREATE TABLE TutorialAppSchema.UserSalary
 );
 
 DROP TABLE IF EXISTS TutorialAppSchema.UserJobInfo;
+
+-- IF OBJECT_ID('TutorialAppSchema.UserJobInfo') IS NOT NULL
+--     DROP TABLE TutorialAppSchema.UserJobInfo;
 
 CREATE TABLE TutorialAppSchema.UserJobInfo
 (
