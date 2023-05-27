@@ -458,3 +458,5 @@ $RECYCLE.BIN/
 Basics/16-HelloWorld_AsyncAwait/HelloWorld.csproj
 Basics/16-HelloWorld_AsyncAwait/Program.cs
 Basics/16-HelloWorld_AsyncAwait/Test/TestAsync.cs
+/2-Intermediate/8-HelloWorld_AsyncAwait
+/2-Intermediate/9-LINQ(Under Construction)
