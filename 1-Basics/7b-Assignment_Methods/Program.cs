@@ -18,7 +18,7 @@ namespace HelloWorld
         }
         //Write Your Code Here
         
-        public void PrintIfOdd(int number)
+        static void PrintIfOdd(int number)
         {
             if (number % 2 == 1)
             {
