@@ -19,8 +19,8 @@ public class UserEFController : ControllerBase
 
         _mapper = new Mapper(new MapperConfiguration(cfg =>{
             cfg.CreateMap<UserToAddDto, User>();
-            cfg.CreateMap<UserSalary, UserSalary>();
-            cfg.CreateMap<UserJobInfo, UserJobInfo>();
+            cfg.CreateMap<UserSalary, UserSalary>().ReverseMap();
+            cfg.CreateMap<UserJobInfo, UserJobInfo>().ReverseMap();
         }));
 
     }
@@ -139,7 +139,7 @@ public class UserEFController : ControllerBase
 
         if (userToUpdate != null)
         {
-            _mapper.Map(userToUpdate, userForUpdate);
+            _mapper.Map(userForUpdate, userToUpdate);
             if (_entityFramework.SaveChanges() > 0)
             {
                 return Ok();
@@ -199,7 +199,7 @@ public class UserEFController : ControllerBase
 
         if (userToUpdate != null)
         {
-            _mapper.Map(userToUpdate, userForUpdate);
+            _mapper.Map(userForUpdate, userToUpdate);
             if (_entityFramework.SaveChanges() > 0)
             {
                 return Ok();
