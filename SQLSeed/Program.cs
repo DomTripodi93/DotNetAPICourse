@@ -18,7 +18,7 @@ namespace SQLSeed
         {
 
             IConfiguration config = new ConfigurationBuilder()
-                    .AddJsonFile("appSettings.json")
+                    .AddJsonFile("appsettings.json")
                     .Build();
 
             DataContextDapper dataContextDapper = new DataContextDapper(config);
