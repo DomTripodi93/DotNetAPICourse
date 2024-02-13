@@ -20,7 +20,7 @@ DROP TABLE IF EXISTS TutorialAppSchema.UserSalary;
 
 CREATE TABLE TutorialAppSchema.UserSalary
 (
-    UserId INT
+    UserId INT UNIQUE
     , Salary DECIMAL(18, 4)
 );
 
@@ -31,7 +31,7 @@ DROP TABLE IF EXISTS TutorialAppSchema.UserJobInfo;
 
 CREATE TABLE TutorialAppSchema.UserJobInfo
 (
-    UserId INT
+    UserId INT UNIQUE
     , JobTitle NVARCHAR(50)
     , Department NVARCHAR(50),
 );
