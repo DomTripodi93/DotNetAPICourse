@@ -23,6 +23,7 @@ namespace HelloWorld
             
             Computer myComputer = new Computer() 
             {
+                ComputerId = 0,
                 Motherboard = "Z690",
                 HasWifi = true,
                 HasLTE = false,
@@ -30,6 +31,8 @@ namespace HelloWorld
                 Price = 943.87m,
                 VideoCard = "RTX 2060"
             };
+
+            Console.WriteLine(myComputer.ComputerId);
 
             entityFramework.Add(myComputer);
             entityFramework.SaveChanges();
