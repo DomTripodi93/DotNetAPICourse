@@ -458,3 +458,8 @@ $RECYCLE.BIN/
 
 /2.1-LINQ(Under Construction)
 /5-APIAdvanced/20-DotnetAPI_Middleware
+/5-APIAdvanced/21-DotnetAPI_RequestBody
+/5-APIAdvanced/22-DotnetAPI_LogActivity
+/5-APIAdvanced/23-DotnetAPI_SkipActivity
+/5-APIAdvanced/24-DotnetAPI_LogRequestFailure
+/SQLScripts/ActivityLog.sql
